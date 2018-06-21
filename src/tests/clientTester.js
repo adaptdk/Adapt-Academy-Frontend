@@ -25,7 +25,7 @@ function renderComponent(ComponentClass, props = {}, state = {}) {
     </Provider>,
   );
 
-  return $(ReactDOM.findDOMNode(componentInstance)); // eslint-disable-line
+  return $(ReactDOM.findDOMNode(componentInstance));
 }
 
 $.fn.simulate = function (eventName, value) {
