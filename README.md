@@ -2,7 +2,6 @@
 
 * [Getting started](#getting-started)
 * [Application structure](#application-structure)
-* [React quick start tutorial](#react-quick-start-tutorial)
 
 ### Getting started
 
