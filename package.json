@@ -4,9 +4,12 @@
   "description": "Front end react boilerplate for Adapt A/S academy",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint ./src",
     "start": "./node_modules/.bin/cross-env NODE_ENV=production API_ENDPOINT='https://min-api.cryptocompare.com' APP_NAME='React boilerplate with examples' node ./index.js",
     "start:dev": "./node_modules/.bin/cross-env NODE_ENV=development API_ENDPOINT='https://min-api.cryptocompare.com' APP_NAME='React boilerplate with examples' ./node_modules/.bin/nodemon --ignore ./src/client/ ./index.js",
+    "lint": "npm run lint:client",
+    "lint:client": "./node_modules/.bin/eslint ./src/client",
+    "lint:server": "./node_modules/.bin/eslint ./src/server",
+    "lint:shared": "./node_modules/.bin/eslint ./src/shared",
     "test:client": "mocha --require @babel/register --require ./src/tests/clientTester.js './src/tests/client/**/*.js'",
     "test:client:watch": "npm run test:client -- --watch",
     "bundle": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js"
