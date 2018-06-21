@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log*
+yarn-error.log
+
+dist/**
+docs/**
+translations/vendor
+
+bundle.js
+styleguide.css
+
+.#*
+*.org
+
+.DS_Store
+.idea/
+coverage

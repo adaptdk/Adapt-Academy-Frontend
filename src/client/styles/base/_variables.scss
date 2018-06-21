@@ -1,0 +1,31 @@
+// Main variables like widths, heights, sizes, timings, settings
+$base-line-height: 1.5;
+$base-font-size: 16px;
+$max-content-width: 1480px;
+$ultra-small-padding: 5px;
+$small-padding: 10px;
+$medium-padding: 20px;
+$large-padding: 40px;
+$ultra-small-margin: 5px;
+$small-margin: 10px;
+$medium-margin: 20px;
+$large-margin: 40px;
+
+$mobile-width: 320px;
+$tablet-width: 736px;
+
+$breakpoints: (
+  small-up     : ( min-width: 650px ),
+  medium-up    : ( min-width: 950px ),
+  large-up     : ( min-width: 1250px ),
+  small-height : '( max-height: 800px ) and ( min-width: 950px )'
+);
+
+$card-border-radius: 0;
+$card-border-radius-inner: 0;
+$card-border-color: transparent;
+$card-cap-bg: $inverse-lightest;
+$card-cap-color: #fff;
+
+$base-font-size: 400;
+$font-weight-bold: 700;

@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+  font-size: 70%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  background-color: $blue-light;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3 {
+  margin: $small-margin;
+}
+
+.divider {
+   &--top {
+     border-top: 2px solid $gray-light;
+   }
+
+  &--left {
+    border-top: 2px solid $gray-light;
+  }
+}
+
+.padding {
+  &--small-bottom {
+    padding-bottom: $small-padding;
+  }
+
+  &--small-top {
+    padding-top: $small-padding;
+  }
+}
+
+.margin {
+  &--small-bottom {
+    padding-bottom: $small-margin;
+  }
+
+  &--small-top {
+    padding-top: $small-margin;
+  }
+}

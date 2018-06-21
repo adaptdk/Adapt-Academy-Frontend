@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "@babel/syntax-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-transform-shorthand-properties",
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-transform-async-to-generator",
+    ["@babel/plugin-transform-runtime", {
+      "helpers": false,
+      "polyfill": true,
+      "regenerator": true,
+      "moduleName": "@babel/runtime"
+    }]
+  ],
+  "presets": [
+    "@babel/env",
+    "@babel/react",
+    ["@babel/preset-stage-0", { "decoratorsLegacy": true }]
+  ]
+}

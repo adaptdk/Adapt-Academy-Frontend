@@ -1,0 +1,26 @@
+.paper {
+  @include box-shadow();
+  transition: box-shadow 200ms ease-in-out;
+  margin-bottom: 10px;
+  background-color: $white;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+
+  &--no-padding {
+    padding: 0;
+  }
+
+  &:hover {
+    @include box-shadow(20%);
+  }
+
+  @include respond-to(medium-up) {
+    padding: 40px;
+
+    &--no-padding {
+      padding: 0;
+    }
+  }
+}
+
