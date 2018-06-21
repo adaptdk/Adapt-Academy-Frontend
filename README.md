@@ -41,9 +41,10 @@ There are three main source folders:
 ```
 src/
    client/   // Most of your time you will spend in this folder :)
-   shared/
-   tests/
-   server/
+   shared/   // Shared code between server and client.
+   tests/    // Tests.
+   server/   // Server side rendering. API proxying.
+   webpack/  // Project build configuration.
 ```
 Mostly you will deal with source code that are placed in `client`, `shared` and `tests` (this will be used to introduce code testing for you ). `shared` contains main component (Html.js) that mimics index.html file. You will use this file for adding third part js libraries or css files that are not fully compatible or not work with npm registy at all (e.g. c3.js).
 
