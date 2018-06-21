@@ -46,6 +46,8 @@ src/
    server/
 ```
 Mostly you will deal with source code that are placed in `client`, `shared` and `tests` (this will be used to introduce code testing for you ). `shared` contains main component (Html.js) that mimics index.html file. You will use this file for adding third part js libraries or css files that are not fully compatible or not work with npm registy at all (e.g. c3.js).
+
+
 All your source code during implemantation of your practical task will be places at `client` folder. This folder already includes recommended application structure and also includes some basic components that can be reused and that will give you a quick overview how reusable components can be created and reused.
 
 #### Quick overview of client folder
@@ -101,4 +103,6 @@ src/
 	  ...
 ```
 
-Such structure allows for us to add pages to application in easy way. All routes and all pages will be added in `routes.js`. Common and reusable components should be extracted and moved to `client/`. Right now you get a lot of information that can me not familiar for you. But all concepts will be introduced to you :)
+Such structure allows for us to add pages to application in easy way. All routes and all pages will be added in `routes.js`. Common and reusable components should be extracted and moved to `client/`. 
+
+Right now you get a lot of information that can be not familiar for you. But all concepts will be introduced to you :)
