@@ -232,6 +232,6 @@ The main principle of React.js is not only component creation, but reusing of ex
 You can switch to already implemented step of creation page of this tutorial:
 
 ```
-> git checkout -b tutorial-step-1
+> git checkout tutorial-step-1
 ```
 
