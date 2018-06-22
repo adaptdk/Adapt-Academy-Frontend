@@ -42,12 +42,12 @@ There are three main source folders:
 ```
 src/
    client/   // Most of your time you will spend in this folder :)
-   shared/   // Shared code between server and client.
-   tests/    // Tests.
    server/   // Server side rendering. API proxying.
+   tests/    // Tests.
+   shared/   // Shared code between server and client.
    webpack/  // Project build configuration.
 ```
-Mostly you will deal with source code that are placed in `client`, `shared` and `tests` (this will be used to introduce code testing for you ). `shared` contains main component (Html.js) that mimics index.html file. You will use this file for adding third part js libraries or css files that are not fully compatible or not work with npm registy at all (e.g. c3.js).
+Mostly you will deal with source code that are placed in `client` and `tests` (this will be used to introduce code testing for you ). `client` contains main component (Html.js) that mimics index.html file. You will use this file for adding third part js libraries or css files that are not fully compatible or not work with npm registy at all (e.g. c3.js).
 
 
 All your source code during implemantation of your practical task will be placed at `client` folder. This folder already includes recommended application structure and also includes some basic components that can be reused and that will give you a quick overview how reusable components can be created and reused.
@@ -61,6 +61,7 @@ src/
     routes.js           // Will define routes of pages.
     initialState.js     // Appplication global initial state.
     App.js              // Application entry point.
+    Html.js             // Third part libraries through cdn can be added here.
     tests/              // Testing. We will do only simple testing.
       components/
         Homespec.js

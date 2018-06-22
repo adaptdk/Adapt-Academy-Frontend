@@ -9,7 +9,7 @@ import { createStore } from 'redux';
 
 import reducers from '../../../client/reducers/index';
 import App from '../../../client/App';
-import Html from '../../../shared/Html';
+import Html from '../../../client/Html';
 
 export default (req, res) => {
   if (process.env.NODE_ENV === 'development') {
