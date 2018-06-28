@@ -9,14 +9,25 @@
 There are two methods for getting started with this repo.
 
 #### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+Checkout this repo, install dependencies, then start the webpack process with the following:
 
 ```
 > git clone git@github.com:adaptdk/aa-fe.git
 > cd aa-fe
+> npm install -g yarn
 > yarn install
 > yarn start:dev
 ```
+
+You can use only npm as well
+
+```
+> git clone git@github.com:adaptdk/aa-fe.git
+> cd aa-fe
+> npm install
+> npm run start:dev
+```
+
 Open [http://localhost:4000](http://localhost:4000) in your borwser.
 
 #### Not Familiar with Git?
@@ -26,6 +37,13 @@ Click [here](https://github.com/adaptdk/aa-fe/archive/master.zip) then download 
 > yarn install
 > yarn start:dev
 ```
+or 
+
+```
+> npm install
+> npm run start:dev
+```
+
 Open [http://localhost:4000](http://localhost:4000) in your borwser.
 
 ### Application structure
@@ -47,8 +65,8 @@ src/
    shared/   // Shared code between server and client.
    webpack/  // Project build configuration.
 ```
-Mostly you will deal with source code that are placed in `client` and `tests` (this will be used to introduce code testing for you ). `client` contains main component (Html.js) that mimics index.html file. You will use this file for adding third part js libraries or css files that are not fully compatible or not work with npm registy at all (e.g. c3.js).
 
+Mostly you will deal with source code that are placed in `client` and `tests` (this will be used to introduce code testing for you ). `client` contains main component (Html.js) that mimics index.html file. You will use this file for adding third part js libraries or css files that are not fully compatible or not work with npm registy at all (e.g. c3.js).
 
 All your source code during implemantation of your practical task will be placed at `client` folder. This folder already includes recommended application structure and also includes some basic components that can be reused and that will give you a quick overview how reusable components can be created and reused.
 
@@ -236,3 +254,256 @@ You can switch to already implemented step of creation page of this tutorial:
 > git checkout tutorial-step-1
 ```
 
+#### Defining a component
+
+Component can be defined as: 
+* stateless (by using plain JS function);
+* statefull (by using ES6 class).
+
+##### Steteless component
+
+```
+import React from 'react';
+
+const Component({ name }) => (
+	<div>Hello { name }</div>
+);
+```
+
+##### Statefull component
+
+```
+import React, { Component } from 'react';
+
+class Component extends Component {
+	render() {
+		const { name } = this.props;
+		
+		return (
+			<div>Hello { name }</div>
+		);
+	}
+}
+```
+
+#### Managing application state
+
+Components can store state during so called lifecycle (will be explained later in more details). Every component after mounting and dom rendering can display some data that are passed down to them. It is important to notice that components have only one way data binding. It means that parent component can pass data to his childrens only and not vice verus.
+
+```
+   ParentComponent
+         |
+         V
+       props
+         |
+         V
+   ChildrenComponent
+```
+
+Data to components can be passed by so called properties. Properties can't be modified (can't be changed) during component lifecycle. It means that component by itself can't change properties. Properties can't be only changed outside of component.
+
+```
+// Component usage
+<Component 
+	width={ 512 }   // width property
+	height={ 512 }  // height property
+/>
+
+// Component declaration
+import React from 'react';
+
+// Is a good :)
+const Component = ({ width, height }) => {
+	return (
+		<div>My size is: { width } x { height }</div>
+	);
+}
+
+// Is a bad :)
+const Component = ({ width, height }) => {
+	// Properties should be used only for reading data
+	width = width + 15;   // Not ok. Avoid this.
+	height = height + 15; // Not ok. Avoid this.
+	
+	return (
+		<div>My size is: { width } x { height }</div>
+	);
+}
+```
+
+If you need to have mutable state inside of component during his lifecycle, you can use state for that.
+
+```
+// Component usage
+
+<Component 
+	width={ 512 }   // width property
+	height={ 512 }  // height property
+/>
+
+// Component declaration
+
+import React, { Component, Fragment } from 'react';
+
+class Component extends Component {
+	constructor(props) {
+		super(props);
+		// Setting default state from incoming props
+		const { width, height } = this.props;
+	 	
+		this.state = {
+			width,
+			heiht,
+		}
+	}
+	
+	onClick() {
+		const { width, height } = this.state;
+	
+		this.setState({
+			width: width + 10,
+			height: height + 10
+		});
+	}
+
+	render() {
+		const { name } = this.props;
+		
+		return (
+			<Fragment>
+				<div>
+			   		My size is {width} x {height}
+		   		</div>
+				<button onClick={ increaseSize }/>
+			</Fragment>
+		);
+	}
+}
+```
+ 
+You can change state by using setState() method. From React documentation:
+
+Think of setState() as a request rather than an immediate command to update the component. For better perceived performance, React may delay it, and then update several components in a single pass. React does not guarantee that the state changes are applied immediately.
+
+Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state. You should use:
+
+```
+// Correct when you need to use this.state and this.props 
+// for calculating new values for state.
+this.setState((prevState, props) => ({
+   width: prevState.width + 10,
+   height: prevState.height + props.height,
+}));
+```
+
+##### Creating ToDoList component
+
+We have already created `TO DO` page that have two simple widgets that display text. Lets create ToDoList that will be placed in the widget in the left side that will replace plain text.
+
+```
+import React from 'react';
+import {
+  arrayOf,
+  shape,
+  string,
+  number,
+  bool,
+} from 'prop-types';
+
+import Paper from './base/Paper';
+
+const propTypes = {
+  title: string,
+  todo: arrayOf(shape({
+    id: number.isRequired,
+    text: string.isRequired,
+    checked: bool.isRequired,
+  })).isRequired,
+};
+
+const defaultProps = {
+  title: '',
+};
+
+const TodoList = ({
+  title,
+  todo,
+}) => (
+  <Paper>
+    <h2>{ title }</h2>
+    <hr className="divider--top" />
+    <ul>
+      {
+        todo.length > 0 ? todo.map((item) => (
+          <li key={ item.id }>
+            { item.text }
+          </li>
+        )) :
+        <div>Great, you have completed all tasks :)</div>
+        }
+    </ul>
+  </Paper>
+);
+
+TodoList.propTypes = propTypes;
+TodoList.defaultProps = defaultProps;
+
+export default TodoList;
+```
+
+It's a good practise to use PropTypes with React components. PropTypes is a helper library that is used for describing what kind of data will be passed to component. It's something like contract between data that will be passed to component and component. It data will contain wrong type or structure React will throw error message in browser console. This will let to decrease errors in your application and will let for developer to be aware about component (what kind of data component is using).
+
+Let's include this component in our `Todo` page.
+
+```
+import React from 'react';
+import Paper from '../components/base/Paper';
+import Columns from '../components/base/Columns';
+import TodoList from '../components/TodoList';
+import * as layouts from '../constants/layouts';
+
+// It's not a good idea to include (describe) mocked data in container or components.
+// But right now we will keep it here.
+const mockedTodoList = [
+  { id: 1, text: 'Set up project.', checked: true },
+  { id: 2, text: 'Implement new features.', checked: false },
+  { id: 3, text: 'Test new features.', checked: false },
+  { id: 4, text: 'Fix bugs.', checked: false },
+  { id: 5, text: 'Build and make release.', checked: false },
+  { id: 6, text: 'Be a happy developer.', checked: false },
+];
+
+const TodoContainer = () => (
+  <Columns
+    options={ layouts.TWO_COLUMNS_LAYOUTS }
+  >
+    <TodoList
+      title="My awesome to do list"
+      todo={ mockedTodoList }
+    />
+    <Paper>
+      Todo form
+    </Paper>
+  </Columns>
+);
+
+export default TodoContainer;
+```
+Now you should see `Todo` page with `TodoList` basic widget that can render list:
+
+![To do page with two widgets](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-page-step-4.png)
+
+You have learned:
+
+* How to create a new component;
+* How to pass data to it by using properties;
+* How to validate data with PropTypes that are passed to component;
+* How to include component in page and pass data to it from page;
+
+##### Something goes wrong or you are lazy to type? 
+
+You can switch to already implemented step of creation page of this tutorial:
+
+```
+> git checkout tutorial-step-2
+```
