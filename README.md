@@ -491,7 +491,7 @@ export default TodoContainer;
 ```
 Now you should see `Todo` page with `TodoList` basic widget that can render list:
 
-![To do page with two widgets](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-page-step-4.png)
+![To do page with todo list](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-page-step-4.png)
 
 You have learned:
 
