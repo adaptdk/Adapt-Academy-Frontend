@@ -4,8 +4,8 @@
   "description": "Front end react boilerplate for Adapt A/S academy",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/cross-env NODE_ENV=production API_ENDPOINT='https://min-api.cryptocompare.com' APP_NAME='React boilerplate with examples' node ./index.js",
-    "start:dev": "./node_modules/.bin/cross-env NODE_ENV=development API_ENDPOINT='https://min-api.cryptocompare.com' APP_NAME='React boilerplate with examples' ./node_modules/.bin/nodemon --ignore ./src/client/ ./index.js",
+    "start": "./node_modules/.bin/cross-env NODE_ENV=production API_ENDPOINT=\"https://min-api.cryptocompare.com\" APP_NAME=\"React boilerplate with examples\" node ./index.js",
+    "start:dev": "./node_modules/.bin/cross-env NODE_ENV=development API_ENDPOINT=\"https://min-api.cryptocompare.com\" APP_NAME=\"React boilerplate with examples\" ./node_modules/.bin/nodemon --ignore ./src/client/ ./index.js",
     "lint": "npm run lint:client",
     "lint:client": "./node_modules/.bin/eslint ./src/client",
     "lint:server": "./node_modules/.bin/eslint ./src/server",
