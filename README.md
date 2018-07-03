@@ -569,7 +569,7 @@ export default combineReducers({
 ```
 Right now, we already included todo reducer in  our store and we can inspect it by using react dev tool ([more about react dev tool](https://reactjs.org/blog/2014/01/02/react-chrome-developer-tools.html)) or redux dev tool ([more about redux dev tool](https://codeburst.io/redux-devtools-for-dummies-74566c597d7)):
 
-![To do page with todo list](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-page-step-4.png)
+![To do page with todo list](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-reducer-step-1.png)
 
 Now we need to connect our store in our component and pass `todo` object from state and this can be done by using so called high order function - `connect` and pure function `mapStateToProps` like it is done below:
 
