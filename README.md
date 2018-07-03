@@ -398,7 +398,15 @@ this.setState((prevState, props) => ({
 
 ##### Creating ToDoList component
 
-We have already created `TO DO` page that have two simple widgets that display text. Lets create ToDoList that will be placed in the widget in the left side that will replace plain text.
+We have already created `TO DO` page that have two simple widgets that display text.
+
+If you didn't complete previous steps of tutorial, you can checkout previous step with:
+
+```
+> git checkout tutorial-step-1
+```
+
+Lets create ToDoList that will be placed in the widget in the left side that will replace plain text.
 
 ```
 import React from 'react';
@@ -507,3 +515,114 @@ You can switch to already implemented step of creation page of this tutorial:
 ```
 > git checkout tutorial-step-2
 ```
+
+#### Managing application state with Redux
+
+Redux - a helper library that is used alongside with React. It's a predictable state container for js applications. Basically redux operates in a similiar fashion to a reducing function. What does it mean? It means that all state of your application is stored in an object tree and the only way to change the state is to emit an `action` (object that describes what happened) that is handled by pure function called reducer. Reducers are just pure functions that take the previous state and an action, and return the next state. 
+
+Basically before start using redux in your application you need to configure store, that contains application state as tree object. React boilerplate already did this work for you. So you just need to write new reducers and actions for emiting and handling state changes. Let's start writing reducer :)
+
+##### Creating todo reducer
+
+We already have `TodoList` that we can connect to reducer so we can start implementing reducer for that component. If you don't, just run:
+
+If you didn't complete previous steps of tutorial, you can checkout previous step with:
+
+```
+> git checkout tutorial-step-2
+```
+
+First of all we will create `todo` reducer as a simple pure function that will always return the same state (todo list):
+
+```
+// src/client/reducers/todo.js
+
+const initialState = [
+  { id: 1, text: 'Set up project.', checked: true },
+  { id: 2, text: 'Implement new features.', checked: false },
+  { id: 3, text: 'Test new features.', checked: false },
+  { id: 4, text: 'Fix bugs.', checked: false },
+  { id: 5, text: 'Build and make release.', checked: false },
+  { id: 6, text: 'Be a happy developer.', checked: false },
+];
+
+const todo = (state = initialState) => state;
+
+export default todo;
+
+```
+
+That's all. This is our reducer that always returns the same application state. Now we need to add it to store. This can be done in `src/client/reducers/index.js` file:
+
+```
+import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
+import { reducer as formReducer } from 'redux-form';
+
+import todo from './todo';
+
+export default combineReducers({
+  routing: routerReducer,
+  form: formReducer,
+  todo,
+});
+```
+Right now, we already included todo reducer in  our store and we can inspect it by using react dev tool ([more about react dev tool](https://reactjs.org/blog/2014/01/02/react-chrome-developer-tools.html)) or redux dev tool ([more about redux dev tool](https://codeburst.io/redux-devtools-for-dummies-74566c597d7)):
+
+![To do page with todo list](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-page-step-4.png)
+
+Now we need to connect our store in our component and pass `todo` object from state and this can be done by using so called high order function - `connect` and pure function `mapStateToProps` like it is done below:
+
+```
+import React from 'react';
+import { connect } from 'react-redux';
+import {
+  arrayOf,
+  bool,
+  number,
+  shape,
+  string,
+} from 'prop-types';
+
+import Paper from '../components/base/Paper';
+import Columns from '../components/base/Columns';
+import TodoList from '../components/TodoList';
+import * as layouts from '../constants/layouts';
+
+const propTypes = {
+  todo: arrayOf(shape({
+    id: number.isRequired,
+    text: string.isRequired,
+    checked: bool.isRequired,
+  })).isRequired,
+};
+
+const TodoContainer = ({ todo }) => (
+  <Columns
+    options={ layouts.TWO_COLUMNS_LAYOUTS }
+  >
+    <TodoList
+      title="My awesome to do list"
+      todo={ todo }
+    />
+    <Paper>
+      Todo form
+    </Paper>
+  </Columns>
+);
+
+TodoContainer.propTypes = propTypes;
+
+// Mapping `todo` object from state to component properties
+const mapStateToProps = (state) => ({
+  todo: state.todo,
+});
+
+// Connecting `todo` object to properties in container
+export default connect(mapStateToProps)(TodoContainer);
+```
+
+Right now, we only passing some immutable state to our `TodoList` component through container (page).
+
+
+
