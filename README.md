@@ -1,8 +1,15 @@
 # Adapt academy react simple starter boilerplate
 
-* [Getting started](#getting-started)
-* [Application structure](#application-structure)
-* [React quick start tutorial](#react-quick-start-tutorial)
+* [Getting started](#getting-started):
+* [Application structure](#application-structure):
+	1. [Quick overview of client folder](#quick-overview-of-client-folder)
+* [React quick start tutorial](#react-quick-start-tutorial):
+	1. [Adding new page](#adding-new-page)
+	2. [Defining a component](#defining-a-component)
+	3. [Managing application state](#managing-application-state)
+	4. [Managing application state with Redux](#managing-application-state-with-redux)
+
+--
 
 ### Getting started
 
