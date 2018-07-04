@@ -3,25 +3,28 @@ html {
   font-size: 70%;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
-  font-size: 1.4rem;
   background-color: $blue-light;
+  font-size: 1.4rem;
   margin: 0;
   padding: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin: $small-margin;
 }
 
 .divider {
-   &--top {
-     border-top: 2px solid $gray-light;
-   }
+  &--top {
+    border-top: 2px solid $gray-light;
+  }
 
   &--left {
     border-top: 2px solid $gray-light;
@@ -41,12 +44,12 @@ h2, h3 {
     padding-right: $small-padding;
   }
 
-  &--small-right {
-    padding-right: $small-padding;
+  &--small-left {
+    padding-left: $small-padding;
   }
 
   &--small {
-    padding: $small-padding $small-padding $small-padding $small-padding;
+    padding: $small-padding;
   }
 }
 
@@ -63,11 +66,11 @@ h2, h3 {
     margin-right: $small-margin;
   }
 
-  &--small-right {
-    margin-right: $small-margin;
+  &--small-left {
+    margin-left: $small-margin;
   }
 
   &--small {
-    margin: $small-margin $small-margin $small-margin $small-margin;
+    margin: $small-margin;
   }
 }

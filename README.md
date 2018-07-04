@@ -1,8 +1,15 @@
 # Adapt academy react simple starter boilerplate
 
-* [Getting started](#getting-started)
-* [Application structure](#application-structure)
-* [React quick start tutorial](#react-quick-start-tutorial)
+* [Getting started](#getting-started):
+* [Application structure](#application-structure):
+	1. [Quick overview of client folder](#quick-overview-of-client-folder)
+* [React quick start tutorial](#react-quick-start-tutorial):
+	1. [Adding new page](#adding-new-page)
+	2. [Defining a component](#defining-a-component)
+	3. [Managing application state](#managing-application-state)
+	4. [Managing application state with Redux](#managing-application-state-with-redux)
+
+---
 
 ### Getting started
 
@@ -45,6 +52,26 @@ or
 ```
 
 Open [http://localhost:4000](http://localhost:4000) in your borwser.
+
+#### Code formatting and styleguide
+
+For JS files in most cases you will follow Eslint rules. Eslint will inform when your code is written wrongly:
+
+```
+> yarn lint
+```
+
+Some of the warnings or even errors can be fixed automatically:
+
+```
+> yarn lint --fix
+```
+
+For sass files you will use `sass-lint` linter:
+
+```
+> yarn lint:sass
+```
 
 ### Application structure
 
@@ -924,29 +951,39 @@ Now you will be able to check checkboxes and stroke a todo task :)
 In short. Our action creator with action `{ type: types.TODO_TOGGLE, payload: { id } }` will inform reducer that something happened in front end and we need to do changes on application state:
 
 ```
-				<TodoList { ...props } />
-							|
-							V
+<TodoList { ...props } />
+
+		|
+		V
+
 <input onChange={ (evt) => toggleTodo(item.id) }/>
-							|
-							V
+
+		|
+		V
+
 { type: types.TODO_TOGGLE, payload: { id } }
-							|
-							V
-				case types.TODO_TOGGLE: {
-			      const { id } = action.payload;
-			      return state.map((item) => {
-			        if (item.id === id) {
-			          item.checked = !item.checked;
-			        }
-			        return item;
-			      });
-			    }
-							|
-							V
+
+		|
+		V
+
+case types.TODO_TOGGLE: {
+  const { id } = action.payload;
+  return state.map((item) => {
+    if (item.id === id) {
+      item.checked = !item.checked;
+    }
+    return item;
+  });
+}
+
+		|
+		V
+
 State is mapped to props in <TodoContainer { ...props } />
-							|
-							V
+
+		|
+		V
+
 New props emits rendering in <TodoList { ...props } /> and list is updated
 ```
 
@@ -966,5 +1003,4 @@ You can switch to already implemented step of creation page of this tutorial:
 ```
 > git checkout tutorial-step-3
 ```
-
 

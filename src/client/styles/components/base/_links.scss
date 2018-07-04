@@ -1,34 +1,33 @@
 .arrow-link {
+  color: $gray;
   display: inline-block;
 
   i {
-    font-size: 1.8rem
+    font-size: 1.8rem;
   }
 
-  color: $gray;
-
-  &:before {
-    transition: transform .2s ease-in-out;
-    content: "";
+  &::before {
+    content: '';
     display: inline-block;
-    margin-left: 0;
     height: 10px;
+    margin-left: 0;
+    transition: transform .2s ease-in-out;
     width: 10px;
   }
 
   &:link,
   &:visited {
-    transition: color .2s ease-in;
     color: $gray-dark;
     text-decoration: none;
+    transition: color .2s ease-in;
   }
 
   &:hover {
-    transition: color .2s ease-out;
     color: $san-marino;
     text-decoration: underline;
+    transition: color .2s ease-out;
 
-    &:before {
+    &::before {
       margin-left: $ultra-small-margin;
     }
   }
