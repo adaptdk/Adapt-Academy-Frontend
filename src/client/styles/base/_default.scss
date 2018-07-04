@@ -36,6 +36,18 @@ h2, h3 {
   &--small-top {
     padding-top: $small-padding;
   }
+
+  &--small-right {
+    padding-right: $small-padding;
+  }
+
+  &--small-right {
+    padding-right: $small-padding;
+  }
+
+  &--small {
+    padding: $small-padding $small-padding $small-padding $small-padding;
+  }
 }
 
 .margin {
@@ -45,5 +57,17 @@ h2, h3 {
 
   &--small-top {
     padding-top: $small-margin;
+  }
+
+  &--small-right {
+    margin-right: $small-margin;
+  }
+
+  &--small-right {
+    margin-right: $small-margin;
+  }
+
+  &--small {
+    margin: $small-margin $small-margin $small-margin $small-margin;
   }
 }
