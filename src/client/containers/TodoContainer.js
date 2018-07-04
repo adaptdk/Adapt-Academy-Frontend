@@ -1,27 +1,40 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import {
+  arrayOf,
+  bool,
+  number,
+  shape,
+  string,
+  func,
+} from 'prop-types';
+import { bindActionCreators } from 'redux';
+
 import Paper from '../components/base/Paper';
 import Columns from '../components/base/Columns';
 import TodoList from '../components/TodoList';
 import * as layouts from '../constants/layouts';
+import { toggleTodo } from '../actions/todo';
 
-// It's not a good idea to include (describe) mocked data in container or components.
-// But right now we will keep it here.
-const mockedTodoList = [
-  { id: 1, text: 'Set up project.', checked: true },
-  { id: 2, text: 'Implement new features.', checked: false },
-  { id: 3, text: 'Test new features.', checked: false },
-  { id: 4, text: 'Fix bugs.', checked: false },
-  { id: 5, text: 'Build and make release.', checked: false },
-  { id: 6, text: 'Be a happy developer.', checked: false },
-];
+const propTypes = {
+  todo: arrayOf(shape({
+    id: number,
+    text: string,
+    checked: bool,
+  })).isRequired,
+  actions: shape({
+    toggleTodo: func,
+  }).isRequired,
+};
 
-const TodoContainer = () => (
+const TodoContainer = ({ todo, actions }) => (
   <Columns
     options={ layouts.TWO_COLUMNS_LAYOUTS }
   >
     <TodoList
       title="My awesome to do list"
-      todo={ mockedTodoList }
+      todo={ todo }
+      onToggleTodo={ actions.toggleTodo }
     />
     <Paper>
       Todo form
@@ -29,4 +42,19 @@ const TodoContainer = () => (
   </Columns>
 );
 
-export default TodoContainer;
+TodoContainer.propTypes = propTypes;
+
+const mapStateToProps = (state) => ({
+  todo: state.todo,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators({
+    toggleTodo,
+  }, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(TodoContainer);
