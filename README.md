@@ -569,7 +569,7 @@ export default combineReducers({
 ```
 Right now, we already included todo reducer in  our store and we can inspect it by using react dev tool ([more about react dev tool](https://reactjs.org/blog/2014/01/02/react-chrome-developer-tools.html)) or redux dev tool ([more about redux dev tool](https://codeburst.io/redux-devtools-for-dummies-74566c597d7)):
 
-![To do page with todo list](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-reducer-step-1.png)
+![To do page with simple reducer](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-reducer-step-1.png)
 
 Now we need to connect our store in our component and pass `todo` object from state and this can be done by using so called high order function - `connect` and pure function `mapStateToProps` like it is done below:
 
@@ -591,9 +591,9 @@ import * as layouts from '../constants/layouts';
 
 const propTypes = {
   todo: arrayOf(shape({
-    id: number.isRequired,
-    text: string.isRequired,
-    checked: bool.isRequired,
+    id: number,
+    text: string,
+    checked: bool,
   })).isRequired,
 };
 
@@ -624,5 +624,347 @@ export default connect(mapStateToProps)(TodoContainer);
 
 Right now, we only passing some immutable state to our `TodoList` component through container (page).
 
+##### Creating todo actions
+
+There is no point to have only state in React components. In most cases we need to have possibility to update state of application when user interact with user interface (for example pressing on checkbox should stroke text in todo list) and dispatch that changes to reducer that will update application state.
+
+The state can be changed with actions. Actions are payloads of information that send data from your application to your store. They are the only source of information for the store and you can send them to the store using:
+
+```
+store.dispatch({
+	type: 'TODO_TOGGLE', // action type
+	payload: { id }, // data passed to reducer
+})
+```
+
+The `dispatch()` function can be accessed directly from the store as `store.dispatch()`, but more likely you'll access it using a helper like `react-redux` connect(). You can use bindActionCreators() to automatically bind many action creators to a dispatch() function. You will become familiar with that later. Now let concentrate on implementing actions creator. 
+
+For small projects it's ok to define `type` as a string literals, but for bigger projects it's a common practise to define action types as a constant in separate file (some patterns suggest to store action types in the same file were lives reducer).
+
+Lets implement possibility to toggle our tasks in todo list.
+
+First of all we need to slightly modify our TodoList component.
+
+```
+import React from 'react';
+import {
+  arrayOf,
+  shape,
+  string,
+  number,
+  bool,
+} from 'prop-types';
+
+import Paper from './base/Paper';
+
+const propTypes = {
+  title: string,
+  todo: arrayOf(shape({
+    id: number,
+    text: string,
+    checked: bool,
+  })).isRequired,
+};
+
+const defaultProps = {
+  title: '',
+};
+
+const TodoList = ({
+  title,
+  todo,
+}) => (
+  <Paper>
+    <h2>{ title }</h2>
+    <hr className="divider--top" />
+    {
+      todo.length > 0 ? todo.map((item) => (
+        <div key={ item.id } className="padding--small-bottom">
+          <label
+            htmlFor={ `todoItem-${item.id}` }
+          >
+            <input
+              id={ `todoItem-${item.id}` }
+              className="margin--small-right"
+              type="checkbox"
+              checked={ item.checked }
+              onChange={ () => {} }
+            />
+            <span style={ {
+              textDecoration: `${item.checked ? 'line-through' : 'none'}`,
+            } }
+            >
+              { item.text }
+            </span>
+          </label>
+        </div>
+        )) :
+      <div>Great, you have completed all tasks :)</div>
+    }
+  </Paper>
+);
+
+TodoList.propTypes = propTypes;
+TodoList.defaultProps = defaultProps;
+
+export default TodoList;
+```
+
+Now our component will have checkboxes that will let for us to stroke one of the todo list:
+
+![To do page with simple reducer](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-reducer-step-2.png)
+
+You have already noticed that it is not possible to check or uncheck checkboxes. This is because our `input` elements are controled by React component. In this case item.checked for concrete `input` element is not updated when change event is fired.
+
+We need to pass action creator to our component, that will triger state change in reducer. First of all we need to create our action creator that will pass action to reducer and describe what should happen when that action is passed to reducer:
+
+```
+// src/client/actions/todo.js
+import * as types from '../constants/actionTypes';
+
+export const toggleTodo = (id) => ({ type: types.TODO_TOGGLE, payload: { id } });
+
+// src/client/constants/actionTypes.js
+export const TODO_TOGGLE = 'TODO_TOGGLE';
+
+// src/client/reducers/todo.js
+import * as types from '../constants/actionTypes';
+
+const initialState = [
+  { id: 1, text: 'Set up project.', checked: true },
+  { id: 2, text: 'Implement new features.', checked: false },
+  { id: 3, text: 'Test new features.', checked: false },
+  { id: 4, text: 'Fix bugs.', checked: false },
+  { id: 5, text: 'Build and make release.', checked: false },
+  { id: 6, text: 'Be a happy developer.', checked: false },
+];
+
+const todo = (state = initialState, action) => {
+  switch (action.type) {
+    case types.TODO_TOGGLE: {
+      const { id } = action.payload;
+      return state.map((item) => {
+        if (item.id === id) {
+          item.checked = !item.checked;
+        }
+        return item;
+      });
+    }
+    default:
+      return state;
+  }
+};
+
+export default todo;
+```
+
+Now we can pass action to container and its components:
+
+```
+// src/client/containers/TodoContainer.js
+import React from 'react';
+import { connect } from 'react-redux';
+import {
+  arrayOf,
+  bool,
+  number,
+  shape,
+  string,
+  func,
+} from 'prop-types';
+import { bindActionCreators } from 'redux';
+
+import Paper from '../components/base/Paper';
+import Columns from '../components/base/Columns';
+import TodoList from '../components/TodoList';
+import * as layouts from '../constants/layouts';
+import { toggleTodo } from '../actions/todo';
+
+const propTypes = {
+  todo: arrayOf(shape({
+    id: number,
+    text: string,
+    checked: bool,
+  })).isRequired,
+  actions: shape({
+    toggleTodo: func,
+  }).isRequired,
+};
+
+const TodoContainer = ({ todo, actions }) => (
+  <Columns
+    options={ layouts.TWO_COLUMNS_LAYOUTS }
+  >
+    <TodoList
+      title="My awesome to do list"
+      todo={ todo }
+      onToggleTodo={ actions.toggleTodo }
+    />
+    <Paper>
+      Todo form
+    </Paper>
+  </Columns>
+);
+
+TodoContainer.propTypes = propTypes;
+
+const mapStateToProps = (state) => ({
+  todo: state.todo,
+});
+
+// We will bind dispatch to our action creater and map 
+// it to props so it would be possible 
+// to trigger state change in reducer.
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators({
+    toggleTodo,
+  }, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(TodoContainer);
+```
+
+and our `TodoList` component will look:
+
+```
+// src/client/components/TodoList.js
+import React from 'react';
+import {
+  arrayOf,
+  shape,
+  string,
+  number,
+  bool,
+  func,
+} from 'prop-types';
+
+import Paper from './base/Paper';
+
+const propTypes = {
+  title: string,
+  todo: arrayOf(shape({
+    id: number.isRequired,
+    text: string.isRequired,
+    checked: bool.isRequired,
+  })).isRequired,
+  onToggleTodo: func.isRequired,
+};
+
+const defaultProps = {
+  title: '',
+};
+
+const TodoList = ({
+  title,
+  todo,
+  onToggleTodo,
+}) => {
+  // This is so called cyrrying in JS. 
+  // This means that we pass id from component render part to function that 
+  // can acces id and so called SyntheticEvent (evt) 
+  const onChangeCallback = (id) => (evt) => onToggleTodo(id);
+
+  return (
+    <Paper>
+      <h2>{ title }</h2>
+      <hr className="divider--top" />
+      {
+        todo.length > 0 ? todo.map((item) => (
+          <div key={ item.id } className="padding--small-bottom">
+            <label
+              htmlFor={ `todoItem-${item.id}` }
+            >
+              <input
+                id={ `todoItem-${item.id}` }
+                className="margin--small-right"
+                type="checkbox"
+                checked={ item.checked }
+                onChange={ onChangeCallback(item.id) }
+              />
+              <span style={ {
+                  textDecoration: `${item.checked ? 'line-through' : 'none'}`,
+                } }
+              >
+                { item.text }
+              </span>
+            </label>
+          </div>
+          )) :
+        <div>Great, you have completed all tasks :)</div>
+      }
+    </Paper>
+  );
+};
+
+TodoList.propTypes = propTypes;
+TodoList.defaultProps = defaultProps;
+
+export default TodoList;
+```
+
+It's possible to write:
+
+```
+<input
+	id={ `todoItem-${item.id}` }
+	className="margin--small-right"
+	type="checkbox"
+	checked={ item.checked }
+	onChange={ (evt) => onToggleTodo(id) }
+/>
+```
+
+But for performance it's better to use so called currying (partial applying).
+
+Now you will be able to check checkboxes and stroke a todo task :)
+
+In short. Our action creator with action `{ type: types.TODO_TOGGLE, payload: { id } }` will inform reducer that something happened in front end and we need to do changes on application state:
+
+```
+				<TodoList { ...props } />
+							|
+							V
+<input onChange={ (evt) => toggleTodo(item.id) }/>
+							|
+							V
+{ type: types.TODO_TOGGLE, payload: { id } }
+							|
+							V
+				case types.TODO_TOGGLE: {
+			      const { id } = action.payload;
+			      return state.map((item) => {
+			        if (item.id === id) {
+			          item.checked = !item.checked;
+			        }
+			        return item;
+			      });
+			    }
+							|
+							V
+State is mapped to props in <TodoContainer { ...props } />
+							|
+							V
+New props emits rendering in <TodoList { ...props } /> and list is updated
+```
+
+![To do page with complete reducer](https://raw.githubusercontent.com/adaptdk/aa-fe/master/tutorial/todo-reducer-step-3.png)
+
+You have learned:
+
+* How to create reducer that will be responsible for state managing;
+* How to create action that will inform reducer about changes in front end (button click, input change and so on);
+* How to pass state from reducer to container and its components props;
+* How to bind action creators in container and its components;
+
+##### Something goes wrong or you are lazy to type? 
+
+You can switch to already implemented step of creation page of this tutorial:
+
+```
+> git checkout tutorial-step-3
+```
 
 
