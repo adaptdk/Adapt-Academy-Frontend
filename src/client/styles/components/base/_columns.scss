@@ -4,10 +4,10 @@ $_gap: calc(5px * -1);
   padding: 0;
 
   &__row {
-    padding: 0;
-    margin: 0 $_gap;
     display: flex;
     flex-flow: row wrap;
+    margin: 0 $_gap;
+    padding: 0;
   }
 
   &__column {

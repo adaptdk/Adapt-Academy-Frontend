@@ -1,3 +1,4 @@
+// scss-lint:disable
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -6,9 +7,9 @@
  */
 
 html {
-    font-family: sans-serif; /* 1 */
-    -ms-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    font-family: sans-serif; /* 2 */
 }
 
 /**
@@ -90,8 +91,8 @@ template, /* 1 */
  */
 
 a {
-    background-color: transparent; /* 1 */
-    -webkit-text-decoration-skip: objects; /* 2 */
+    -webkit-text-decoration-skip: objects; /* 1 */
+    background-color: transparent; /* 2 */
 }
 
 /**
@@ -113,7 +114,7 @@ a:hover {
  */
 
 abbr[title] {
-    border-bottom: none; /* 1 */
+    border-bottom: 0; /* 1 */
     text-decoration: underline; /* 2 */
     text-decoration: underline dotted; /* 2 */
 }
@@ -417,3 +418,4 @@ textarea {
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
 }
+// scss-lint:enable

@@ -3,10 +3,10 @@
 }
 
 @mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
+  &::after {
     clear: both;
+    content: '';
+    display: table;
   }
 }
 
@@ -16,9 +16,9 @@
   }
 }
 
-@mixin truncate() {
-  width: 100%;
+@mixin truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 100%;
 }

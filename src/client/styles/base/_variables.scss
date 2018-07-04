@@ -15,10 +15,10 @@ $mobile-width: 320px;
 $tablet-width: 736px;
 
 $breakpoints: (
-  small-up     : ( min-width: 650px ),
-  medium-up    : ( min-width: 950px ),
-  large-up     : ( min-width: 1250px ),
-  small-height : '( max-height: 800px ) and ( min-width: 950px )'
+  small-up: ( min-width: 650px ),
+  medium-up: ( min-width: 950px ),
+  large-up: ( min-width: 1250px ),
+  small-height: '( max-height: 800px ) and ( min-width: 950px )'
 );
 
 $card-border-radius: 0;

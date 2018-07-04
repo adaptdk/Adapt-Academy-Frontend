@@ -1,6 +1,6 @@
 .app {
-  max-width: $max-content-width;
   margin: 0 auto;
+  max-width: $max-content-width;
   padding: 0 $small-padding;
 
   @include respond-to(medium-up) {
@@ -9,8 +9,8 @@
 
   .main {
     display: block;
-    margin-top: $small-margin;
     margin-bottom: $small-margin;
+    margin-top: $small-margin;
 
     @include respond-to(small-up) {
       margin-top: $medium-margin;

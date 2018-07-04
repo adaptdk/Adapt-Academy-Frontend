@@ -10,7 +10,9 @@
     "lint:client": "./node_modules/.bin/eslint ./src/client",
     "lint:server": "./node_modules/.bin/eslint ./src/server",
     "lint:shared": "./node_modules/.bin/eslint ./src/shared",
-    "test:client": "mocha --require @babel/register --require ./src/tests/clientTester.js './src/tests/client/**/*.js'",
+    "lint:scss": "./node_modules/.bin/sass-lint -c scss-lint.yml -v -q",
+    "lint:scss:fix": "./node_modules/.bin/sass-lint-auto-fix -c scss-lint.yml",
+    "test:client": "mocha --require @babel/register --require ./src/tests/clientTester.js \"./src/tests/client/**/*.js\"",
     "test:client:watch": "npm run test:client -- --watch",
     "bundle": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js"
   },
@@ -95,6 +97,8 @@
     "redux-api-middleware": "^2.3.0",
     "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0",
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.11.0",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.19.1"

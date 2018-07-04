@@ -11,10 +11,9 @@
     }
   }
   // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-      + "Available breakpoints are: #{map-keys($breakpoints)}.";
-  }
+  //sass-lint:disable no-warn
+  @else { @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. Available breakpoints are: #{map-keys($breakpoints)}.'; }
+  //sass-lint:enable no-warn
 }
 
 // Mixin for vertical aligning
