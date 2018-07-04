@@ -9,7 +9,7 @@
 	3. [Managing application state](#managing-application-state)
 	4. [Managing application state with Redux](#managing-application-state-with-redux)
 
---
+---
 
 ### Getting started
 
@@ -52,6 +52,26 @@ or
 ```
 
 Open [http://localhost:4000](http://localhost:4000) in your borwser.
+
+#### Code formatting and styleguide
+
+For JS files in most cases you will follow Eslint rules. Eslint will inform when your code is written wrongly:
+
+```
+> yarn lint
+```
+
+Some of the warnings or even errors can be fixed automatically:
+
+```
+> yarn lint --fix
+```
+
+For sass files you will use `sass-lint` linter:
+
+```
+> yarn lint:sass
+```
 
 ### Application structure
 
