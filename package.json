@@ -74,7 +74,9 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
-    "url-loader": "^1.0.1"
+    "url-loader": "^1.0.1",
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.11.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0-beta.40",
@@ -97,8 +99,6 @@
     "redux-api-middleware": "^2.3.0",
     "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0",
-    "sass-lint": "^1.12.1",
-    "sass-lint-auto-fix": "^0.11.0",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.19.1"
