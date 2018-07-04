@@ -7,7 +7,6 @@ import TodoContainer from './containers/TodoContainer';
 const routes = [
   {
     path: '/',
-    displayName: 'Root',
     exact: true,
     Component: () => <RootRedirector to="/home" />,
   },

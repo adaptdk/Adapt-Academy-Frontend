@@ -1,6 +1,32 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {
+  oneOfType,
+  string,
+  bool,
+  node,
+  func,
+  object,
+  array,
+} from 'prop-types';
 import { Route } from 'react-router-dom';
+
+const propTypes = {
+  path: string,
+  exact: bool,
+  Component: oneOfType([
+    node,
+    func,
+  ]).isRequired,
+  routes: array,
+  context: object,
+};
+
+const defaultProps = {
+  path: null,
+  exact: false,
+  routes: [],
+  context: {},
+};
 
 const RoutesRenderer = ({
   path,
@@ -22,20 +48,7 @@ const RoutesRenderer = ({
   />
 );
 
-RoutesRenderer.propTypes = {
-  path: PropTypes.string.isRequired,
-  exact: PropTypes.bool.isRequired,
-  Component: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.func,
-  ]).isRequired,
-  routes: PropTypes.array,
-  context: PropTypes.object,
-};
-
-RoutesRenderer.defaultProps = {
-  routes: [],
-  context: {},
-};
+RoutesRenderer.propTypes = propTypes;
+RoutesRenderer.defaultProps = defaultProps;
 
 export default RoutesRenderer;
