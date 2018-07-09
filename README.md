@@ -217,18 +217,18 @@ Hurray, we have created our first page:
 
 You can see that navigation menu is genarated automatically. This is because we use `Nav` base component. Let's see how we can use other base components that already exists in our starter project.
 
-Lets add `Paper` component. Basically this component will create white box with shadow which can be used for page widget creation.
+Lets add `Widget` component. Basically this component will create white box with shadow which can be used for page widget creation.
 
 ```
 // src/client/containers/TodoContainer.js 
 
 import React from 'react';
-import Paper from '../components/base/Paper';
+import Widget from '../components/base/Widget';
 
 const TodoContainer = () => (
-  <Paper>
+  <Widget>
     Todo page
-  </Paper>
+  </Widget>
 );
 
 export default TodoContainer;
@@ -242,7 +242,7 @@ We can layout page by splitting it into two separate widgets by using base `Colu
 // src/client/containers/TodoContainer.js 
 
 import React from 'react';
-import Paper from '../components/base/Paper';
+import Widget from '../components/base/Widget';
 import Columns from '../components/base/Columns';
 import * as layouts from '../constants/layouts';
 
@@ -250,12 +250,12 @@ const TodoContainer = () => (
   <Columns
     options={ layouts.TWO_COLUMNS_LAYOUTS }
   >
-    <Paper>
+    <Widget>
       Todo list
-    </Paper>
-    <Paper>
+    </Widget>
+    <Widget>
       Todo form
-    </Paper>
+    </Widget>
   </Columns>
 );
 
@@ -445,7 +445,7 @@ import {
   bool,
 } from 'prop-types';
 
-import Paper from './base/Paper';
+import Widget from './base/Widget';
 
 const propTypes = {
   title: string,
@@ -464,9 +464,9 @@ const TodoList = ({
   title,
   todo,
 }) => (
-  <Paper>
+  <Widget>
     <h2>{ title }</h2>
-    <hr className="divider--top" />
+    <div className="divider" />
     <ul>
       {
         todo.length > 0 ? todo.map((item) => (
@@ -477,7 +477,7 @@ const TodoList = ({
         <div>Great, you have completed all tasks :)</div>
         }
     </ul>
-  </Paper>
+  </Widget>
 );
 
 TodoList.propTypes = propTypes;
@@ -492,7 +492,7 @@ Let's include this component in our `Todo` page.
 
 ```
 import React from 'react';
-import Paper from '../components/base/Paper';
+import Widget from '../components/base/Widget';
 import Columns from '../components/base/Columns';
 import TodoList from '../components/TodoList';
 import * as layouts from '../constants/layouts';
@@ -516,9 +516,9 @@ const TodoContainer = () => (
       title="My awesome to do list"
       todo={ mockedTodoList }
     />
-    <Paper>
+    <Widget>
       Todo form
-    </Paper>
+    </Widget>
   </Columns>
 );
 
@@ -611,7 +611,7 @@ import {
   string,
 } from 'prop-types';
 
-import Paper from '../components/base/Paper';
+import Widget from '../components/base/Widget';
 import Columns from '../components/base/Columns';
 import TodoList from '../components/TodoList';
 import * as layouts from '../constants/layouts';
@@ -632,9 +632,9 @@ const TodoContainer = ({ todo }) => (
       title="My awesome to do list"
       todo={ todo }
     />
-    <Paper>
+    <Widget>
       Todo form
-    </Paper>
+    </Widget>
   </Columns>
 );
 
@@ -682,7 +682,7 @@ import {
   bool,
 } from 'prop-types';
 
-import Paper from './base/Paper';
+import Widget from './base/Widget';
 
 const propTypes = {
   title: string,
@@ -701,9 +701,9 @@ const TodoList = ({
   title,
   todo,
 }) => (
-  <Paper>
+  <Widget>
     <h2>{ title }</h2>
-    <hr className="divider--top" />
+    <div className="divider" />
     {
       todo.length > 0 ? todo.map((item) => (
         <div key={ item.id } className="padding--small-bottom">
@@ -728,7 +728,7 @@ const TodoList = ({
         )) :
       <div>Great, you have completed all tasks :)</div>
     }
-  </Paper>
+  </Widget>
 );
 
 TodoList.propTypes = propTypes;
@@ -801,7 +801,7 @@ import {
 } from 'prop-types';
 import { bindActionCreators } from 'redux';
 
-import Paper from '../components/base/Paper';
+import Widget from '../components/base/Widget';
 import Columns from '../components/base/Columns';
 import TodoList from '../components/TodoList';
 import * as layouts from '../constants/layouts';
@@ -827,9 +827,9 @@ const TodoContainer = ({ todo, actions }) => (
       todo={ todo }
       onToggleTodo={ actions.toggleTodo }
     />
-    <Paper>
+    <Widget>
       Todo form
-    </Paper>
+    </Widget>
   </Columns>
 );
 
@@ -868,7 +868,7 @@ import {
   func,
 } from 'prop-types';
 
-import Paper from './base/Paper';
+import Widget from './base/Widget';
 
 const propTypes = {
   title: string,
@@ -895,9 +895,9 @@ const TodoList = ({
   const onChangeCallback = (id) => (evt) => onToggleTodo(id);
 
   return (
-    <Paper>
+    <Widget>
       <h2>{ title }</h2>
-      <hr className="divider--top" />
+      <div className="divider" />
       {
         todo.length > 0 ? todo.map((item) => (
           <div key={ item.id } className="padding--small-bottom">
@@ -922,7 +922,7 @@ const TodoList = ({
           )) :
         <div>Great, you have completed all tasks :)</div>
       }
-    </Paper>
+    </Widget>
   );
 };
 
