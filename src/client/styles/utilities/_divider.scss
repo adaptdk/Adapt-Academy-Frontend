@@ -10,7 +10,7 @@
     display: inline-block;
     font-size: $font-size-sm;
     padding: 0 $unit-2;
-    transform: translateY(-$font-size-sm + $border-width);
+    transform: translateY(-$font-size-sm / 2 - $border-width);
   }
 }
 
