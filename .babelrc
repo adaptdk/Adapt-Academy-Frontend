@@ -16,6 +16,9 @@
   "presets": [
     "@babel/env",
     "@babel/react",
-    ["@babel/preset-stage-0", { "decoratorsLegacy": true }]
+    ["@babel/preset-stage-0", {
+      "pipelineProposal": "minimal",
+      "decoratorsLegacy": true
+    }]
   ]
 }

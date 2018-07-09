@@ -1,18 +1,21 @@
-// Vendors
+// Vendors.
 @import 'vendors/normalize';
-// Base
+// Base.
 @import 'base/colors';
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/helpers';
 @import 'base/default';
-// Base components
+// Utilities.
+@import 'utilities/spacing';
+@import 'utilities/divider';
+// Base components.
 @import 'components/base/links';
 @import 'components/base/columns';
 @import 'components/base/paper';
-// Components
+// Components.
 @import 'components/app';
 @import 'components/nav';
-// Pages
+// Pages.
 @import 'components/home';
 @import 'components/layouts';
