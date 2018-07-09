@@ -9,7 +9,7 @@ const Home = () => (
       <h1>
         Welcome to Adapt academy ;)
       </h1>
-      <hr className="divider--top" />
+      <div className="divider" />
       <div>
         <p>
           You have successfully started our react boilerplate which will let you:
