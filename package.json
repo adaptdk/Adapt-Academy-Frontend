@@ -10,8 +10,8 @@
     "lint:client": "./node_modules/.bin/eslint ./src/client",
     "lint:server": "./node_modules/.bin/eslint ./src/server",
     "lint:shared": "./node_modules/.bin/eslint ./src/shared",
-    "lint:scss": "./node_modules/.bin/sass-lint -c scss-lint.yml -v -q",
-    "lint:scss:fix": "./node_modules/.bin/sass-lint-auto-fix -c scss-lint.yml",
+    "lint:scss": "./node_modules/.bin/sass-lint -c sass-lint.yml -v -q",
+    "lint:scss:fix": "./node_modules/.bin/sass-lint-auto-fix -c sass-lint.yml",
     "test:client": "mocha --require @babel/register --require ./src/tests/clientTester.js \"./src/tests/client/**/*.js\"",
     "test:client:watch": "npm run test:client -- --watch",
     "bundle": "./node_modules/.bin/rimraf dist && ./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js"
