@@ -13,9 +13,9 @@ $large-margin: 40px;
 
 $html-font-size: 20px;
 $html-line-height: 1.5;
-$font-size: .8rem;
-$font-size-sm: .7rem;
-$font-size-lg: .9rem;
+$font-size: 1.8rem;
+$font-size-sm: 1.2rem;
+$font-size-lg: 1.9rem;
 $line-height: 1.2rem;
 
 $mobile-width: 320px;
@@ -29,14 +29,14 @@ $breakpoints: (
 );
 
 $border-color: $gray;
-$bg-color-light: $gray-light;
+$bg-color-light: $white;
 
 $primary-color: $san-marino;
 $secondary-color: $ultra-marino;
 
 // Unit sizes
-$unit-o: .05rem;
-$unit-h: .1rem;
+$unit-o: .12rem;
+$unit-h: .14rem;
 $unit-1: .2rem;
 $unit-2: .4rem;
 $unit-3: .6rem;
@@ -50,5 +50,5 @@ $unit-10: 2rem;
 $unit-12: 2.4rem;
 $unit-16: 3.2rem;
 
-$border-width: $unit-h;
-$border-width-lg: $unit-1;
+$border-width: $unit-o;
+$border-width-lg: $unit-h;
