@@ -19,8 +19,8 @@ There are two methods for getting started with this repo.
 Checkout this repo, install dependencies, then start the webpack process with the following:
 
 ```
-> git clone git@github.com:adaptdk/Adapt-Academy-Frontend.git
-> cd Adapt-Academy-Frontend/final
+> git clone git@github.com:adaptdk/aa-fe.git
+> cd aa-fe
 > npm install -g yarn
 > yarn install
 > yarn start:dev
@@ -29,8 +29,8 @@ Checkout this repo, install dependencies, then start the webpack process with th
 You can use only npm as well
 
 ```
-> git clone git@github.com:adaptdk/Adapt-Academy-Frontend.git
-> cd Adapt-Academy-Frontend/final
+> git clone git@github.com:adaptdk/aa-fe.git
+> cd aa-fe
 > npm install
 > npm run start:dev
 ```
@@ -407,7 +407,7 @@ class Component extends Component {
 	}
 }
 ```
-
+ 
 You can change state by using setState() method. From React documentation:
 
 Think of setState() as a request rather than an immediate command to update the component. For better perceived performance, React may delay it, and then update several components in a single pass. React does not guarantee that the state changes are applied immediately.
