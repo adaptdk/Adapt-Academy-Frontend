@@ -7,6 +7,7 @@ Repository contains:
 |——— final
 |——— lesson1
 |——— lesson2
+|——— lesson`*
 |——— README.md
 
 In *final* directory you will found React boilerplate for final task that you will accomplish after course end.
