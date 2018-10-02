@@ -4,11 +4,15 @@ This is main repository for Adapt academy for front end. Here you will find reso
 
 Repository contains:
 
-|——— final
-|——— lesson1
-|——— lesson2
-|——— lesson`*
-|——— README.md
+```
+├── final
+├── lesson1
+│   ├── html-common.html
+│   └── html1.html
+├── lesson2
+│   └── html-common.html
+└── README.md
+```
 
 In *final* directory you will found React boilerplate for final task that you will accomplish after course end.
 
