@@ -8,7 +8,7 @@ import chai, { expect } from 'chai';
 import chaiJquery from 'chai-jquery';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducers from '../client/reducers/index';
+import reducers from '../reducers/index';
 
 const { document } = (new JSDOM('<!doctype html><html><body></body></html>')).window;
 

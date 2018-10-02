@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src/client'),
+  entry: path.resolve(__dirname, '../src'),
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
@@ -29,7 +29,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, '../src/client', 'assets'),
+        from: path.resolve(__dirname, '../src', 'assets'),
         to: path.resolve(__dirname, '../dist', '../assets'),
       },
     ]),
@@ -58,16 +58,13 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        include: path.resolve(__dirname, '../src/client'),
+        include: path.resolve(__dirname, '../src'),
         use: {
           loader: 'babel-loader',
         },
       },
       {
         test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../node_modules/react-ui-kit'),
-        ],
         loaders: [
           'style-loader',
           { loader: 'css-loader', options: { importLoaders: 1 } },
@@ -84,7 +81,7 @@ module.exports = {
             options: {
               plugins: () => [
                 postcsscssnext,
-                postcssinlinesvg({ path: path.resolve(__dirname, '../src/client/assets') }),
+                postcssinlinesvg({ path: path.resolve(__dirname, '../src/assets') }),
               ],
             },
           },
@@ -101,14 +98,14 @@ module.exports = {
               plugins() {
                 return [
                   postcsscssnext,
-                  postcssinlinesvg({ path: path.resolve(__dirname, '../src/client/assets') }),
+                  postcssinlinesvg({ path: path.resolve(__dirname, '../src/assets') }),
                 ];
               },
             },
           },
           'sass-loader',
         ],
-        include: path.resolve(__dirname, '../src/client'),
+        include: path.resolve(__dirname, '../src'),
       },
       {
         test: /\.(png|jpe?g|svg)$/i,

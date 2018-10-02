@@ -9,16 +9,15 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    path.resolve(__dirname, '../src/client'),
+    path.resolve(__dirname, '../src'),
   ],
   output: {
-    path: path.resolve(__dirname, '../src/client'),
+    path: path.resolve(__dirname, '../src'),
     filename: 'bundle.js',
     publicPath: '/',
   },
   resolve: {
     modules: [
-      path.resolve(__dirname, 'src'),
       'node_modules',
     ],
     extensions: ['.json', '.js', '.jsx'],
@@ -41,7 +40,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        include: path.resolve(__dirname, '../src/client'),
+        include: path.resolve(__dirname, '../src'),
         use: {
           loader: 'babel-loader',
         },
@@ -49,9 +48,6 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        include: [
-          path.resolve(__dirname, '../node_modules/react-ui-kit'),
-        ],
         loaders: [
           'style-loader',
           {
@@ -63,7 +59,7 @@ module.exports = {
             options: {
               plugins: () => [
                 postcsscssnext,
-                postcssinlinesvg({ path: path.resolve(__dirname, '../src/client/assets') }),
+                postcssinlinesvg({ path: path.resolve(__dirname, '../src/assets') }),
               ],
             },
           },
@@ -80,7 +76,7 @@ module.exports = {
               plugins() {
                 return [
                   postcsscssnext,
-                  postcssinlinesvg({ path: path.resolve(__dirname, '../src/client/assets') }),
+                  postcssinlinesvg({ path: path.resolve(__dirname, '../src/assets') }),
                 ];
               },
             },
@@ -94,7 +90,7 @@ module.exports = {
             },
           },
         ],
-        include: path.resolve(__dirname, '../src/client'),
+        include: path.resolve(__dirname, '../src'),
       },
       {
         test: /\.(png|jpe?g|svg)$/i,
