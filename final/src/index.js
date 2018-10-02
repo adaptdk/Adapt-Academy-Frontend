@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import initialState from './initialState';
-import initStore from './store';
+import initStore from './store/index';
 
 import './styles/main.scss';
 
