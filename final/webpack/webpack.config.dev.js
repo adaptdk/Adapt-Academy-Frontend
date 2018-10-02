@@ -6,6 +6,7 @@ const postcsscssnext = require('postcss-cssnext')();
 require('autoprefixer');
 
 module.exports = {
+  mode: 'development',
   devtool: 'inline-source-map',
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
@@ -36,7 +37,7 @@ module.exports = {
     }),
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,

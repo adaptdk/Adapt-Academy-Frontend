@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   entry: path.resolve(__dirname, '../src'),
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -54,7 +55,7 @@ module.exports = {
     new ExtractTextPlugin('bundle.css'),
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
