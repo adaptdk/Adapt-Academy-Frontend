@@ -12,8 +12,8 @@ There are two methods for getting started with this repo.
 Checkout this repo, install dependencies, then start the webpack process with the following:
 
 ```
-> git clone git@github.com:adaptdk/aa-fe.git
-> cd aa-fe
+> git clone git@github.com:adaptdk/Adapt-Academy-Frontend.git
+> cd Adapt-Academy-Frontend/final
 > npm install -g yarn
 > yarn install
 > yarn start:dev
