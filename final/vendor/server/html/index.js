@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /* eslint-disable */
-const Html = ({
+const Index = ({
   title,
   markup,
 }) => (
@@ -25,13 +25,13 @@ const Html = ({
 );
 /* eslint-enable */
 
-Html.propTypes = {
+Index.propTypes = {
   title: PropTypes.string.isRequired,
   markup: PropTypes.string,
 };
 
-Html.defaultProps = {
+Index.defaultProps = {
   markup: '',
 };
 
-export default Html;
+export default Index;
