@@ -22,19 +22,21 @@ const Nav = ({ routes }) => (
       <ul className="nav__items">
         {
           routes.map(({ path, displayName }, idx) => (
-              isString(path) && !!displayName &&
+            isString(path) && !!displayName
+                && (
                 <li
                   key={ idx }
                   className={ classNames(
-                      'nav__item',
-                      {
-                        'nav__item--active': location.pathname.includes(path), // eslint-disable-line no-restricted-globals
-                      },
-                    ) }
+                    'nav__item',
+                    {
+                      'nav__item--active': location.pathname.includes(path), // eslint-disable-line no-restricted-globals
+                    },
+                  ) }
                 >
                   <Link to={ path }>{ displayName }</Link>
                 </li>
-            ),
+                )
+          ),
           )
         }
       </ul>

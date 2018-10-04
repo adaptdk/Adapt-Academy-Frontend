@@ -4,9 +4,9 @@ import { Redirect } from 'react-router-dom';
 
 const RootRedirector = ({ to, location }) => (
   <Redirect to={ {
-      pathname: to,
-      state: { from: location },
-    } }
+    pathname: to,
+    state: { from: location },
+  } }
   />
 );
 

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { isNil, isArray } from 'lodash';
+import {
+  isNil,
+  isArray,
+} from 'lodash';
 
 import { mediaQueryMapper } from '../../utils/mediaQuery';
 
@@ -34,9 +37,10 @@ class Columns extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const optionsChanged = this.props.options !== nextProps.options;
-    const columnsChanged = this.props.columns !== nextProps.columns;
-    const queryChanged = this.props.query !== nextProps.query;
+    const { options, columns, query } = this.props;
+    const optionsChanged = options !== nextProps.options;
+    const columnsChanged = columns !== nextProps.columns;
+    const queryChanged = query !== nextProps.query;
     if (optionsChanged || columnsChanged || queryChanged) {
       this.updateColumns(nextProps);
     }
@@ -59,44 +63,14 @@ class Columns extends Component {
   }
 
   getColumnsContainers({ masonry, children, columns }) {
-    const validChildren = !isNil(children) && isArray(children) ?
-      children.filter((c) => !isNil(c)) :
-      [children];
+    const validChildren = !isNil(children) && isArray(children)
+      ? children.filter((c) => !isNil(c))
+      : [children];
     return masonry ? this.mapColumns({ children: validChildren, columns }) : validChildren;
   }
 
   // Masonry and fill can't be at once. So if masonry specified fill classname can't be applied here
   getColumnClassName = ({ fill, masonry }) => (!masonry && fill ? 'columns__column columns__column--fill' : 'columns__column');
-
-  removeColumnListeners() {
-    if (this._columns) {
-      this._columns.removeListeners();
-    }
-
-    if (this._query) {
-      this._query.removeListeners();
-    }
-  }
-
-  updateColumns(props) {
-    if (props.options.length) {
-      this.removeColumnListeners();
-      this._columns = mediaQueryMapper({
-        queries: props.options,
-        valueKey: 'columns',
-        defaultValue: props.options.length ? 1 : props.columns,
-        onChange: this.setColumns.bind(this),
-      });
-      this._query = mediaQueryMapper({
-        queries: props.options,
-        valueKey: 'query',
-        defaultValue: props.options.length ? 1 : props.columns,
-        onChange: this.setQuery.bind(this),
-      });
-      this.setColumns();
-      this.setQuery();
-    }
-  }
 
   mapColumns = ({ children = [], columns = 1 } = {}) => {
     const nodes = [];
@@ -130,14 +104,45 @@ class Columns extends Component {
     return styles[index];
   };
 
+  updateColumns(props) {
+    if (props.options.length) {
+      this.removeColumnListeners();
+      this._columns = mediaQueryMapper({
+        queries: props.options,
+        valueKey: 'columns',
+        defaultValue: props.options.length ? 1 : props.columns,
+        onChange: this.setColumns.bind(this),
+      });
+      this._query = mediaQueryMapper({
+        queries: props.options,
+        valueKey: 'query',
+        defaultValue: props.options.length ? 1 : props.columns,
+        onChange: this.setQuery.bind(this),
+      });
+      this.setColumns();
+      this.setQuery();
+    }
+  }
+
+  removeColumnListeners() {
+    if (this._columns) {
+      this._columns.removeListeners();
+    }
+
+    if (this._query) {
+      this._query.removeListeners();
+    }
+  }
+
   render() {
     const {
       className,
       children,
       masonry,
+      columns: _columns,
       fill,
     } = this.props;
-    const { columns = this.props.columns } = this.state;
+    const { columns = _columns } = this.state;
     const { query } = this.state;
     const columnClassName = this.getColumnClassName({ fill, masonry });
     const columnsContainers = this.getColumnsContainers({ masonry, children, columns });
@@ -163,4 +168,3 @@ class Columns extends Component {
 }
 
 export default Columns;
-

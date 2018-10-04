@@ -16,7 +16,7 @@ Checkout this repo, install dependencies, then start the webpack process with th
 > cd Adapt-Academy-Frontend/final
 > npm install -g yarn
 > yarn install
-> yarn start:dev
+> yarn start
 ```
 
 You can use only npm as well
@@ -25,26 +25,26 @@ You can use only npm as well
 > git clone git@github.com:adaptdk/Adapt-Academy-Frontend.git
 > cd Adapt-Academy-Frontend/final
 > npm install
-> npm run start:dev
+> npm run start
 ```
 
-Open [http://localhost:4000](http://localhost:4000) in your borwser.
+Open [http://localhost:3000](http://localhost:3000) in your borwser.
 
 #### Not Familiar with Git?
 Click [here](https://github.com/adaptdk/Adapt-Academy-Frontend/archive/master.zip) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
 > yarn install
-> yarn start:dev
+> yarn start
 ```
 or 
 
 ```
 > npm install
-> npm run start:dev
+> npm run start
 ```
 
-Open [http://localhost:4000](http://localhost:4000) in your borwser.
+Open [http://localhost:3000](http://localhost:3000) in your borwser.
 
 #### Code formatting and styleguide
 
