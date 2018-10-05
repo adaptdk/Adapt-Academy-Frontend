@@ -22,7 +22,7 @@ In *lesson* folders you will find resources for lessons.
 
 ## Course
 
-* Lesson 1: Intro.
+* **Lesson 1: Intro.**
 
 1. What is Front-end development.
 
@@ -32,7 +32,7 @@ In *lesson* folders you will find resources for lessons.
 
 4. Practical exercise.
 
-* Lesson 2: Advanced CSS.
+* **Lesson 2: Advanced CSS.**
 
 1. Transitions - Animations.
 
@@ -46,7 +46,7 @@ In *lesson* folders you will find resources for lessons.
 
 6. Practical exercise
 
-* Lesson 3: Javascript (1).
+* **Lesson 3: Javascript (1).**
 
 1. Introduction (data types, variables, variable assignments, statement).
 
@@ -63,7 +63,7 @@ In *lesson* folders you will find resources for lessons.
 7. Functional programming, OOP (prototype-based programming).
 
 8. Practical exercise.
-* Lesson 4: Javascript (2).
+* **Lesson 4: Javascript (2).**
 
 1. ES7 (arrow function, bind, spread operator, class, const, let keywords; new collections - Map, Set, WeakMap, WeakSet).
 2. Traversing through collection (map, forEach, filter, find).
@@ -72,7 +72,7 @@ In *lesson* folders you will find resources for lessons.
 
 4. Practical exercise.
 
-* Lesson 5: Making things click together - real life project development.
+* **Lesson 5: Making things click together - real life project development.**
 
 1. Code standarts - linters, readable code.
 
@@ -82,7 +82,7 @@ In *lesson* folders you will find resources for lessons.
 
 4. Practical exercise
 
-* Lesson 6: React - introduction.
+* **Lesson 6: React - introduction.**
 
 1. Introduction - what is it, differences from others, philosophy, simple examples.
 
@@ -92,7 +92,7 @@ In *lesson* folders you will find resources for lessons.
 
 4. Practical exercise
 
-* Lesson 7: React - data flow and lifecycle.
+* **Lesson 7: React - data flow and lifecycle.**
 
 1. How data works in React?
 
@@ -100,7 +100,7 @@ In *lesson* folders you will find resources for lessons.
 
 3. Practical exercise.
 
-* Lesson 8: React - integration with third party libraries.
+* **Lesson 8: React - integration with third party libraries.**
 
 1. React and third party libraries (redux, react-router, redux-api-middleware and etc.).
 
@@ -110,7 +110,7 @@ In *lesson* folders you will find resources for lessons.
 4. Make API request in React.
 5. Practical exercise.
 
-* Lesson 9: React - advanced.
+* **Lesson 9: React - advanced.**
 
 1. React enhancement with redux middlewares.
 
@@ -118,15 +118,20 @@ In *lesson* folders you will find resources for lessons.
 
 3. Practical exercise
 
-* Final task (for more details look at *final* directory *READM.md* file).
+* **Final task (for more details look at *final* directory *READM.md* file).**
 
 ## Tools used and learned
 
 Nodejs 8 (latest LTS) [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+
 Yarn [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
+
 Webpack
+
 Chrome dev tools
+
 Visual Studio code (free open source editor, but you can pickany other)
+
 GIT
 
 ## Final words
