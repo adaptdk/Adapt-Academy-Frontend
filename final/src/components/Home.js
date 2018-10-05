@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Paper from './base/Paper';
+import Box from './base/Box';
 import Columns from './base/Columns';
 
 const Home = () => (
   <Columns>
-    <Paper>
+    <Box>
       <h1>
         Welcome to Adapt academy ;)
       </h1>
@@ -38,7 +38,7 @@ const Home = () => (
           </li>
         </ul>
       </div>
-    </Paper>
+    </Box>
   </Columns>
 );
 

@@ -13,16 +13,16 @@ const defaultProps = {
   noPadding: false,
 };
 
-const Paper = (props) => {
+const Box = (props) => {
   const { children, className, noPadding } = props;
   return (
-    <div className={ classNames(className, 'paper', { 'paper--no-padding': noPadding }) }>
+    <div className={ classNames(className, 'box', { 'box--no-padding': noPadding }) }>
       { children }
     </div>
   );
 };
 
-Paper.propTypes = propTypes;
-Paper.defaultProps = defaultProps;
+Box.propTypes = propTypes;
+Box.defaultProps = defaultProps;
 
-export default Paper;
+export default Box;
