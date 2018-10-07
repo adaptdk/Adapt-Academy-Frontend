@@ -1,24 +1,16 @@
 import React from 'react';
-import {
-  oneOfType,
-  string,
-  bool,
-  node,
-  func,
-  object,
-  array,
-} from 'prop-types';
+import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 
 const propTypes = {
-  path: string,
-  exact: bool,
-  Component: oneOfType([
-    node,
-    func,
+  path: PropTypes.string,
+  exact: PropTypes.bool,
+  Component: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
   ]).isRequired,
-  routes: array,
-  context: object,
+  routes: PropTypes.array,
+  context: PropTypes.object,
 };
 
 const defaultProps = {

@@ -1,6 +1,18 @@
 .home {
   &__wireframe-img {
-    height: 250px;
+    height: 200px;
     width: 100%;
+  }
+
+  &-box {
+    &__header {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+
+      &--right-link {
+        @extend %right-link;
+      }
+    }
   }
 }
