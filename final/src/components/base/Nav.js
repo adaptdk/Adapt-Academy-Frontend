@@ -1,18 +1,13 @@
-// eslint-disable-global location
 import React, { Fragment } from 'react';
-import {
-  arrayOf,
-  shape,
-  string,
-} from 'prop-types';
+import PropTypes from 'prop-types';
 import { isString } from 'lodash';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 const propTypes = {
-  routes: arrayOf(shape({
-    path: string,
-    displayName: string,
+  routes: PropTypes.arrayOf(PropTypes.shape({
+    path: PropTypes.string,
+    displayName: PropTypes.string,
   })).isRequired,
 };
 
