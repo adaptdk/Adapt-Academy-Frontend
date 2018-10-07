@@ -154,9 +154,9 @@ All your code will be putted in this directory. This folder already includes rec
 └── serviceWorker.js
 ```
 
-### Task (Crypto currency application)
+### Task
 
-You will need to create an application that will contain main page with four widgets:
+You will need create an application that will contain main page with four widgets:
 
 ![Main page with widgets](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/main-4-widgets.png)
 
