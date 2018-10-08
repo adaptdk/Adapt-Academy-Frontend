@@ -122,17 +122,18 @@ In *lesson* folders you will find resources for lessons.
 
 ## Tools used and learned
 
-Nodejs 8 (latest LTS) [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+* Nodejs 8 (latest LTS) [https://nodejs.org/en/download/](https://nodejs.org/en/download/);
 
-Yarn [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
+* Yarn [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install);
 
-Webpack
+* Webpack;
+* nvm (node version manager);
 
-Chrome dev tools
+* Chrome dev tools;
 
-Visual Studio code (free open source editor, but you can pickany other)
+* Visual Studio code (free open source editor, but you can pick any other);
 
-GIT
+* GIT;
 
 ## Final words
 
