@@ -160,8 +160,6 @@ Your main goal is to create a landing page that will display 3-4 (depends on the
 
 ![Main page with widgets](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/main-4-widgets.png)
 
-
-
 ![Dashboard 1 page](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/dashboard-1.png)
 
 In addition your application has to have a multistep form and optionally an authentication service (register/login). App will be deployed to herokuapp.
