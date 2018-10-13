@@ -156,7 +156,7 @@ All your code will be putted in this directory. This folder already includes rec
 
 ### Task
 
-Your main goal is to create a landing page, overview page displaying 3-4 (depends on the size of the group) different widgets, extended single page view for each widget:
+Your main goal is to create a landing page that will display 3-4 (depends on the size of the group) different widgets. Each widget will forward to extended single page view with more detailed information:
 
 ![Main page with widgets](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/main-4-widgets.png)
 
