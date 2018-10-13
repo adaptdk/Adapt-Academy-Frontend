@@ -75,7 +75,7 @@ Application is structured by LIFT principle:
 
 #### Quick overview of *src* folder
 
-All your code will be putted in this directory. This folder already includes recommended application structure and also includes some basic components that can be reused and that will give you a quick overview how reusable components can be created and reused:
+All your code will be putted in this directory. This folder already includes recommended application structure and also includes some basic components that can be reused and that will give you a quick overview how reusable components can be created in *React*:
 
 ```
 ├── actions
@@ -156,20 +156,44 @@ All your code will be putted in this directory. This folder already includes rec
 
 ### Task
 
-You will need create an application that will contain main page with four widgets:
+Your main goal is to create a landing page that will display 3-4 (depends on the size of the group) different widgets. Each widget will forward to extended single page view with more detailed information:
 
 ![Main page with widgets](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/main-4-widgets.png)
 
-As you can see some of widgets have a links to dashboards that will contains more detailed information. For example `Home dashboard 1` widget have a link to `Dashboard 1` that will contain some more detailed information.
-
 ![Dashboard 1 page](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/dashboard-1.png)
+
+In addition your application has to have a multistep form and optionally an authentication service (register/login). App will be deployed to herokuapp.
 
 #### Crypto currency application
 
-During final task you will be responsible for creating application which will provide some information about crypto curreny:
+During final task you will be responsible for creating application which will provide some information about crypto currency that will display main information about exchange, crypto currency news and so on. You will:
 
-* Crypto currency exchange graphics;
-* News about crypto currency;
-* and more;
+1. create a landing page;
 
-TODO: More detailed describtion about final task (wireframes, clarification and so on).
+2. integrate D3 library for displaying graphics;
+
+3. widgets with dynamic data;
+
+4. separate pages with data filtering, editing and so on;
+
+5. multistep form;
+
+6. learn how to deploy app to cloud based hosting service - heroku;
+
+
+
+## Landing page
+
+Create a static landing page based on the given wireframe (https://wireframe.cc/XOQw46)
+
+![Small wireframe](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/wireframe-landing-small.png)
+
+## User story (general)
+
+| User story                                                   | Epic                | Skills                                                |
+| :----------------------------------------------------------- | ------------------- | ----------------------------------------------------- |
+| Create a sticky header with logo and menu navigation (burger menu). | Landing page        | HTML / CSS                                      |
+| Implement third party video with custom play button and descriptive text. | Landing page        | HTML / CSS                                            |
+| List benefits/functionality of your service with icons and descriptive text. Implement CSS animation on your icons for more interactivity. Consider making one of the icons with pure CSS. Inspiration: https://cssicon.space | Landing page        | HTML / CSS / Animations Creative usage of psuedo elements |
+| Implement slider by using third part library library and add texts, call to action button on different slides. Consider dynamic layouting, each slide could be different. | Landing page        | JS                                                    |
+| Add a basic footer with social media icons and links.        | Landing page        | HTML / CSS                                           |
