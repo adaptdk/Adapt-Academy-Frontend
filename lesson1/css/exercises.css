@@ -1,5 +1,24 @@
 /* EXERCISE 1 */
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: blue;
+    overflow: auto;
+}
 
+section.articles {
+    float: left;
+    width: 65%;
+    margin-right: 5%;
+    background: white;
+}
+
+aside {
+    float: left;
+    width: 30%;
+    background: red;
+}
 
 /* EXERCISE 2 */
 
