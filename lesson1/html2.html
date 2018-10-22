@@ -4,7 +4,7 @@
 
 You are HackerMan and you need to create a HTML form for humans which will help them attain super powers.
 
-Create a form where you can fill details such as:
+Create a form where you can fill and submit details such as:
 
 1. Name (text, required)
 2. Lastname (text, required)
@@ -13,7 +13,7 @@ Create a form where you can fill details such as:
 6. Pick a Super Power (select one of options in dropdown)
 8. Skill level (1-123, range)
 7. Motivation letter (long text)
-8. Date of birth
+8. Date of birth (the person needs to be atleast 18 years old)
 9. Subscribe for HackerMan newsletter (checkbox)
 
 
@@ -60,25 +60,26 @@ FURTHER READ:
 
 <!DOCTYPE html>
 <html>
-  <head>
-   <meta charset="UTF-8">
-   <title>Title of the document</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <title>Title of the document</title>
+</head>
 
-   <h1>Register to get super powers</h1>
+<body>
 
-   <form id="DivineSkills">
+  <h1>Register to get super powers</h1>
 
-     <div class="field-wrapper">
+  <form id="DivineSkills">
+
+    <div class="field-wrapper">
       <label for="unique_field_id">Label name</label>
       <input type="text" id="unique_field_id" name="fieldname">
-     </div>
+    </div>
 
-     <input type="submit" value="Submit"/>
-   </form>
+    <input type="submit" value="Submit" />
+  </form>
 
-  </body>
+</body>
+
 </html>
-

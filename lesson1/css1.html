@@ -6,15 +6,16 @@ You have several articles and a sidebar. You can't change the html.
 
 Style them according to these criteria:
 
-1. Special article should have a different background and text color
-2. Special article button needs to have big button
-3. Article and sidebar go into two column layout with proportion of 70:30
-4. Sidebar has different background
-5. Buttons need to be blue. On hover they should change to red, on focus they should change to green.
-6. Image in articles need to take full space of article and maintain proportion
-7. Articles should appear in a grid of 3 per row and have borders
-8. Hover on article should move it up 10px.
-9. Footer needs to have a #666 background, white text , 5px dashed border on top
+1. Main width of your content should be 1100px and centered
+2. Article and sidebar go into two column layout -> 65% | 30%
+3. Sidebar has different background
+4. Articles should appear in a grid of 3 per row and have borders
+5. Special article should have a different background and text color
+6. Special article button needs to have big button
+7. Buttons need to be blue. On hover they should change to darker blue, on active as well
+8. Image in articles need to take full space of article and maintain proportion
+9. Hover on article should move it up 10px
+10. Footer needs to have a #666 background, white text , 5px dashed border on top
 
 TIPS:
 
@@ -24,8 +25,8 @@ To generate image use
 
 You can change size in the url.
 
-We will get accompanid with CSS properties
-Color, background-color, margin, padding, font-size, float, display: inline-block, clear, width, height.
+We will get accompanied with CSS properties
+Color, background-color, margin, padding, font-size, float, display: inline-block, clear, width, height, box-sizing
 
 
 FURTHER READ:
@@ -36,69 +37,80 @@ FURTHER READ:
 
 <!DOCTYPE html>
 <html>
-  <head>
-   <meta charset="UTF-8">
-   <title>Title of the document</title>
-   <link rel="stylesheet" type="text/css" href="css/exercises.css">
-  </head>
 
-  <body class="exercise-1">
+<head>
+  <meta charset="UTF-8">
+  <title>Title of the document</title>
+  <link rel="stylesheet" type="text/css" href="exercises.css">
+</head>
+
+<body class="exercise-1">
+
+  <main>
     <h1>My blog</h1>
 
-    <main>
-      <section class="articles">
-        <article class="">
-          <img src="https://via.placeholder.com/350x150">
-          <h2>This is some nice title</h2>
-          <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-          <a class="button">Read more</a>
-        </article>
+    <section class="articles">
+      <article class="">
+        <img src="https://via.placeholder.com/350x150">
+        <h2>This is some nice title</h2>
+        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+          kielbasa turducken.</p>
+        <a href="#" class="button">Read more</a>
+      </article>
 
-        <article class="special">
-          <img src="https://via.placeholder.com/350x150">
-          <h2>This is some nice title</h2>
-          <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-          <a class="button">Read more</a>
-        </article>
+      <article class="special">
+        <img src="https://via.placeholder.com/350x150">
+        <h2>This is some nice title</h2>
+        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+          kielbasa turducken.</p>
+        <a href="#" class="button">Read more</a>
+      </article>
 
-        <article class="">
-          <img src="https://via.placeholder.com/350x150">
-          <h2>This is some nice title</h2>
-          <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-          <a class="button">Read more</a>
-        </article>
+      <article class="">
+        <img src="https://via.placeholder.com/350x150">
+        <h2>This is some nice title</h2>
+        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+          kielbasa turducken.</p>
+        <a href="#" class="button">Read more</a>
+      </article>
 
-        <article class="">
-          <img src="https://via.placeholder.com/350x150">
-          <h2>This is some nice title</h2>
-          <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-          <a class="button">Read more</a>
-        </article>
+      <article class="">
+        <img src="https://via.placeholder.com/350x150">
+        <h2>This is some nice title</h2>
+        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+          kielbasa turducken.</p>
+        <a href="#" class="button">Read more</a>
+      </article>
 
-        <article>
-          <img src="https://via.placeholder.com/350x150">
-          <h2>This is some nice title</h2>
-          <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-          <a class="button">Read more</a>
-        </article>
+      <article>
+        <img src="https://via.placeholder.com/350x150">
+        <h2>This is some nice title</h2>
+        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+          kielbasa turducken.</p>
+        <a href="#" class="button">Read more</a>
+      </article>
 
-        <article class="special">
-          <img src="https://via.placeholder.com/350x150">
-          <h2>This is some nice title</h2>
-          <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-          <a class="button">Read more</a>
-        </article>
-      </section>
+      <article class="special">
+        <img src="https://via.placeholder.com/350x150">
+        <h2>This is some nice title</h2>
+        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+          kielbasa turducken.</p>
+        <a href="#" class="button">Read more</a>
+      </article>
+    </section>
 
-      <aside>
-        <h2>This is some nice sidebar title</h2>
-        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-        <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine kielbasa turducken.</p>
-      </aside>
-    </main>
+    <aside>
+      <h2>This is some nice sidebar title</h2>
+      <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+        kielbasa turducken.</p>
+      <p>Bacon ipsum dolor amet short loin burgdoggen venison, alcatra pork belly bacon sausage. Burgdoggen swine
+        kielbasa turducken.</p>
+    </aside>
+  </main>
 
-    <footer>
-      This is site information
-    </footer>
-  </body>
+  <footer>
+    This is site information
+  </footer>
+</body>
+
 </html>
