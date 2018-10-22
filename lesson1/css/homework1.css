@@ -139,8 +139,11 @@ header .scroll_down {
   contain: content;
 }
 
-.projects img {
-  /* width: 100px; */
-  /* max-width: 33.33333333333333%; */
-  height: auto;
+.project a {
+  color: white;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
 }
