@@ -1,17 +1,22 @@
-node_modules
-npm-debug.log*
-yarn-error.log
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-dist/**
-docs/**
-translations/vendor
+# dependencies
+/node_modules
 
-bundle.js
-styleguide.css
+# testing
+/coverage
 
-.#*
-*.org
+# production
+/build
 
+# misc
 .DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .idea/
-coverage
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

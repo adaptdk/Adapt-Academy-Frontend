@@ -2,7 +2,7 @@ files:
   include: "**/*.s+(a|c)ss"
   ignore:
     - "node_modules/**"
-    - "src/client/styles/vendors/**/*.scss"
+    - "src/styles/vendors/**/*.scss"
 syntax:
   include:
     - scss
