@@ -1,13 +1,92 @@
 /* EXERCISE 1 */
 
-
 /* EXERCISE 2 */
-
 
 /* EXERCISE 3 */
 
+.exercise-3 li {
+  margin-top: 50px;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  background: red;
+  border-radius: 100%;
+}
+
+.trapezius {
+  border-bottom: 100px solid red;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  width: 50px;
+}
+
+.square {
+  height: 50px;
+  width: 50px;
+  background: red;
+}
+
+.oval {
+  width: 100px;
+  height: 50px;
+  background: red;
+  border-radius: 50%;
+}
+
+.parallelogram {
+  width: 100px;
+  height: 50px;
+  background: red;
+  transform: skew(-20deg);
+  background: red;
+  border-top: 20px solid red;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+}
+
+.rhomboid {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 70px solid red;
+  position: relative;
+  top: -50px;
+}
+
+.rhomboid::after {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 70px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 70px solid red;
+}
 
 /* EXERCISE 4 */
-
 
 /* EXERCISE 5 */
