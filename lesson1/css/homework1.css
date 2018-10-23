@@ -3,6 +3,8 @@
 :root {
   --background: #021d43;
   --pink: #fe3e54;
+  --skills: #d5b335;
+  --work: #021d43;
 }
 
 /* Variables */
@@ -49,6 +51,21 @@ h5 {
 
 h2 {
   font-size: 50px;
+}
+
+@keyframes cursor {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: var(--pink);
+  }
+}
+
+#cursor {
+  background-color: var(--pink);
+  animation: cursor 1s infinite;
 }
 
 span.highlight {
@@ -100,22 +117,9 @@ header .scroll_down {
 
 #about {
   contain: content;
-  background: linear-gradient(
-    45deg,
-    rgba(254, 62, 84, 1) 0%,
-    rgba(2, 29, 67, 0.63) 99%,
-    rgba(2, 29, 67, 0.63) 100%
-  );
-
+  background: var(--skills);
   text-align: center;
-}
-
-#about h2 {
-  padding-top: 100px;
-}
-
-#projects {
-  margin-top: 100px;
+  padding: 100px 0;
 }
 
 .skills-container {
@@ -127,23 +131,42 @@ header .scroll_down {
   float: left;
 }
 
-.projects-wrapper {
-  width: 100%;
-  padding-bottom: 400px;
-}
-
-.projects-wrapper .project {
-  margin-top: 20px;
-  width: 33.33333333333333%;
-  float: left;
+#work {
   contain: content;
+  background: var(--work);
+
+  text-align: center;
+  padding: 100px 0;
 }
 
-.project a {
-  color: white;
+.project {
+  margin-top: 100px;
+}
+
+.project-photo {
+  width: 100%;
+  max-width: 100%;
+  content: contain;
+}
+.project-photo img {
+  width: 55%;
+}
+
+.project-title a {
+  font-size: 30px;
+  color: var(--pink);
   text-decoration: none;
 }
 
-.project a:hover {
+.project-title a:hover {
   text-decoration: underline;
+}
+
+.project-description {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.project-description p {
+  color: white;
 }
