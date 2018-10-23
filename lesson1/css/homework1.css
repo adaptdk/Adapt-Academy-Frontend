@@ -64,7 +64,10 @@ body {
 }
 
 .fa {
-  width: 30px;
+  box-sizing: border-box;
+  padding-right: 15px;
+  text-align: center;
+  width: 35px;
 }
 
 .dropdown {
@@ -147,9 +150,5 @@ body {
   .dropdown {
     padding-left: 55px;
     text-align: left;
-  }
-
-  .fa {
-    width: 35px;
   }
 }
