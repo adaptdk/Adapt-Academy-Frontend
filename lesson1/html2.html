@@ -72,12 +72,58 @@ FURTHER READ:
 
   <form id="DivineSkills">
 
+    <!-- 1. Name (text, required)
+    2. Lastname (text, required)
+    4. Age (number)
+    5. Email (required)
+    6. Pick a Super Power (select one of options in dropdown)
+    8. Skill level (1-123, range)
+    7. Motivation letter (long text)
+    8. Date of birth (the person needs to be atleast 18 years old)
+    9. Subscribe for HackerMan newsletter (checkbox) -->
     <div class="field-wrapper">
-      <label for="unique_field_id">Label name</label>
-      <input type="text" id="unique_field_id" name="fieldname">
+      <label for="name">Name</label>
+      <input id="name" type="text" required>
+    </div>
+    <div class="field-wrapper">
+      <label for="lastName">Last name</label>
+      <input id="lastName" type="text" required>
+    </div>
+    <div class="field-wrapper">
+      <label for="email">Email</label>
+      <input id="email" type="email">
+    </div>
+    <div class="field-wrapper">
+      <label for="age">Age</label>
+      <input id="age" type="number">
+    </div>
+    <div class="field-wrapper">
+      <label for="superpower">Super power</label>
+      <select id="superpower">
+        <option value="">Invisibility</option>
+        <option value="">Laser</option>
+        <option value="">Strength</option>
+      </select>
+    </div>
+    <div class="field-wrapper">
+      <label for="skill">Skill level</label>
+      <input id="skill" type="range" min="1" max="123">
+    </div>
+    <div class="field-wrapper">
+      <label for="motivation">Motivation</label>
+      <textarea id="motivation" type="number"></textarea>
+    </div>
+    <div class="field-wrapper">
+      <label for="dob">Date of birth</label>
+      <input id="dob" type="date" min="2000-00-00">
+    </div>
+    <div class="field-wrapper">
+      <input id="subscribe" type="checkbox">
+      <label for="subscribe">Subscribe</label>
     </div>
 
     <input type="submit" value="Submit" />
+    <input type="reset" value="reset">
   </form>
 
 </body>
