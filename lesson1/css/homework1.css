@@ -1,0 +1,53 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+    background-image: url("https://b8.eu.icdn.ru/o/osovitskiy/2/imgsrc.ru_61587762kFe.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h3 {
+    display: inline-block;
+    padding: 2px;
+    background-color: #fff;
+}
+
+.myfoto {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.3);
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 50% 50%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+ul li i {
+    margin-right: 8px;
+    color: #000;
+}
+
