@@ -1,0 +1,50 @@
+// <figure class="hero-image">
+// <img class="hero-image__image" src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+// assets/bat-screen-landscape.jpg 525w'
+//     sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
+//     100vw' />
+
+// <div class="hero-image__content">
+//     <h2 class="hero-image__title">Welcome</h2>
+//     <p class="hero-image__description">This is the cover text for super secret and awesome batsy site. I
+//         will sell you some cool bat
+//         gadgets</p>
+//     <a class="hero-image__button button" href="#">Take my cash</a><a href="#">Nope.</a>
+// </div>
+// </figure>
+
+.hero-image {
+    position: relative;
+    margin: 0;
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        padding: $padding;
+        transform: translateY(-50%) translateX(-50%);
+        background-color: transparentize($color: $color--dark-grey, $amount: 0.2);
+    }
+
+    &__title {
+        color: $color--white;
+        font-size: rem(30px);
+        margin: 0 0 15px 0;
+    }
+
+    &__description {
+        color: $color--white;
+        font-size: rem(20px);
+        margin: 0 0 15px 0;  
+    }
+
+    &__button {
+
+    }
+
+}

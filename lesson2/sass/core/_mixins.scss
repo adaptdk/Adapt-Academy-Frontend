@@ -38,3 +38,42 @@ $browser-context: 16; // Default
     font-size: $size; //Fallback in px
     font-size: rem($size);
 }
+
+@mixin button($type: primary, $color: $color--yellow) {
+    padding: $padding / 2;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.5s linear;
+
+    @if $type == primary {
+        background: $color;
+        color: $color--black;
+
+        &:hover {
+            background: darken($color, 15%);
+        }
+    }
+    @if $type == secondary {
+        background: transparent;
+        border: 3px solid $color;
+        color: $color--white;
+
+        &:hover {
+            border: 3px solid darken($color, 15%);
+        }
+    }
+}
+
+.button {
+    @include button("primary");
+
+    &--primary {
+        @include button("primary");
+    }
+
+    &--secondary {
+        @include button("secondary");
+    }
+}
+
