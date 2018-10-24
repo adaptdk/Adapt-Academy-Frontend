@@ -1,13 +1,288 @@
 /* EXERCISE 1 */
 
+body.exercise-1 {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+section.articles {
+  width: 65%;
+  float: left;
+  margin-right: 2%;
+}
+
+aside {
+  display: inline-block;
+  width: 30%;
+  float: left;
+  background-color: #2BD6D2;
+}
+
+main::after {
+  content: "";
+  clear: both;
+  visibility: hidden;
+  display: block;
+}
+
+.exercise-1 article {
+  vertical-align: top;
+  display: inline-block;
+  width: 33%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 3px;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.5s linear;
+}
+.exercise-1 article img {
+  max-width: 100%;
+  height: auto;
+}
+
+.exercise-1 article:nth-of-type(3n) {
+  margin-right: 0;
+}
+.exercise-1 article:hover {
+  transform: translateY(-10px);
+}
+
+.exercise-1 article.special {
+  background-color: #B9DAD9;
+  color: #485353;
+}
+.exercise-1 .button {
+  background-color: blue;
+  padding: 10px;
+  border-radius: 10%;
+  color: white;
+  text-decoration: none;
+}
+.exercise-1 .button:hover,
+.exercise-1 .button:active {
+  background-color: red;
+}
+
+.exercise-1 footer {
+  margin-top: 20px;
+  background-color: #666;
+  color: white;
+  border-top: 5px dashed;
+}
+
 
 /* EXERCISE 2 */
+
+.exercise-2 figure {
+  margin: 0;
+}
+.exercise-2 figure img {
+  width: 100%;
+  height: 100vh;
+}
+.exercise-2 figure {
+  position: relative;
+}
+
+.txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.exercise-2 h1,
+.exercise-2 p {
+  text-align: center;
+  color: white;
+}
+.exercise-2 h1 {
+  font-size: 4em;
+  margin-top: 5%;
+}
+.exercise-2 button {
+  position: absolute;
+  width: 20%;
+  min-height: 50px;
+  border-radius: 30px;
+  bottom: 0;
+  transform: translate(-50%,-50%);
+  top: 100%;
+  left: 50%;
+}
+
+figure.icon {
+  background-color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+figure.icon img {
+  width: 30px;
+  height: auto;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 
 
 /* EXERCISE 3 */
 
 
+.shapes .circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 100%;
+}
+
+.shapes .trapezius {
+  border-bottom: 50px solid red;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 0;
+  width: 50px;
+}
+.shapes .square {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+
+
+
 /* EXERCISE 4 */
+.checkboxes p input {
+  display: none;
+}
+.checkboxes p label::before {
+  margin-right: 10px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid red;
+}
+.checkboxes p input:checked + label::before {
+  background-color: red;
+}
+.radios p input {
+  display: none;
+}
+.radios p label::before {
+  margin-right: 10px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid red;
+  border-radius: 100%;
+}
+.radios p input:checked + label::before {
+  background-color: red;
+}
 
 
 /* EXERCISE 5 */
+
+.stage {
+    display: block;
+    text-align: center;
+    position: relative;
+    background: #111;
+}
+
+.stage::before {
+    content: "";
+    /* Taip pat galima naudoti border dashed */
+    background-image: linear-gradient(to right, transparent 50%, white 50%);
+    background-size: 60px 100%;
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    left: 0;
+    right: 0;
+}
+
+.stage .cat {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    right: 10px;
+    bottom: 10px;
+    z-index: 20;
+    /* Sito reikia, kad katinas smoothly griztu i pradine busena, tuo metu kol vyksta animacija nesvarbu kokie transitionai aprasyti. Animation > transition      */
+    transition: right 1s ease-in-out, transform 1s linear;
+    transform: rotateY(-180deg) scale(1);
+}
+
+.stage:hover .cat {
+    right: 90%;
+    /*  Sitas buvo svarbu, kad uzfiksuoti galutine stadija musu katei, nes naudojam backwards animacijoje, todel galutine busena turejo sutapti su animacijos galutiniu scale, pakeitem rotate, kad apsukti atgal.   */
+    transform: rotateY(-180deg) scale(1.5);
+    animation: move 2s 1 alternate backwards;
+}
+
+/*  alternatyvy snack-1, snack-2, snack-3 klasem*/
+.stage:hover .snack:nth-of-type(1) {
+    animation: snacks 0.7s 1.3s ease-in-out forwards;
+}
+
+.stage:hover .snack:nth-of-type(2) {
+    animation: snacks 0.7s 0.7s ease-in-out forwards;
+}
+
+.stage:hover .snack:nth-of-type(3) {
+    animation: snacks 0.7s 0s ease-in-out forwards;
+}
+
+.stage .snack {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background:url(https://www.friskies.com/media/1083-friskies-bacon-cat-treats-party-mix-brunch-morning-munch.png) center center no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 10;
+}
+
+.stage .snack + .snack {
+    margin-left: 30%;
+}
+
+@keyframes move {
+    0% {
+        right: 10px;
+        transform: rotateY(-180deg) scale(1);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    100% {
+        right: 90%;
+        transform: rotate(0deg) scale(1.6);
+    }
+}
+
+/* Animacija kieciau  */
+@keyframes snacks {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

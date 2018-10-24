@@ -1,4 +1,4 @@
-<!-- 
+<!--
 
 *** EXERCISE BRIEF ***
 
@@ -69,15 +69,69 @@ FURTHER READ:
 <body>
 
   <h1>Register to get super powers</h1>
-
+<--
+  1. Name (text, required)
+  2. Lastname (text, required)
+  4. Age (number)
+  5. Email (required)
+  6. Pick a Super Power (select one of options in dropdown)
+  8. Skill level (1-123, range)
+  7. Motivation letter (long text)
+  8. Date of birth (the person needs to be atleast 18 years old)
+  9. Subscribe for HackerMan newsletter (checkbox)
+--/>
   <form id="DivineSkills">
 
+  <div class="field-wrapper">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+  </div>
+
     <div class="field-wrapper">
-      <label for="unique_field_id">Label name</label>
-      <input type="text" id="unique_field_id" name="fieldname">
+      <label for="lastName">Last name</label>
+      <input type="text" id="lastName" name="lastName" required>
     </div>
 
+    <div class="field-wrapper">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="5" max="105" step="1" value="15">
+    </div>
+
+    <div class="field-wrapper">
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="field-wrapper">
+      <label for="superPower">Choose your super power</label>
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+
+    <div class="field-wrapper">
+      <label for="range">Skill range</label>
+      <input type="range" id="range" name="range" min="1" max="123">
+    </div>
+
+    <div class="field-wrapper">
+      <label for="motivation-letter">Motivation letter</label>
+      <textarea id="motivation-letter" name="motivation-letter" rows="10" cols="30"></textarea>
+    </div>
+
+    <div class="field-wrapper">
+      <label for="birth-year">Date of Birth</label>
+      <input type="date" id="birth-year" name="birth-year" min="2000-10-23" value="2001-01-01">
+    </div>
+
+    <div class="field-wrapper">
+      <label for="subscribe">Subscribe to our newsletter?</label>
+      <input type="checkbox" id="subscribe" checked>
+    </div>
     <input type="submit" value="Submit" />
+    <!-- Reset -->
   </form>
 
 </body>
