@@ -1,0 +1,21 @@
+.contacts {
+  display: flex;
+
+  article {
+    width: 50%;
+    padding: $padding;
+  }
+
+  .map {
+    width: 50%;
+    position: relative;
+
+    iframe {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+  }
+}

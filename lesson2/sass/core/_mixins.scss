@@ -1,25 +1,24 @@
 @mixin breakpoint($class) {
-    @if $class == xs {
-        @media (max-width: 767px) { @content; }
+  @if $class == xs {
+    @media (max-width: 767px) {
+      @content;
     }
-
-    @else if $class == sm {
-        @media (min-width: 768px) { @content; }
+  } @else if $class == sm {
+    @media (min-width: 768px) {
+      @content;
     }
-
-    @else if $class == md {
-        @media (min-width: 992px) { @content; }
+  } @else if $class == md {
+    @media (min-width: 992px) {
+      @content;
     }
-
-    @else if $class == lg {
-        @media (min-width: 1200px) { @content; }
+  } @else if $class == lg {
+    @media (min-width: 1200px) {
+      @content;
     }
-
-    @else {
-        @warn "Breakpoint mixin supports: xs, sm, md, lg";
-    }
+  } @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
 }
-
 
 //Convert px to EM
 $browser-context: 16; // Default
@@ -30,11 +29,52 @@ $browser-context: 16; // Default
 
 //convert px to REM
 @function rem($size) {
-    $remSize: $size / 16px;
-    @return #{$remSize}rem;
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }
 
 @mixin rem-font($size) {
-    font-size: $size; //Fallback in px
-    font-size: rem($size);
+  font-size: $size; //Fallback in px
+  font-size: rem($size);
 }
+
+@mixin button($type: primary, $color: $color--yellow) {
+  padding: $padding / 2;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.5s linear;
+
+  @if $type == primary {
+    background: $color;
+    color: $color--black;
+
+    &:hover {
+      background: darken($color, 15%);
+    }
+  }
+
+  @if $type == secondary {
+    background: transparent;
+    border: 3px solid $color;
+    color: $color--white;
+    margin-left: 10px;
+
+    &:hover {
+      background: $color;
+      color: $color--black;
+    }
+  }
+}
+
+// .button {
+//   @include button("primary");
+
+//   &--primary {
+//     @include button("primary");
+//   }
+
+//   &--secondary {
+//     @include button("secondary");
+//   }
+// }

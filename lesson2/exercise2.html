@@ -1,9 +1,9 @@
-<!-- 
+<!--
 
 *** EXERCISE BRIEF ***
 
 You are given a wireframe and part of html mark up. Your task is to make the site look like in the wireframe with your own consistent styles.
-1. Use flexbox, grid or whatever you want for layouting 
+1. Use flexbox, grid or whatever you want for layouting
 2. Make sure site looks good on different screens (tablet, mobile)
 3. Write additional html where needed
 4. Use BEM naming methodology
@@ -34,57 +34,70 @@ images: <img src="https://via.placeholder.com/350x150" />
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="assets/bat-logo.svg" />
-            <h1>Wicked site</h1>
+    <header class="header">
+        <div class="branding">
+            <img class="branding__logo" src="assets/bat-logo.svg" />
+            <h1 class="branding__name">Wicked site</h1>
         </div>
-        <nav>
+        <nav class="primary-nav">
             <ul>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#welcome">Welcome</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Benefits</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Products</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Blog</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Contacts</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <div>
-        <figure>
-            <img src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+    <section id="welcome">
+        <figure class="hero-image">
+            <img class="hero-image__image" src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
          assets/bat-screen-landscape.jpg 525w'
                 sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
                 100vw' />
 
-            <div>
-                <h2>Welcome</h2>
-                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
+            <div class="hero-image__content">
+                <h2 class="hero-image__title">Welcome</h2>
+                <p class="hero-image__description">This is the cover text for super secret and awesome batsy site. I
+                    will sell you some cool bat
                     gadgets</p>
-                <a href="#">Take my cash</a><a href="#">Nope.</a>
+                <a class="hero-image__button button" href="#">Take my cash</a><a class="hero-image__button button" href="#">Nope.</a>
             </div>
         </figure>
-    </div>
+    </section>
 
-    <section>
-        <article>
-            <h2>Benefits</h2>
-            <span><i class="fas fa-balance-scale"></i></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
+    <section id="benefits" class="benefits">
+        <h2 class="benefits__title">Benefits</h2>
+        <article class="benefits__container">
+            <span class="benefits__icon"><i class="fas fa-balance-scale"></i></span>
+            <h3 class="benefits__benefit">Benefit</h3>
+            <p class="benefits__description">This greatly describes how awesome this feature is.</p>
         </article>
 
-        <article>
-            <span></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
+        <article class="benefits__container">
+            <span class="benefits__icon"><i class="far fa-clipboard"></i></span>
+            <h3 class="benefits__benefit">Benefit</h3>
+            <p class="benefits__description">This greatly describes how awesome this feature is.</p>
         </article>
 
-        <article>
-            <span></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
+        <article class="benefits__container">
+            <span class="benefits__icon"><i class="fas fa-project-diagram"></i></span>
+            <h3 class="benefits__benefit">Benefit</h3>
+            <p class="benefits__description">This greatly describes how awesome this feature is.</p>
         </article>
+
+
     </section>
 
     <section>
