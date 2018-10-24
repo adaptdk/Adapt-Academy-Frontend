@@ -249,3 +249,12 @@ aside {
 .snack + .snack {
   margin-left: 20%;
 }
+
+.sport-img {
+  width: 100px;
+  display: none;
+}
+
+li:hover li img {
+  display: block;
+}
