@@ -3,6 +3,7 @@ img.background {
 }
 
 img.picture {
+    transform: rotate(90deg);
     position: absolute;
     width: 40%;
     top: 13%;
@@ -58,8 +59,8 @@ article.education {
 }
 
 article.media {
-    top: 44%;
-    left: 12%;
+    top: 48%;
+    left: 20%;
     width: 22%;
 }
 
