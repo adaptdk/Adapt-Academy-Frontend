@@ -1,0 +1,142 @@
+<!-- 
+
+*** EXERCISE BRIEF ***
+
+You are given a wireframe and part of html mark up. Your task is to make the site look like in the wireframe with your own consistent styles.
+1. Use flexbox, grid or whatever you want for layouting 
+2. Make sure site looks good on different screens (tablet, mobile)
+3. Write additional html where needed
+4. Use BEM naming methodology
+5. Make sure you make your css modular
+
+TIPS:
+
+Wireframe: https://wireframe.cc/9AHcbh
+Font awesome: https://fontawesome.com/icons?d=gallery&m=free
+images: <img src="https://via.placeholder.com/350x150" />
+
+*** *** *** *** *** ***
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 1</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="assets/bat-logo.svg" />
+            <h1>Wicked site</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Welcome</a></li>
+                <li><a href="#">Benefits</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <figure>
+            <img src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+         assets/bat-screen-landscape.jpg 525w'
+                sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
+                100vw' />
+
+            <div>
+                <h2>Welcome</h2>
+                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
+                    gadgets</p>
+                <a href="#">Take my cash</a><a href="#">Nope.</a>
+            </div>
+        </figure>
+    </div>
+
+    <section>
+        <article>
+            <h2>Benefits</h2>
+            <span><i class="fas fa-balance-scale"></i></span>
+            <h3>Benefit</h3>
+            <p>This greatly describes how awesome this feature is.</p>
+        </article>
+
+        <article>
+            <span></span>
+            <h3>Benefit</h3>
+            <p>This greatly describes how awesome this feature is.</p>
+        </article>
+
+        <article>
+            <span></span>
+            <h3>Benefit</h3>
+            <p>This greatly describes how awesome this feature is.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Products</h2>
+        <div>
+            <article>
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+
+            <article>
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+
+            <article>
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+
+            <article>
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div class="map">
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                <style>
+                    .mapouter {
+                        text-align: right;
+                        height: 597px;
+                        width: 600px;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 597px;
+                        width: 600px;
+                    }
+                </style>
+            </div>
+    </section>
+
+    <footer>
+        <p>This is a super site designed by Bat engineers who are very batsy. Built in 2018 at <a href="#">Adapt
+                Academy</a></p>
+    </footer>
+</body>
+
+</html>
