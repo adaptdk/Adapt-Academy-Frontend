@@ -34,37 +34,49 @@ images: <img src="https://via.placeholder.com/350x150" />
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="assets/bat-logo.svg" />
-            <h1>Wicked site</h1>
+    <header class="header">
+        <div class="branding">
+            <img class="branding__logo" src="assets/bat-logo.svg" />
+            <h1 class="branding__name">Wicked site</h1>
         </div>
-        <nav>
+        <nav class="primary-nav">
             <ul>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#welcome">Welcome</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Benefits</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Products</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Blog</a>
+                </li>
+                <li class="primary-nav__element">
+                    <a class="primary-nav__link" href="#">Contacts</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <div>
-        <figure>
-            <img src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+    <section id="welcome">
+        <figure class="hero-image">
+            <img class="hero-image__image" src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
          assets/bat-screen-landscape.jpg 525w'
                 sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
                 100vw' />
 
-            <div>
-                <h2>Welcome</h2>
-                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
+            <div class="hero-image__content">
+                <h2 class="hero-image__title">Welcome</h2>
+                <p class="hero-image__description">This is the cover text for super secret and awesome batsy site. I
+                    will sell you some cool bat
                     gadgets</p>
-                <a href="#">Take my cash</a><a href="#">Nope.</a>
+                <a class="hero-image__button button button--primary" href="#">Take my cash</a>
+                <a class="hero-image__button button button--secondary" href="#">Nope.</a>
             </div>
         </figure>
-    </div>
+    </section>
 
     <section>
         <article>
@@ -116,7 +128,7 @@ images: <img src="https://via.placeholder.com/350x150" />
         </div>
     </section>
 
-    <section>
+    <section id="contacts" class="contacts">
         <article>
             <address>
                 <h3>Mr. Batsy</h3>
