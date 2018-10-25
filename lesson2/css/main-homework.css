@@ -138,14 +138,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.main-sub-article-l-content {
-  background: #FFFFFF;
-  margin-right: 1%; }
-
-.main-sub-article-r-content {
-  background: #FFFFFF;
-  margin-left: 1%; }
-
 .header {
   background: #D3135A;
   padding: 27px 35px; }
@@ -256,8 +248,29 @@ table {
     font-weight: 600; }
 
 .main-sub-article {
-  display: flex;
   margin-top: 15px; }
+  @media (min-width: 884px) {
+    .main-sub-article {
+      display: flex;
+      margin-top: 15px; } }
+
+.main-sub-article-l-content {
+  background: #FFFFFF;
+  margin-bottom: 15px; }
+  @media (min-width: 884px) {
+    .main-sub-article-l-content {
+      flex-grow: 1;
+      margin-bottom: 0;
+      margin-right: 1%;
+      width: 100%; } }
+
+.main-sub-article-r-content {
+  background: #FFFFFF; }
+  @media (min-width: 884px) {
+    .main-sub-article-r-content {
+      flex-grow: 1;
+      margin-left: 1%;
+      width: 100%; } }
 
 body {
   background: #E6E6E6;
