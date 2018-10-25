@@ -6,10 +6,14 @@
 @import "layout";
 
 //main
+@import "components/header/header";
+
+
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Exo 2', sans-serif;
+  background: $color--light-grey;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .grid-example { 
@@ -35,3 +39,4 @@ body {
   column-gap: 10px;
   row-gap: 1em;
 }
+
