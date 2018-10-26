@@ -47,25 +47,33 @@ $browser-context: 16; // Default
     transition: all 0.5s linear;
 
     @if $type == primary {
-        background-color: $color;
+        background: $color;
         color: $color--black;
 
         &:hover {
             background: darken($color, 15%);
         }
     }
-
     @if $type == secondary {
         background: transparent;
         border: 3px solid $color;
         color: $color--white;
 
         &:hover {
-            background: darken($color, 15%);
+            border: 3px solid darken($color, 15%);
         }
     }
-    
-    // .button {
-    //     @include button("primary");
-    // }
 }
+
+.button {
+    @include button("primary");
+
+    &--primary {
+        @include button("primary");
+    }
+
+    &--secondary {
+        @include button("secondary");
+    }
+}
+

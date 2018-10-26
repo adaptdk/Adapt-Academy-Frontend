@@ -1,6 +1,6 @@
-$spirit-bomb-inner: #7afffd;
-$spirit-bomb-outer: #3EC8EB;
-$spirit-bomb-border: #92fefb;
+$spirit-bomb-inner : #7afffd;
+$spirit-bomb-outer : #3EC8EB;
+$spirit-bomb-border : #92fefb;
 
 body {
     background: url(../assets/cosmos.png) center center no-repeat;
@@ -21,10 +21,10 @@ body {
 
     &:hover {
         + .goku {
+
             .goku__spirit-bomb {
                 animation: float 3s ease-in-out infinite alternate, 
-        glow 2s ease-in-out infinite alternate, 
-        grow 3s ease-in-out 1 forwards;
+        glow 5s ease-in-out infinite alternate, grow 3s cubic-bezier(.05,1.34,.78,-0.35) 1 forwards;
             }
         }
     }
@@ -32,7 +32,7 @@ body {
     &__video {
         position: relative;
         height: 0;
-        padding-bottom: 56.25%;
+        padding-bottom: 56.25%; // 16:9
 
         iframe {
             width: 100%;
@@ -51,7 +51,7 @@ body {
 
     &__description {
         color: white;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     &__button {
@@ -59,20 +59,17 @@ body {
         background: $spirit-bomb-outer;
         border-radius: 5px;
         padding: 15px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
-
-    
-
 }
 
 .goku {
     position: fixed;
-    left: 10vw;
+    left: 15vw;
     bottom: 10vh;
-    width: 300px;
-
+    width: 200px;
     animation: float 3s ease-in-out infinite alternate;
+
     &__body {
         max-width: 100%;
         height: auto;
@@ -83,15 +80,16 @@ body {
         width: 50px;
         height: 50px;
         background: radial-gradient($spirit-bomb-inner, $spirit-bomb-outer);
-        border: 5px solid &spirit-bomb-border;
+        border: 5px solid $spirit-bomb-border;
         border-radius: 100%;
         text-indent: -9999px;
         word-wrap: nowrap;
         position: absolute;
         top: -100px;
-        left: 40%;
+        left: 50%;
+        margin-left: -25px;
         animation: float 3s ease-in-out infinite alternate, 
-        glow 2s ease-in-out infinite alternate;
+        glow 5s ease-in-out infinite alternate;
     }
 }
 
@@ -102,12 +100,12 @@ body {
         top: -100px;
         left: 50%;
         margin-left: -25px;
-    } to {
+    }
+    to {
         width: 150px;
         height: 150px;
         top: -200px;
         margin-left: -75px;
-        left: 50%;
     }
 }
 
@@ -123,8 +121,10 @@ body {
 @keyframes glow {
     from {
         box-shadow: 0 0 15px 20px darken($spirit-bomb-outer, 15%);
-    } to {
+    }
+    to {
         box-shadow: 0 0 30px 35px darken($spirit-bomb-outer, 15%);
     }
+    
 }
 

@@ -1,5 +1,6 @@
 .hero-image {
     position: relative;
+    margin: 0;
 
     &__image {
         width: 100%;
@@ -24,17 +25,11 @@
     &__description {
         color: $color--white;
         font-size: rem(20px);
-        margin: 0 0 15px 0;
+        margin: 0 0 15px 0;  
     }
 
     &__button {
-        @include button;
 
-        &:nth-of-type(1) {
-            @include button("primary", $color--grey);
-        }
-        &:nth-of-type(2) {
-            @include button("secondary", $color--grey);
-        }
     }
+
 }
