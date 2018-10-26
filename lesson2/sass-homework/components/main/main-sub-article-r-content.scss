@@ -1,5 +1,6 @@
 .main-sub-article-r-content {
   background: $color--white;
+  padding: 20px 15px 0;
   
   @include breakpoint(sm) {
     flex-grow: 1;

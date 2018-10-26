@@ -1,0 +1,36 @@
+.main-sub-article-content {
+
+  @include breakpoint(sm) {
+
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 25px;
+  }
+
+  &__item {
+    padding-bottom: 5px;
+
+    &:not(:last-child)::after {
+      background: $color--dark-grey;
+      content: " ";
+      display: block;
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    line-height: 1.4;
+    padding: 20px 15px;
+  }
+
+  &__link {
+    color: #1DB0E8;
+    display: block;
+    padding-bottom: 10px;
+    text-decoration: none;
+  }
+}

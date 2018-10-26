@@ -6,5 +6,7 @@
     @include breakpoint(sm) {
       display: flex;
       max-width: initial;
+      line-height: 1.4;
+      padding: 20px;
   }
 }

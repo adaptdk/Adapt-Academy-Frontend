@@ -5,6 +5,33 @@
   
   @include breakpoint(sm) {
     flex-grow: 1;
-    width: 35%;
+    padding-left: 15px;
+    margin: 0;
+    width: calc(35% - 15px);
   }
 }
+
+.side-article {
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 25px;
+    width: 50%;
+  }
+
+  &__text {
+    line-height: 1.5;
+    padding-bottom: 15px;
+    
+    &::before {
+      background: $color--black;
+      content: "";
+      display: block;
+      height: 5px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+}
+

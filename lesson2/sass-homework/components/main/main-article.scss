@@ -2,8 +2,17 @@
   background: white;
   padding: 15px;
 
+  @include breakpoint(sm) {
+    padding: 35px 25px 55px;
+  }
+
   &__title {
     font-size: 33px;
     font-weight: 600;
+    padding-bottom: 15px;
+  }
+
+  &__text {
+    line-height: 1.6;
   }
 }
