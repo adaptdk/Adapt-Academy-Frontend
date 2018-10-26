@@ -1,0 +1,130 @@
+$spirit-bomb-inner: #7afffd;
+$spirit-bomb-outer: #3EC8EB;
+$spirit-bomb-border: #92fefb;
+
+body {
+    background: url(../assets/cosmos.png) center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal {
+    position: fixed;
+    right: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparentize($color: #000000, $amount: 0.5);
+    width: 40vw;
+    text-align: center;
+    padding: 10px;
+
+    &:hover {
+        + .goku {
+            .goku__spirit-bomb {
+                animation: float 3s ease-in-out infinite alternate, 
+        glow 2s ease-in-out infinite alternate, 
+        grow 3s ease-in-out 1 forwards;
+            }
+        }
+    }
+
+    &__video {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__title {
+        font-size: 2em;
+        color: white;
+        margin: 0;
+    }
+
+    &__description {
+        color: white;
+        margin-top: 10px;
+    }
+
+    &__button {
+        display: inline-block;
+        background: $spirit-bomb-outer;
+        border-radius: 5px;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    
+
+}
+
+.goku {
+    position: fixed;
+    left: 10vw;
+    bottom: 10vh;
+    width: 300px;
+
+    animation: float 3s ease-in-out infinite alternate;
+    &__body {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__spirit-bomb {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: radial-gradient($spirit-bomb-inner, $spirit-bomb-outer);
+        border: 5px solid &spirit-bomb-border;
+        border-radius: 100%;
+        text-indent: -9999px;
+        word-wrap: nowrap;
+        position: absolute;
+        top: -100px;
+        left: 40%;
+        animation: float 3s ease-in-out infinite alternate, 
+        glow 2s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes grow {
+    from {
+        width: 50px;
+        height: 50px;
+        top: -100px;
+        left: 50%;
+        margin-left: -25px;
+    } to {
+        width: 150px;
+        height: 150px;
+        top: -200px;
+        margin-left: -75px;
+        left: 50%;
+    }
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px 20px darken($spirit-bomb-outer, 15%);
+    } to {
+        box-shadow: 0 0 30px 35px darken($spirit-bomb-outer, 15%);
+    }
+}
+
