@@ -1,0 +1,36 @@
+.footer {
+  background: $color--darker-grey;
+  color: $color--white;
+  margin-top: 15px;
+  padding: 0;
+
+  &__item {
+
+
+    
+    @include breakpoint(sm) {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    color: $color--white;
+    text-decoration: none;
+
+    &::after {
+      background: $color--white;
+      content: " ";
+      display: block;
+      height: 2px;
+      width: 81px;   
+
+      @include breakpoint(sm) {
+        display: inline-block;
+        height: 10px;  
+        margin-left: 15px;
+        width: 2px;
+      }
+    }
+  }
+}

@@ -3,10 +3,8 @@
   padding: 27px 35px;
 
   @include breakpoint(sm) {
-    align-items: center;
-    display: flex;
-    justify-content: space-between; 
-    padding: 0 55px;   
+    margin-bottom: 35px;
+    padding: 0;
   }
 
   &__logo {
@@ -74,123 +72,4 @@
       position: inherit;
     }
   }
-}
-
-.top-nav {
-  padding-top: 15px;
-
-
-  @include breakpoint(sm) {
-    text-align: right;
-  }
- 
-  &__item {
-    padding-bottom: 10px; 
-
-    
-    @include breakpoint(sm) {
-      display: inline-block;
-      margin-left: 15px;
-    }
-  }
-
-  &__link {
-    color: $color--black;
-    text-decoration: none;
-  }
-}
-
-.bottom-nav {
-  font-size: 16pt;
-  padding-top: 10px;
-
-  @include breakpoint(sm) {
-    display: inline-block;
-    padding-top: 58px;
-  }
-
-  &__item {
-    padding-bottom: 10px; 
-
-    @include breakpoint(sm) {
-      display: inline-block;
-      margin-left: 15px;
-    }
-  }
-
-  &__link {
-    color: $color--white;
-    text-decoration: none;
-  }
-}
-
-.main-section {
-  box-sizing: border-box;
-  margin-left: 7%;
-  margin-top: 3%;
-  max-width: 900px;
-  width: 85%;
-}
-
-.main-article {
-  background: white;
-  padding: 15px;
-
-  &__title {
-    font-size: 33px;
-    font-weight: 600;
-  }
-}
-
-.main-sub-article {
-  margin-top: 15px;
-  
-  @include breakpoint(sm) {
-    display: flex;
-    margin-top: 15px;
-  }
-}
-
-.main-sub-article-l-content {
-  background: $color--white;
-  margin-bottom: 15px;
-
-  @include breakpoint(sm) {
-    flex-grow: 1;
-    margin-bottom: 0;
-    margin-right: 1%;
-    width: 100%;
-  }
-
-  &__title {
-    
-  }
-
-  &__text {
-
-  }
-
-  &__link {
-    
-  }
-
-}
-
-.main-sub-article-r-content {
-  background: $color--white;
-  
-  @include breakpoint(sm) {
-    flex-grow: 1;
-    margin-left: 1%;
-    width: 100%;
-  }
-
-  &__title {
-    
-  }
-
-  &__link {
-    
-  }
-
 }

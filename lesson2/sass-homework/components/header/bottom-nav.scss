@@ -1,0 +1,23 @@
+.bottom-nav {
+  font-size: 16pt;
+  padding-top: 10px;
+
+  @include breakpoint(sm) {
+    display: inline-block;
+    padding-top: 58px;
+  }
+
+  &__item {
+    padding-bottom: 10px; 
+
+    @include breakpoint(sm) {
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+
+  &__link {
+    color: $color--white;
+    text-decoration: none;
+  }
+}

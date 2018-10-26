@@ -1,0 +1,23 @@
+.top-nav {
+  padding-top: 15px;
+
+
+  @include breakpoint(sm) {
+    text-align: right;
+  }
+ 
+  &__item {
+    padding-bottom: 10px; 
+
+    
+    @include breakpoint(sm) {
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+
+  &__link {
+    color: $color--black;
+    text-decoration: none;
+  }
+}

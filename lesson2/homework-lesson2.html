@@ -9,29 +9,31 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__logo">The Site</h1>
-        <label for="menu" class="header__menu-trigger">Menu</label>
-        <input class="header__menu-checkbox" type="checkbox" id="menu" name="menu">
-      <div class="header__navigation">
-        <nav class="top-nav">
-          <ul class="top-nav__items">
-            <li class="top-nav__item"><a class="top-nav__link" href="/">menu link 1</a></li>
-            <li class="top-nav__item"><a class="top-nav__link" href="/">menu link 2</a></li>
-            <li class="top-nav__item"><a class="top-nav__link" href="/">menu link 3</a></li>
-          </ul>
-        </nav>
-        <nav class="bottom-nav">
-          <ul class="bottom-nav__items">
-            <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 1</a></li>
-            <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 2</a></li>
-            <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 3</a></li>
-            <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 4</a></li>
-          </ul>
-        </nav>
+      <div class="wrapper">
+        <h1 class="header__logo">The Site</h1>
+          <label for="menu" class="header__menu-trigger">Menu</label>
+          <input class="header__menu-checkbox" type="checkbox" id="menu" name="menu">
+        <div class="header__navigation">
+          <nav class="top-nav">
+            <ul class="top-nav__items">
+              <li class="top-nav__item"><a class="top-nav__link" href="/">menu link 1</a></li>
+              <li class="top-nav__item"><a class="top-nav__link" href="/">menu link 2</a></li>
+              <li class="top-nav__item"><a class="top-nav__link" href="/">menu link 3</a></li>
+            </ul>
+          </nav>
+          <nav class="bottom-nav">
+            <ul class="bottom-nav__items">
+              <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 1</a></li>
+              <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 2</a></li>
+              <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 3</a></li>
+              <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">menu link 4</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     
-    <main class="main">
+    <main class="main wrapper">
       <section class="main-section">
         <article class="main-article">
           <h2 class="main-article__title">Lorum Ipsum</h2>
@@ -46,19 +48,67 @@ Tincidunt ornare massa eget egestas purus viverra. Nunc consequat interdum variu
 In fermentum posuere urna nec tincidunt praesent semper. Mauris a diam maecenas sed enim ut sem viverra. Eros in cursus turpis massa. Quis imperdiet massa tincidunt nunc pulvinar sapien. Pulvinar mattis nunc sed blandit libero volutpat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Tincidunt dui ut ornare lectus sit amet. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Faucibus ornare suspendisse sed nisi lacus sed. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Sit amet est placerat in egestas erat imperdiet sed euismod. Malesuada fames ac turpis egestas. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Sit amet dictum sit amet justo donec enim. Ut eu sem integer vitae justo.</p>
         </article>
         <div class="main-sub-article">
-        <article class="main-sub-article-l-content">
-          <p class="main-sub-article-content__text">In fermentum posuere urna nec tincidunt praesent semper. Mauris a diam maecenas sed enim ut sem viverra. Eros in cursus turpis massa. Quis imperdiet massa tincidunt nunc pulvinar sapien. Pulvinar mattis nunc sed blandit libero volutpat. </p>
-        </article>
-        <article class="main-sub-article-r-content">
-          <h3 class="main-sub-article-content__title">Lorem ipsum dolor sit amet</h3>
-          <ul class="main-sub-article-content__items">
-            <li class="main-sub-article-content__item"><a class="main-sub-article-content__item" href="/">Pulvinar mattis nunc</a></li>
-            <li class="main-sub-article-content__item"><a class="main-sub-article-content__item" href="/">Mauris a diam maecenas sed enim</a></li>
-            <li class="main-sub-article-content__item"><a class="main-sub-article-content__item" href="/"> Quis imperdiet massa tincidunt</a></li>
-          </ul>
-        </article>
+          <article class="main-sub-article-l-content">
+            <p class="main-sub-article-content__text">In fermentum posuere urna nec tincidunt praesent semper. Mauris a diam maecenas sed enim ut sem viverra. Eros in cursus turpis massa. Quis imperdiet massa tincidunt nunc pulvinar sapien. Pulvinar mattis nunc sed blandit libero volutpat. </p>
+          </article>
+          <article class="main-sub-article-r-content">
+            <h3 class="main-sub-article-content__title">Lorem ipsum dolor sit amet</h3>
+            <ul class="main-sub-article-content__items">
+              <li class="main-sub-article-content__item"><a class="main-sub-article-content__item" href="/">Pulvinar mattis nunc</a></li>
+              <li class="main-sub-article-content__item"><a class="main-sub-article-content__item" href="/">Mauris a diam maecenas sed enim</a></li>
+              <li class="main-sub-article-content__item"><a class="main-sub-article-content__item" href="/"> Quis imperdiet massa tincidunt</a></li>
+            </ul>
+          </article>
         </div>
       </section>      
+
+        <section class="side-section">
+        <article class="side-article">
+          <h3 class="side-article__title">Nunc consequat interdum varius</h3>
+          <p class="side-article__text">Tincidunt ornare massa eget egestas purus viverra. Nunc consequat interdum varius sit amet. In metus vulputate eu scelerisque felis. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus.</p>
+        </article>
+
+        <form class="main-form">
+          <label class="main-form__label" for="firstname">First name</label>
+          <input type="text" name="firstname">
+          <label class="main-form__label" for="lastname">Last name</label>
+          <input type="text" name="firstname">
+          <label class="main-form__label" for="message">Last name</label>
+          <input type="text" name="message">
+        </form>
+      </section>
+
+      <section class="main-second-section">
+        <article class="main-second-article">
+          <p class="second-article__text">In fermentum posuere urna nec tincidunt praesent semper. Mauris a diam maecenas sed enim ut sem viverra. Eros in cursus turpis massa. Quis imperdiet massa tincidunt nunc pulvinar sapien. Pulvinar mattis nunc sed blandit libero volutpat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Tincidunt dui ut ornare lectus sit amet. </p>
+        </article>
+        <article class="main-second-article">
+          <p class="second-article__text">In fermentum posuere urna nec tincidunt praesent semper. Mauris a diam maecenas sed enim ut sem viverra. Eros in cursus turpis massa. Quis imperdiet massa tincidunt nunc pulvinar sapien. Pulvinar mattis nunc sed blandit libero volutpat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Tincidunt dui ut ornare lectus sit amet. </p>
+        </article>
+        <article class="main-second-article">
+         <p class="second-article__text">In fermentum posuere urna nec tincidunt praesent semper. Mauris a diam maecenas sed enim ut sem viverra. Eros in cursus turpis massa. Quis imperdiet massa tincidunt nunc pulvinar sapien. Pulvinar mattis nunc sed blandit libero volutpat. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Tincidunt dui ut ornare lectus sit amet. </p>
+        </article>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-l-content">
+          <ul class="footer__items">
+            <li class="footer__item"><a class="footer__link" href="/">menu link 1</a></li>
+            <li class="footer__item"><a class="footer__link" href="/">menu link 2</a></li>
+            <li class="footer__item"><a class="footer__link" href="/">menu link 3</a></li>
+            <li class="footer__item"><a class="footer__link" href="/">menu link 4</a></li>
+            <li class="footer__item"><a class="footer__link" href="/">menu link 5</a></li>
+            <li class="footer__item"><a class="footer__link" href="/">menu link 6</a></li>
+          </ul>
+          <p class="footer__text">
+            Tincidunt ornare massa eget egestas purus viverra. Nunc consequat interdum varius sit amet. In metus vulputate eu scelerisque felis. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Aliquam vestibulum morbi blandit cursus risus. Eget dolor morbi non arcu risus quis varius quam. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Velit dignissim sodales ut eu sem integer vitae justo eget.
+          </p>
+        </div>
+        <div class="footer-r-content">
+          <h2 class="footer__logo">The Site</h2>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

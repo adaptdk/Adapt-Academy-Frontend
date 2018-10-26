@@ -1,0 +1,23 @@
+.main-sub-article-l-content {
+  background: $color--white;
+  margin-bottom: 15px;
+
+  @include breakpoint(sm) {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 1%;
+    width: 100%;
+  }
+
+  &__title {
+    
+  }
+
+  &__text {
+
+  }
+
+  &__link {
+    
+  }
+}

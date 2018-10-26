@@ -1,0 +1,10 @@
+.main-second-section {
+  background: $color--dark-grey;
+  max-width: 900px;
+  margin: 15px auto 0;
+
+    @include breakpoint(sm) {
+      display: flex;
+      max-width: initial;
+  }
+}

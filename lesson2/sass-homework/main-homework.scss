@@ -1,12 +1,26 @@
 //system
+@import "base";
 @import "core/variables";
 @import "core/mixins";
 @import "core/animations";
-@import "base";
 @import "layout";
 
 //main
+@import "components/header/bottom-nav";
+@import "components/footer/footer";
+@import "components/footer/footer-l-content";
+@import "components/footer/footer-r-content";
 @import "components/header/header";
+@import "components/header/top-nav";
+@import "components/main/main-article";
+@import "components/main/main-second-article";
+@import "components/main/main-second-section";
+@import "components/main/main-section";
+@import "components/main/main-sub-article";
+@import "components/main/main-sub-article-l-content";
+@import "components/main/main-sub-article-r-content";
+@import "components/main/side-section";
+
 
 
 

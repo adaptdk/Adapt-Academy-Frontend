@@ -1,0 +1,8 @@
+.main-sub-article {
+  margin-top: 15px;
+  
+  @include breakpoint(sm) {
+    display: flex;
+    margin-top: 15px;
+  }
+}

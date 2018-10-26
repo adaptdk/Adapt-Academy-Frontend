@@ -1,0 +1,10 @@
+.side-section {
+  margin: 15px auto;
+  max-width: 900px;
+  width: 100%;
+  
+  @include breakpoint(sm) {
+    flex-grow: 1;
+    width: 35%;
+  }
+}
