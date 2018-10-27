@@ -4,11 +4,10 @@
   background: $color--blue--dark;
 
   &__container {
-    width: 100%;
+    width: 50%;
     padding: $padding;
-    margin-left: 150px;
-    margin-top: 50px;
     color: white;
+    line-height: 20px;
   }
 
   &__title {
@@ -17,12 +16,27 @@
   }
 
   .map {
-    width: 100%;
+    width: 50%;
     text-align: right;
 
     .gmap_canvas {
       overflow: hidden;
       height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contacts {
+    flex-wrap: wrap;
+
+    &__container {
+      width: 100%;
+    }
+
+    .map {
+      width: 100%;
+      max-width: 100%;
     }
   }
 }

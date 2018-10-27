@@ -143,8 +143,8 @@ table {
   align-items: center;
   background-color: rgba(15, 15, 15, 0.8);
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 10px;
   z-index: 10; }
@@ -166,8 +166,7 @@ table {
     margin-left: 10px; }
 
 .primary-nav__element {
-  display: inline-block;
-  margin-left: 20px; }
+  display: inline-block; }
   .primary-nav__element + .primary-nav__element {
     margin-left: 20px; }
 
@@ -185,10 +184,15 @@ table {
     bottom: 0px;
     left: 0;
     width: 100%;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out; }
+    background-color: #ffd000;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
   .primary-nav__link:hover::after {
-    background-color: #ffd000; }
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
 
 .hero-image {
   position: relative;
@@ -253,7 +257,7 @@ table {
   flex-wrap: wrap;
   position: relative;
   padding-bottom: 100px;
-  background: rgba(64, 64, 64, 0.7);
+  background-color: #8d8d8d;
   margin-top: -2px; }
   .benefits__title {
     font-size: 1.875rem;
@@ -346,41 +350,55 @@ table {
     justify-content: space-between;
     flex-wrap: wrap; }
   .blog__post {
-    width: 48%;
+    width: 45%;
+    min-width: 48%;
     border: 1px solid #1a1b2b;
     margin-bottom: 50px; }
     .blog__post img {
-      width: 250px;
+      width: 150px;
       max-width: 100%;
       height: auto;
       float: left;
       margin-right: 10px; }
     .blog__post h3 {
       font-size: 1.5625rem;
-      margin-top: 60px; }
+      margin-top: 10px;
+      margin-bottom: 10px; }
     .blog__post p {
-      font-size: 1.125rem;
+      font-size: 1rem;
       letter-spacing: 2.3px; }
+
+@media only screen and (max-width: 1095px) {
+  .blog__post {
+    width: 100%; } }
 
 .contacts {
   width: 100%;
   display: flex;
   background: #1a1b2b; }
   .contacts__container {
-    width: 100%;
+    width: 50%;
     padding: 20px;
-    margin-left: 150px;
-    margin-top: 50px;
-    color: white; }
+    color: white;
+    line-height: 20px; }
   .contacts__title {
     font-size: 1.875rem;
     margin-bottom: 25px; }
   .contacts .map {
-    width: 100%;
+    width: 50%;
     text-align: right; }
     .contacts .map .gmap_canvas {
       overflow: hidden;
       height: auto; }
+
+@media only screen and (max-width: 600px) {
+  .contacts {
+    flex-wrap: wrap; }
+    .contacts__container {
+      width: 100%; }
+    .contacts .map {
+      width: 100%;
+      max-width: 100%; } }
 
 footer {
   text-align: center; }
