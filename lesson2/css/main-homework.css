@@ -1,166 +1,98 @@
-@-webkit-keyframes animation {
-  0% { }
-  100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); } }
-
-@keyframes animation {
-  0% { }
-  100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); } }
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box; }
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+body {
+  font-family: "Lato", sans-serif;
+  color: #313131;
   margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+  padding: 0; }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #404040; }
 
-body {
-  line-height: 1; }
+h1 {
+  font-size: 3.6rem; }
 
-ol,
-ul {
-  list-style: none; }
+h2 {
+  font-size: 2.9rem; }
 
-blockquote,
-q {
-  quotes: none; }
+.nav {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 10; }
+  .nav__container {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 7px 0; }
+  .nav__branding {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .nav__menu {
+    list-style-type: none; }
+    .nav__menu-item {
+      display: inline;
+      margin-right: 20px; }
+      .nav__menu-item:hover {
+        color: #e96656;
+        cursor: pointer; }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none; }
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/bg2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff; }
+  .hero__container {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .hero__title {
+    color: #fff; }
+  .hero__buttons-red {
+    background: #e96656;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 35px;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 15px; }
+    .hero__buttons-red:hover {
+      background: #e6523f;
+      cursor: pointer; }
+  .hero__buttons-green {
+    background: #20aa73;
+    border: none;
+    border-radius: 5px;
+    padding: 13px 35px;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase; }
+    .hero__buttons-green:hover {
+      background: #1c9564;
+      cursor: pointer; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Exo 2', sans-serif; }
-
-.grid-example {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-auto-rows: 100px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  row-gap: 1em; }
-
-.box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3; }
-
-.box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  row-gap: 1em; }
+.benefits {
+  text-align: center; }
+  .benefits__container {
+    display: flex; }
+  .benefits__benefit i {
+    border: 10px solid #ececec;
+    padding: 20px;
+    border-radius: 100%;
+    transition: border 0.2s ease-in;
+    font-size: 2.5rem; }
+    .benefits__benefit i:hover {
+      border: 10px solid #20aa73;
+      cursor: pointer; }

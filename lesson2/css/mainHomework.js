@@ -91,9 +91,9 @@
   !*** ./sass-homework/main-homework.scss ***!
   \******************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("module.exports = __webpack_require__.p + \"main-homework.css\";\n\n//# sourceURL=webpack:///./sass-homework/main-homework.scss?");
+eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/lib/loader.js):\\n\\n@import \\\"modules/nav\\\";\\n^\\n      File to import not found or unreadable: modules/nav.\\n      in /mnt/c/Users/sidbu/Desktop/front-end/Adapt-Academy-Frontend/lesson2/sass-homework/main-homework.scss (line 6, column 1)\");\n\n//# sourceURL=webpack:///./sass-homework/main-homework.scss?");
 
 /***/ })
 

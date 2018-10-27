@@ -1,10 +1,10 @@
-<!-- 
+<!--
 
 *** EXERCISE BRIEF ***
 
 You are a really cool HTML-CSS Guru right now. It's time to shine and deliver something nice on your own.
 
-1. Pick any web design from the internet that you like. It has to contain different elements[components]. 
+1. Pick any web design from the internet that you like. It has to contain different elements[components].
 Good place to search for designs is dribble and google. If you need to do something personally, feel free to do that as well. As long as it's complex enough - it fits.
 2. Make sure you use all the correct practices, modular approach, BEM and so on.
 3. See if you can make reusable sass mixins, animations, functions or whatever else that you might need.
@@ -21,6 +21,11 @@ https://github.com/neutraltone/awesome-stock-resources
 
 *** *** *** *** *** ***
 
+Website I'll be making: https://themeisle.com/demo/?theme=Zelle%20Pro
+
+'Montserrat', Helvetica, sans-serif
+Lato, Helvetica, sans-serif
+
 -->
 
 <!DOCTYPE html>
@@ -33,10 +38,73 @@ https://github.com/neutraltone/awesome-stock-resources
     <link rel="stylesheet" type="text/css" href="css/main-homework.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
 <body>
+    <header class="nav">
+        <div class="nav__container">
+            <div class="nav__branding">
+                <img src="assets/logo.png" alt="website logo" class="nav__logo">
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__menu-item">Portfolio</li>
+                <li class="nav__menu-item">About</li>
+                <li class="nav__menu-item">Team</li>
+                <li class="nav__menu-item">Plans</li>
+            </ul>
+        </div>
+    </header>
 
+    <section class="hero">
+        <div class="hero__container">
+            <h1 class="hero__title">INTRODUCING ZELLE PRO - OUR #1<br> BEST-SELLING THEME</h1>
+            <div class="hero__buttons">
+                <button class="hero__buttons-red">
+                    what makes this unique?
+                </button>
+
+                <button class="hero__buttons-green">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2 class="benefits__title">WHAT MAKES THIS THEME UNIQUE</h2>
+
+        <div class="benefits__container">
+            <div class="benefits__benefit">
+                <i class="fas fa-desktop"></i>
+                <h3>Benefit</h3>
+                <p>Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight
+                    content slider offering you smooth and great-looking animations.</p>
+            </div>
+
+            <div class="benefits__benefit">
+                <i class="far fa-calendar-check"></i>
+                <h3>Benefit</h3>
+                <p>Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight
+                    content slider offering you smooth and great-looking animations.</p>
+            </div>
+
+            <div class="benefits__benefit">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Benefit</h3>
+                <p>Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight
+                    content slider offering you smooth and great-looking animations.</p>
+            </div>
+
+            <div class="benefits__benefit">
+                <i class="fas fa-envelope-open-text"></i>
+                <h3>Benefit</h3>
+                <p>Create memorable pages with smooth parallax effects that everyone loves. Also, use our lightweight
+                    content slider offering you smooth and great-looking animations.</p>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

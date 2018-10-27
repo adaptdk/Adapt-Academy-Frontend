@@ -1,0 +1,18 @@
+@mixin button($color) {
+  background: $color;
+  border: none;
+  border-radius: 5px;
+  padding: 13px 35px;
+  font-size: 1rem;
+  color: $color--white;
+  text-transform: uppercase;
+
+  @if $color == $color--red {
+    margin-right: 15px;
+  }
+
+  &:hover {
+    background: darken($color, 5%);
+    cursor: pointer;
+  }
+}
