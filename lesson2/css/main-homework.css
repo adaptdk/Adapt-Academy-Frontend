@@ -126,25 +126,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@-webkit-keyframes animation {
-  0% { }
-  100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); } }
-
 @keyframes animation {
-  0% { }
   100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); } }
-
+    transform: rotate(180deg); } }
 @media (min-width: 980px) {
   .wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1290px;
+    max-width: 1090px;
     padding: 0 60px;
     width: 100%; } }
 
@@ -236,7 +227,7 @@ table {
     text-align: right;
     width: 55%; }
     .header__menu-trigger::before {
-      content: "\F0C9";
+      content: "\f0c9";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       padding-right: 10px; }
@@ -244,16 +235,14 @@ table {
       .header__menu-trigger {
         display: none; } }
   .header__menu-checkbox:checked + .header__navigation {
-    -webkit-clip-path: none;
-            clip-path: none;
+    clip-path: none;
     display: block;
     opacity: 1;
     position: inherit; }
   .header__menu-checkbox {
     display: none; }
   .header__navigation {
-    -webkit-clip-path: polygon(0 100%, 0% 100%, 0 100%);
-            clip-path: polygon(0 100%, 0% 100%, 0 100%);
+    clip-path: polygon(0 100%, 0% 100%, 0 100%);
     display: none;
     opacity: 0;
     position: absolute;
@@ -261,8 +250,7 @@ table {
     @media (min-width: 980px) {
       .header__navigation {
         align-self: flex-start;
-        -webkit-clip-path: none;
-                clip-path: none;
+        clip-path: none;
         display: block;
         opacity: 1;
         position: inherit; } }
@@ -295,6 +283,29 @@ table {
   .main-article__text {
     line-height: 1.6; }
 
+.main-form {
+  padding: 25px;
+  border: 1px solid; }
+  .main-form > input {
+    height: 30px;
+    width: 100%; }
+  .main-form__label {
+    display: block;
+    padding: 5px 0; }
+  .main-form__message {
+    height: 180px;
+    resize: none;
+    width: 100%; }
+  .main-form__button {
+    background-color: #d3135a;
+    border: none;
+    color: white;
+    font-size: 8pt;
+    height: 30px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    width: 90px; }
+
 .main-second-article {
   margin: 0 15px 0 0; }
 
@@ -317,7 +328,7 @@ table {
   @media (min-width: 980px) {
     .main-section {
       margin: 0;
-      width: 65%; } }
+      width: 70%; } }
 
 .main-sub-article {
   margin-top: 15px; }
@@ -330,7 +341,6 @@ table {
   font-size: 22px;
   font-weight: 700;
   padding-bottom: 25px; }
-
 .main-sub-article-content__item {
   padding-bottom: 5px; }
   .main-sub-article-content__item:not(:last-child)::after {
@@ -339,11 +349,9 @@ table {
     display: block;
     height: 1px;
     width: 100%; }
-
 .main-sub-article-content__text {
   line-height: 1.4;
   padding: 20px 15px; }
-
 .main-sub-article-content__link {
   color: #1DB0E8;
   display: block;
@@ -378,24 +386,25 @@ table {
       flex-grow: 1;
       padding-left: 15px;
       margin: 0;
-      width: calc(35% - 15px); } }
+      width: 30%; } }
 
-.side-article__title {
-  font-size: 22px;
-  font-weight: 700;
-  padding-bottom: 25px;
-  width: 50%; }
-
-.side-article__text {
-  line-height: 1.5;
-  padding-bottom: 15px; }
-  .side-article__text::before {
-    background: #000000;
-    content: "";
-    display: block;
-    height: 5px;
-    margin-bottom: 15px;
-    width: 100%; }
+.side-article {
+  padding: 15px; }
+  .side-article__title {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 25px;
+    width: 75%; }
+  .side-article__text {
+    line-height: 1.5;
+    padding-bottom: 15px; }
+    .side-article__text::before {
+      background: #000000;
+      content: "";
+      display: block;
+      height: 5px;
+      margin-bottom: 15px;
+      width: 100%; }
 
 body {
   background: #E6E6E6;
@@ -407,8 +416,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-auto-rows: 100px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  column-gap: 10px;
   row-gap: 1em; }
 
 .box1 {
@@ -421,6 +429,7 @@ body {
   grid-column-start: 1;
   grid-row-start: 3;
   grid-row-end: 5;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  column-gap: 10px;
   row-gap: 1em; }
+
+/*# sourceMappingURL=main-homework.css.map */

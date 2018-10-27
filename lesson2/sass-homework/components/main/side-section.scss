@@ -7,17 +7,18 @@
     flex-grow: 1;
     padding-left: 15px;
     margin: 0;
-    width: calc(35% - 15px);
+    width: 30%;
   }
 }
 
 .side-article {
-
+  padding: 15px;
+  
   &__title {
     font-size: 22px;
     font-weight: 700;
     padding-bottom: 25px;
-    width: 50%;
+    width: 75%;
   }
 
   &__text {
