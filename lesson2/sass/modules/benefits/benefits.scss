@@ -6,9 +6,10 @@
   position: relative;
   padding-bottom: 100px;
   background: transparentize($color: $color--grey, $amount: 0.3);
+  margin-top: -2px;
 
   &__title {
-    font-size: rem(30px);
+    font-size: $h2;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

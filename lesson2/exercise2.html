@@ -45,16 +45,16 @@ images: <img src="https://via.placeholder.com/350x150" />
                     <a class="primary-nav__link" href="#welcome">Welcome</a>
                 </li>
                 <li class="primary-nav__element">
-                    <a class="primary-nav__link" href="#">Benefits</a>
+                    <a class="primary-nav__link" href="#benefits">Benefits</a>
                 </li>
                 <li class="primary-nav__element">
-                    <a class="primary-nav__link" href="#">Products</a>
+                    <a class="primary-nav__link" href="#products">Products</a>
                 </li>
                 <li class="primary-nav__element">
-                    <a class="primary-nav__link" href="#">Blog</a>
+                    <a class="primary-nav__link" href="#blog">Blog</a>
                 </li>
                 <li class="primary-nav__element">
-                    <a class="primary-nav__link" href="#">Contacts</a>
+                    <a class="primary-nav__link" href="#contacts">Contacts</a>
                 </li>
             </ul>
         </nav>
@@ -100,38 +100,81 @@ images: <img src="https://via.placeholder.com/350x150" />
 
     </section>
 
-    <section>
-        <h2>Products</h2>
-        <div>
-            <article>
-                <img src="assets/bat-weapon.jpg" />
-                <h3>product name</h3>
-                <a href=""></a>
+    <section id="products" class="products">
+        <h2 class="products__title">Products</h2>
+        <div class="products__container">
+            <article class="products__product">
+                <img class="products__image" src="assets/bat-weapon.jpg" />
+                <h3 class="products__name">product name</h3>
+                <a href="" class="products__link"></a>
             </article>
 
-            <article>
-                <img src="assets/bat-weapon2.jpg" />
-                <h3>product name</h3>
-                <a href=""></a>
+            <article class="products__product">
+                <img class="products__image" src="assets/bat-weapon2.jpg" />
+                <h3 class="products__name">product name</h3>
+                <a href="" class="products__link"></a>
             </article>
 
-            <article>
-                <img src="assets/bat-weapon3.png" />
-                <h3>product name</h3>
-                <a href=""></a>
+            <article class="products__product">
+                <img class="products__image" src="assets/bat-weapon3.jpg" />
+                <h3 class="products__name">product name</h3>
+                <a href="" class="products__link"></a>
             </article>
 
-            <article>
-                <img src="assets/bat-weapon4.jpeg" />
-                <h3>product name</h3>
-                <a href=""></a>
+            <article class="products__product">
+                <img class="products__image" src="assets/bat-weapon4.jpeg" />
+                <h3 class="products__name">product name</h3>
+                <a href="" class="products__link"></a>
             </article>
         </div>
     </section>
 
-    <section>
-        <article>
-            <address>
+    <section id="blog" class="blog">
+        <header class="blog__header">
+            <h2 class="blog__title">
+                Blog
+            </h2>
+            <span class="blog__button">
+                <a href="#">Read more</a>
+            </span>
+        </header>
+
+        <div class="blog__container">
+            <header class="blog__post">
+                <img src="https://via.placeholder.com/250" alt="blog_thumbnail">
+                <h3>Title</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s</p>
+            </header>
+
+            <header class="blog__post">
+                <img src="https://via.placeholder.com/250" alt="blog_thumbnail">
+                <h3>Title</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the</p>
+            </header>
+
+            <header class="blog__post">
+                <img src="https://via.placeholder.com/250" alt="blog_thumbnail">
+                <h3>Title</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the</p>
+            </header>
+
+            <header class="blog__post">
+                <img src="https://via.placeholder.com/250" alt="blog_thumbnail">
+                <h3>Title</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the</p>
+            </header>
+        </div>
+    </section>
+
+
+    <section id="contacts" class="contacts">
+        <article class="contacts__container">
+            <h2 class="contacts__title">Contacts</h2>
+            <address class="contacts__address">
                 <h3>Mr. Batsy</h3>
                 <p>1007 Mountain Drive, Gotham</p>
                 <p>Dark dark cave where lives a lot of bats and no girl, ever.</p>
@@ -142,21 +185,8 @@ images: <img src="https://via.placeholder.com/350x150" />
         <div class="map">
             <div class="mapouter">
                 <div class="gmap_canvas"><iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
-                <style>
-                    .mapouter {
-                        text-align: right;
-                        height: 597px;
-                        width: 600px;
-                    }
-
-                    .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 597px;
-                        width: 600px;
-                    }
-                </style>
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
             </div>
     </section>
 

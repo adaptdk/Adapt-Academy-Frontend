@@ -1,21 +1,28 @@
 .contacts {
+  width: 100%;
   display: flex;
+  background: $color--blue--dark;
 
-  article {
-    width: 50%;
+  &__container {
+    width: 100%;
     padding: $padding;
+    margin-left: 150px;
+    margin-top: 50px;
+    color: white;
+  }
+
+  &__title {
+    font-size: $h2;
+    margin-bottom: 25px;
   }
 
   .map {
-    width: 50%;
-    position: relative;
+    width: 100%;
+    text-align: right;
 
-    iframe {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
+    .gmap_canvas {
+      overflow: hidden;
+      height: auto;
     }
   }
 }
