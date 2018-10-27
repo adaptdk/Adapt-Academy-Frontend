@@ -3,9 +3,9 @@
 @import "core/mixins";
 
 //main
-@import "modules/nav";
-@import "modules/hero";
-
+@import "modules/nav/nav";
+@import "modules/hero/hero";
+@import "modules/benefits/benefits";
 body {
   font-family: "Lato", sans-serif;
   color: $color--paragraph;
@@ -26,4 +26,8 @@ h1 {
 
 h2 {
   font-size: 2.9rem;
+}
+
+p {
+  color: $color--paragraph;
 }

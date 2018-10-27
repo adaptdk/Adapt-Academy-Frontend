@@ -1,21 +1,3 @@
-body {
-  font-family: "Lato", sans-serif;
-  color: #313131;
-  margin: 0;
-  padding: 0; }
-
-h1,
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  color: #404040; }
-
-h1 {
-  font-size: 3.6rem; }
-
-h2 {
-  font-size: 2.9rem; }
-
 .nav {
   width: 100%;
   background: #fff;
@@ -84,15 +66,57 @@ h2 {
       cursor: pointer; }
 
 .benefits {
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
   .benefits__container {
-    display: flex; }
-  .benefits__benefit i {
-    border: 10px solid #ececec;
-    padding: 20px;
-    border-radius: 100%;
-    transition: border 0.2s ease-in;
-    font-size: 2.5rem; }
-    .benefits__benefit i:hover {
-      border: 10px solid #20aa73;
-      cursor: pointer; }
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px; }
+  .benefits__benefit {
+    padding: 0 7px; }
+    .benefits__benefit i {
+      border: 10px solid #ececec;
+      padding: 20px;
+      border-radius: 100%;
+      transition: border 0.2s ease-in;
+      font-size: 2.5rem; }
+      .benefits__benefit i:hover {
+        border: 10px solid #20aa73;
+        cursor: pointer; }
+    .benefits__benefit-title {
+      text-transform: uppercase;
+      position: relative; }
+      .benefits__benefit-title::after {
+        content: "";
+        height: 2px;
+        width: 30%;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        bottom: -10px;
+        background: #20aa73; }
+    .benefits__benefit-description {
+      font-size: 0.9rem; }
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #313131;
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #404040; }
+
+h1 {
+  font-size: 3.6rem; }
+
+h2 {
+  font-size: 2.9rem; }
+
+p {
+  color: #313131; }

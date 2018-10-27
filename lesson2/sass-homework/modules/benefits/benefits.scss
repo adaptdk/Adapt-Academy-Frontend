@@ -1,13 +1,16 @@
 .benefits {
   text-align: center;
-  &__title {
-  }
+  margin: 0 auto;
 
   &__container {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
   }
 
   &__benefit {
+    padding: 0 7px;
     i {
       border: 10px solid $color--light-grey;
       padding: 20px;
@@ -19,6 +22,19 @@
         border: 10px solid $color--green;
         cursor: pointer;
       }
+    }
+
+    &-title {
+      text-transform: uppercase;
+      position: relative;
+
+      &::after {
+        @include underline($color--green);
+      }
+    }
+
+    &-description {
+      font-size: 0.9rem;
     }
   }
 }
