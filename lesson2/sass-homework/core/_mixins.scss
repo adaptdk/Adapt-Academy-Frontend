@@ -17,13 +17,13 @@
   }
 }
 
-@mixin underline($color) {
+@mixin underline($color, $width, $bottom) {
   content: "";
   height: 2px;
-  width: 30%;
+  width: $width;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -10px;
+  bottom: $bottom;
   background: $color;
 }

@@ -1,11 +1,14 @@
 //system
 @import "core/variables";
 @import "core/mixins";
+@import "core/animations";
 
 //main
 @import "modules/nav/nav";
 @import "modules/hero/hero";
 @import "modules/benefits/benefits";
+@import "modules/portfolio/portfolio";
+
 body {
   font-family: "Lato", sans-serif;
   color: $color--paragraph;

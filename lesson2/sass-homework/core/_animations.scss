@@ -1,8 +1,20 @@
-@keyframes animation {
-    0% {
-        
-    } 
-    100% { 
-        transform: rotate(180deg);
-    } 
+@keyframes slideDown {
+  from {
+    top: 10%;
+  }
+
+  to {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes box {
+  from {
+    background: transparentize($color: black, $amount: 1);
+  }
+
+  to {
+    background: transparentize($color: black, $amount: 0.46);
+  }
 }
