@@ -1,0 +1,241 @@
+<!-- 
+
+*** EXERCISE BRIEF ***
+
+You are a really cool HTML-CSS Guru right now. It's time to shine and deliver something nice on your own.
+
+1. Pick any web design from the internet that you like. It has to contain different elements[components]. 
+Good place to search for designs is dribble and google. If you need to do something personally, feel free to do that as well. As long as it's complex enough - it fits.
+2. Make sure you use all the correct practices, modular approach, BEM and so on.
+3. See if you can make reusable sass mixins, animations, functions or whatever else that you might need.
+4. May the force be with you!
+
+fonts:
+https://fonts.google.com
+
+You still have font awesome available:
+Font awesome: https://fontawesome.com/icons?d=gallery&m=free
+
+In case you need any free media resources in your upcoming work:
+https://github.com/neutraltone/awesome-stock-resources
+
+*** *** *** *** *** ***
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homework site</title>
+    <link rel="stylesheet" type="text/css" href="css/main-homework.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="menu__row">
+                <li class="menu__item">
+                    <div class="menu__item--logo">
+                            SimpeSite
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Make a free website or blog
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Customer Service
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Features
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#"> 
+                        Themes
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">
+                        Our Blog
+                    </a>
+                </li>
+                <li class="menu__item menu__item--right">
+                    <a class="menu__link" href="#">
+                        Log in
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <article class="headerDescription">
+            <div>
+                <h1 class="headerDescription__title">
+                    Create your website in
+                    <span>
+                        three simple steps
+                    </span>
+                </h1>
+                <label class="headerDescription__label">
+                    - It`s free! -
+                </label>
+                <button class="headerDescription__button">
+                    start here
+                </button>
+            </div>
+        </article>
+    </header>
+
+    <div class="container">
+        <section class="section1">
+            <div class="section1__title">
+                <h2 >
+                    WHY SIMPLESITE
+                </h2>
+            </div>
+            <div class="section1__description">
+                <img src="../images/image-section.png" alt="Curricu">
+                <div>
+                    <p>At SimpleSite we believe it's important to offer people of all technological levels the ability to tap into the web's endless potential. Our solution isn't made for professional web developers; it’s made for anybody with a desire to have their own little corner of the internet. No designers, developers, or webmasters necessary.</p>
+                    <p>Best of all, you can have your own website online within minutes!</p>
+                    <p>Simply choose the type of website you'd like to have, customize its look with our guided design wizard, then fill in the information needed to make it yours. Make your own website today!</p>
+                    <button>start here</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section2">
+            <div class="section2__title">
+                <h2 >
+                    MOBILE READY
+                </h2>
+            </div>
+            <div class="section2__description">
+                <div>
+                    <p>What makes SimpleSite stand out is that we are the only website builder that fully supports mobile-friendly editing in a mobile browser - no special app needed! This means you can view and edit your website on your smartphone.</p>
+                    <p>SimpleSite automatically gives you a website that looks stunning on both desktop and mobile. On top of that we also have a full mobile-optimized interface that gives you the freedom to access and edit everything on mobile devices. Edit the design and content of your website from the comfort of your couch or on the go - it’s all possible with SimpleSite’s mobile website editor.</p>
+                    <button>start here</button>
+                </div>
+                <img src="../images/mockups-mobile.png" alt="">
+            </div>
+        </section>
+
+        <section class="section3">
+            <div class="section3__title">
+                <h2 >
+                    FEATURES
+                </h2>
+            </div>
+            <p>Check out all the great features that are included on your website. SimpleSite provides everything you need to create a beautiful and professional website.</p>
+            <article class="section3__description">
+                <div class="section3__description--item">
+                    <img src="../images/icons/all-devices.png" alt="devices">
+                    <h4>Mobile-optimized</h4>
+                    <p>All SimpleSite websites are 100% mobile-friendly, ensuring your website visitors have a great mobile experience when they visit your website.</p>
+                </div>
+                <div class="section3__description--item">
+                    <img src="../images/icons/customer-service.png" alt="customer-service">
+                    <h4>Stunning themes</h4>
+                    <p>A SimpleSite website lets you choose between hundreds of unique designs. Choose between our themes or go with a ready-made design.</p>
+                </div>
+                <div class="section3__description--item">
+                    <img src="../images/icons/design.png" alt="design">
+                    <h4>Online store</h4>
+                    <p>Your SimpleSite website also includes your own professional online store, whether you have your own company or just want to sell a few things now and then.</p>
+                    </div>
+                <div class="section3__description--item">
+                    <img src="../images/icons/online-store.png" alt="online-store">
+                    <h4>Customer support</h4>
+                    <p>Our customer service is ready to help you when you have questions – or check out our frequently asked questions in our customer service section.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <article class="footer__description1">
+                <h5>
+                    SIMPLESITE
+                </h5>
+                <p>
+                    Our user experience ideals run through every vein of our company. Our ideals are not to attain perfection, but rather to attain pleasure. Using our product should feel enjoyable - like playing a game - it should be easy, exciting and uplifting.
+                </p>
+            </article>
+            <article class="footer__description2">
+                <h5>
+                    PRODUCT
+                </h5>
+                <ul>
+                    <li>
+                        Features
+                    </li>
+                    <li>
+                        Themes
+                    </li>
+                    <li>
+                        Gift Certificate
+                    </li>
+                    <li>
+                        Pricing
+                    </li>
+                </ul>
+            </article>
+            <article class="footer__description3">
+                <h5>
+                    Company
+                </h5>
+                <ul>
+                    <li>
+                        Team
+                    </li>
+                    <li>
+                        Nordic Growth Hackers
+                    </li>
+                    <li>
+                        Partnership
+                    </li>
+                    <li>
+                        Jobs
+                    </li>
+                    <li>
+                        Terms of use
+                    </li>
+                </ul>
+            </article>
+            <article class="footer__description4">
+                <h5>
+                    Community
+                </h5>
+                <ul>
+                    <li>
+                        Customer service
+                    </li>
+                    <li>
+                        Our blog
+                    </li>
+                    <li>
+                        FAQ
+                    </li>
+                </ul>
+            </article>
+
+            <div class="footer__social">
+                <img src="../images/icons/fb.png" alt="fb">
+                <img src="../images/icons/linkedin.png" alt="linkedin">
+                <img src="../images/icons/twitter.png" alt="twitter">
+                <img src="../images/icons/youtube.png" alt="youtube">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

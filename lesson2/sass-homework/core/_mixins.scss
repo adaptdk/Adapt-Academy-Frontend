@@ -1,0 +1,13 @@
+@mixin breakpoint($class) {
+    @if $class == sm {
+        @media (min-width: 576px) { @content; }
+    }
+
+    @else if $class == md {
+        @media (min-width: 992px) { @content; }
+    }
+
+    @else {
+        @warn "Unfortunately, this value could not be support";
+    }
+}

@@ -1,0 +1,50 @@
+$spirit-bomb-inner : #7afffd;
+$spirit-bomb-outer : #3EC8EB;
+$spirit-bomb-border : #92fefb;
+
+body {
+    background-image: url(../assets/cosmos.png);
+    background-size: cover;
+}
+
+.modal {
+    position: fixed;
+    right: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparentize($color: #000000, $amount: 1);
+    width: 40vw;
+
+    &__video{
+        position: relative;
+        height: 100%;
+        padding-bottom: 56.25%;
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__title {
+        font-size: 2em;
+        color: #fff;
+        margin: 0;
+    }
+    &__description {
+        color: #fff;
+        margin-top: 1rem;
+    }
+
+    &__button {
+        display: inline-block;
+        background: $spirit-bomb-outer;
+        border-radius: 5px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+}
+
+
+
