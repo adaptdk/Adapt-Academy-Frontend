@@ -197,6 +197,103 @@
         bottom: 40px;
         background: #e96656; }
 
+.pricing {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-image: url("../assets/bg2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+  .pricing__title {
+    margin-bottom: 0;
+    padding-top: 100px;
+    color: #fff; }
+  .pricing__subtitle {
+    margin-top: 0;
+    color: #fff; }
+  .pricing__container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 150px; }
+  .pricing__item {
+    width: 17%;
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 10px; }
+    .pricing__item-header {
+      font-weight: bold;
+      padding: 15px 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+    .pricing__item h3 {
+      font-size: 1.1rem; }
+    .pricing__item .green {
+      background: #20aa73; }
+    .pricing__item .blue {
+      background: #3ab0e2; }
+    .pricing__item .red {
+      background: #e96656; }
+    .pricing__item .gold {
+      background: #e7ac44; }
+    .pricing__item-price {
+      background: #404040;
+      padding: 40px;
+      color: grey; }
+      .pricing__item-price b {
+        font-size: 2rem;
+        font-weight: normal;
+        color: #fff; }
+    .pricing__item ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      .pricing__item ul li {
+        background: #fff;
+        color: #808080;
+        font-size: 0.86rem;
+        padding: 10px;
+        border-bottom: 1px solid #ececec; }
+        .pricing__item ul li:last-of-type {
+          padding-top: 30px;
+          padding-bottom: 30px; }
+        .pricing__item ul li .button {
+          color: #fff;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          border-radius: 5px; }
+          .pricing__item ul li .button:hover {
+            cursor: pointer; }
+
+.footer {
+  width: 100%;
+  display: flex;
+  background: #404040;
+  justify-content: center;
+  text-align: center; }
+  .footer__item {
+    padding: 50px 0;
+    width: 20%;
+    color: #ececec; }
+    .footer__item p {
+      color: #ececec; }
+    .footer__item i {
+      font-size: 1.3rem; }
+    .footer__item .fa-map-marker-alt {
+      color: #e96656; }
+    .footer__item .fa-envelope {
+      color: #20aa73; }
+    .footer__item .fa-phone-square {
+      color: #3ab0e2; }
+    .footer__item.social {
+      background: #313131; }
+      .footer__item.social i:hover {
+        color: #e96656;
+        cursor: pointer;
+        transition: color 0.4s; }
+
 body {
   font-family: "Lato", sans-serif;
   color: #313131;

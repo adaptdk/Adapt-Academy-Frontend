@@ -1,0 +1,103 @@
+.pricing {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-image: url("../assets/bg2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &__title {
+    margin-bottom: 0;
+    padding-top: 100px;
+    color: $color--white;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    color: $color--white;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 150px;
+  }
+
+  &__item {
+    width: 17%;
+    color: $color--white;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    &-header {
+      font-weight: bold;
+      padding: 15px 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .green {
+      background: $color--green;
+    }
+
+    .blue {
+      background: $color--blue;
+    }
+
+    .red {
+      background: $color--red;
+    }
+
+    .gold {
+      background: $color--gold;
+    }
+
+    &-price {
+      background: $color--black;
+      padding: 40px;
+      color: grey;
+      b {
+        font-size: 2rem;
+        font-weight: normal;
+        color: $color--white;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        background: $color--white;
+        color: $color--grey;
+        font-size: 0.86rem;
+        padding: 10px;
+        border-bottom: 1px solid $color--light-grey;
+
+        &:last-of-type {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+
+        .button {
+          color: $color--white;
+          padding: 10px 20px;
+          text-transform: uppercase;
+          border-radius: 5px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

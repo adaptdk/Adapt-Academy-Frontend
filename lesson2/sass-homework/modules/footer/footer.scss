@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  display: flex;
+  background: $color--black;
+  justify-content: center;
+  text-align: center;
+
+  &__item {
+    padding: 50px 0;
+    width: 20%;
+    color: $color--light-grey;
+
+    p {
+      color: $color--light-grey;
+    }
+
+    i {
+      font-size: 1.3rem;
+    }
+
+    .fa-map-marker-alt {
+      color: $color--red;
+    }
+
+    .fa-envelope {
+      color: $color--green;
+    }
+
+    .fa-phone-square {
+      color: $color--blue;
+    }
+
+    &.social {
+      background: $color--paragraph;
+
+      i:hover {
+        color: $color--red;
+        cursor: pointer;
+        transition: color 0.4s;
+      }
+    }
+  }
+}
