@@ -1,0 +1,18 @@
+.footer {
+    background-color: transparentize($color--dark-grey, 0.2);
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+
+    &__text, &__href {
+        color: $color--white;
+    }
+
+    &__href:hover {
+        color: darken($color--white, 40%);
+        transition: color 0.3s linear;
+    }
+
+
+}

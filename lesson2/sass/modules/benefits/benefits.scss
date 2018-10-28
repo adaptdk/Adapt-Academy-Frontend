@@ -1,0 +1,19 @@
+.benefits {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__div {
+        display: flex;
+        justify-content: space-evenly;
+        &__article {
+            &__title {
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+}

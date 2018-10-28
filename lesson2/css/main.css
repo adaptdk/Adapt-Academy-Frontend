@@ -227,6 +227,45 @@ table {
     -webkit-transform: translateX(0);
             transform: translateX(0); }
 
+.benefits {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .benefits__title {
+    text-align: center; }
+  .benefits__div {
+    display: flex;
+    justify-content: space-evenly; }
+    .benefits__div__article__title {
+      font-weight: bold;
+      text-align: center; }
+
+.products__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px; }
+
+.products__div {
+  display: flex; }
+  .products__div__article {
+    width: 25%;
+    text-align: center; }
+    .products__div__article__title {
+      text-align: center; }
+    .products__div__article__img {
+      width: 100%; }
+
+.footer {
+  background-color: rgba(15, 15, 15, 0.8);
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center; }
+  .footer__text, .footer__href {
+    color: #FFFFFF; }
+  .footer__href:hover {
+    color: #999999;
+    transition: color 0.3s linear; }
+
 .hero-image {
   position: relative;
   margin: 0; }
@@ -254,7 +293,9 @@ table {
   display: flex; }
   .contacts article {
     width: 50%;
-    padding: 20px; }
+    padding: 20px;
+    margin-top: 200px;
+    text-align: center; }
   .contacts .map {
     width: 50%;
     position: relative; }
