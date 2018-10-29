@@ -1,5 +1,9 @@
 .footer-r-content {
-  align-self: flex-end;
   font-size: rem(40px);
-  padding-bottom: 10px;
+  padding: 20px 0;
+
+  @include breakpoint(sm) {
+    align-self: flex-end;
+    padding-bottom: 10px;
+  }
 }

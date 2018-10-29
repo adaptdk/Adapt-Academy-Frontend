@@ -1,14 +1,15 @@
 .footer {
   background: $color--darker-grey;
   color: $color--white;
-  margin-top: 15px;
-  padding: 20px 0 10px;
+  padding: 20px 15px;
 
   &__items {
     padding-bottom: 30px;
   }
 
   &__item {
+    padding-bottom: 5px;
+
     @include breakpoint(sm) {
       display: inline-block;
       margin-right: 15px;
@@ -40,6 +41,10 @@
     color: $color--dark-grey;
     font-size: 14px;
     font-weight: 100;
-    line-height: 1.4;
+    line-height: 1.6;
+
+    @include breakpoint(sm) {
+      line-height: 1.4;
+    }
   }
 }

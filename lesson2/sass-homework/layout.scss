@@ -1,11 +1,12 @@
 .wrapper {
-  @include breakpoint(sm) {
+
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1090px;
-    padding: 0 60px;
+    padding: 0 25px;
     width: 100%;  
-  }
+
 }
