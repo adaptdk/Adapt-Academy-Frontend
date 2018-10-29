@@ -1,23 +1,36 @@
 import React from 'react';
 
 import Columns from '../components/base/Columns';
-import { TWO_COLUMNS_LAYOUTS } from '../constants/layouts';
-import HomeBox1 from '../components/Home/HomeBox1';
-import HomeBox2 from '../components/Home/HomeBox2';
-import HomeBox3 from '../components/Home/HomeBox3';
-import HomeBox4 from '../components/Home/HomeBox4';
+import {
+  TWO_COLUMNS_60_40_LAYOUT,
+  THREE_COLUMNS_EQUAL_LAYOUT,
+} from '../constants/layouts';
+import VideoBox from '../components/Home/VideoBox';
+import VideoText from '../components/Home/VideoText';
+import PriceBox from '../components/Home/PriceBox';
+import HistoricalBox from '../components/Home/HistoricalBox';
+import TopListBox from '../components/Home/TopListBox';
+import SliderBox from '../components/Home/SliderBox';
 
 const HomeContainer = () => (
-  <Columns
-    className="home"
-    options={ TWO_COLUMNS_LAYOUTS }
-    fill
-  >
-    <HomeBox1 />
-    <HomeBox2 />
-    <HomeBox3 />
-    <HomeBox4 />
-  </Columns>
+  <div className="home">
+    <Columns
+      options={ TWO_COLUMNS_60_40_LAYOUT }
+      fill
+    >
+      <VideoBox />
+      <VideoText />
+    </Columns>
+    <Columns
+      options={ THREE_COLUMNS_EQUAL_LAYOUT }
+      fill
+    >
+      <PriceBox />
+      <HistoricalBox />
+      <TopListBox />
+    </Columns>
+    <SliderBox />
+  </div>
 );
 
 export default HomeContainer;

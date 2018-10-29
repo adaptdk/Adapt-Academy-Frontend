@@ -1,14 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import paragraphImg from '../../assets/wireframes/paragraph.png';
 
 import Box from '../base/Box';
 
-const HomeBox1 = () => (
+const VideoBox = () => (
   <Box>
-    <div className="home-box__header home-box__header--right-link">
-      <h3>Home dashboard 1</h3>
-      <Link to="dashboard1">See more</Link>
+    <div className="home-box__header">
+      <h3>Video Box</h3>
     </div>
     <div className="divider margin--small-bottom" />
     <img
@@ -18,4 +16,4 @@ const HomeBox1 = () => (
   </Box>
 );
 
-export default HomeBox1;
+export default VideoBox;
