@@ -1,0 +1,54 @@
+
+.customers {
+  
+  background: $color-background-1;
+  padding-top: $big-vertical-margin;
+  padding-bottom: $negative-margin + $medium-vertical-margin;
+  // box-sizing: border-box;
+  @include margins("media");
+  @include breakpoint("xs") {
+    @include margins("xs");
+    padding-top: $small-vertical-margin;
+    padding-bottom: $medium-vertical-margin;
+  }
+  
+  &__heading {
+    font-size: $heading-font-size;
+    font-weight: 300;
+    @include margins("textiual", $margin-left: ($text-content-left-margin - $media-content-left-margin));
+    @include breakpoint("md") {
+      @include margins("textiual-mQ");
+    }
+    @include breakpoint("xs") {
+      @include margins("xs");
+      font-size: 30px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: $medium-vertical-margin;
+    
+    &__item {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+      height: auto; 
+    }
+
+    &__item__div {
+      width: 16%;
+      padding: 25px;
+      margin-right: 10px;
+      margin-left: 10px;
+      @include breakpoint("md") {
+        width: 35%;
+        padding: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+  }
+}

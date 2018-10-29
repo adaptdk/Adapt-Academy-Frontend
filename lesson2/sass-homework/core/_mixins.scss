@@ -1,0 +1,61 @@
+@mixin margins ($type, $margin-left: $text-content-left-margin, $margin-right: $text-content-right-margin) { 
+  @if $type == textiual {
+      margin-left: $margin-left;
+      margin-right: $margin-right;
+  }
+  @if $type == textiual-mQ {
+    margin-left: $margin-left - 130px;
+    margin-right: $margin-right - 60px;
+}
+  
+  @if $type == media-mQ {
+    margin-left: $margin-left - 130px;
+    margin-right: $margin-right - 60px;
+}
+  @if $type == media {
+    margin-left: $media-content-left-margin;
+    margin-right: 0;
+}
+
+@if $type == xs {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+}
+
+@mixin social-hover {
+  &:hover {
+    border-radius: 50%;
+    background: #ddd;
+  }
+}
+
+@mixin image-hover {
+  &__link:hover &__img {
+    transform: scale(1.1);
+  }
+}
+
+@mixin breakpoint($class) {
+  @if $class == xxs {
+    @media (max-width: 568px) { @content; }
+  }
+  
+  @if $class == xs {
+      @media (max-width: 768px) { @content; }
+  }
+
+  @else if $class == md {
+      @media (max-width: 992px) { @content; }
+  }
+
+  @else if $class == lg {
+      @media (max-width: 1200px) { @content; }
+  }
+
+  @else {
+      @warn "Breakpoint mixin supports: xxs, xs, md, lg";
+  }
+}

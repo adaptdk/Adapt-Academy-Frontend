@@ -1,0 +1,185 @@
+//footer styling
+.footer-background {
+  background: $color-background-4;
+  color: $color-white; 
+}
+
+.footer {
+  background: $color-background-3;
+  transform: translateY(-$negative-margin);
+  padding-top: $medium-vertical-margin;
+  padding-bottom: $medium-vertical-margin; 
+  @include margins("media");
+  @include breakpoint("xs") {
+    transform: translateY(0);
+    @include margins("xs");
+  }
+  
+  &__flex-content {
+    display: flex;
+    justify-content: space-between;
+    @include margins("textiual", $margin-left: ($text-content-left-margin - $media-content-left-margin));
+    @include breakpoint("xs") {
+      @include margins("xs");
+      padding: 10px;
+    }
+  }
+
+  &__heading {
+    font-size: $heading-font-size;
+    font-weight: 200; 
+  }
+
+  &__address-box {
+    display: flex;
+    font-size: 14px;
+    font-weight: 200;
+    color: $color-white;
+    line-height: 1.5;
+    @include breakpoint("md") {
+      display: none;
+    }
+
+    &__flex-content {
+      
+      & + & {
+        margin-left: $address-margin;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: $small-vertical-margin;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    @include margins("textiual", $margin-left: ($text-content-left-margin - $media-content-left-margin));
+    @include breakpoint("xs") {
+      @include margins("xs");
+      padding: 10px;
+    }
+  }
+
+  &__contacts {
+    margin-top: $small-vertical-margin;
+    @include margins("textiual", $margin-left: ($text-content-left-margin - $media-content-left-margin));
+    @include breakpoint("xs") {
+      @include margins("xs");
+      padding: 10px;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__nav-bar { 
+    margin-top: $small-vertical-margin;
+    @include margins("textiual", $margin-left: ($text-content-left-margin - $media-content-left-margin));
+    @include breakpoint("md") {
+      display: none;
+    }
+    
+    &__ul {
+      display: inline-block;
+      
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+    
+    &__element {
+      float: left;
+      width: 120px;
+      padding-top: 15px;
+      border-top: 2px solid white;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        border-top: 2px solid $color-background-4;
+        font-size: 25px;
+      }
+      
+      & + & {
+        margin-left: 20px;
+      }
+
+      &__heading {
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      &__text {
+        font-weight: 200;
+        font-size: 14px;
+        color: lighten($color-address, 60%);
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.footer-mini {
+  display: flex;
+  justify-content: space-between;
+  color: darken($color-white, 50%);
+  @include margins("textiual");
+  @include breakpoint("xs") {
+    display: block;
+    padding-top: 100px;
+    text-align: center;
+    @include margins("xs");
+  }
+  
+  &__copyrights {
+    margin-top: -$small-vertical-margin;
+  }
+
+  &__follow-us {
+    margin-top: -$small-vertical-margin;
+    display: flex;
+    @include breakpoint("xs") {
+      display: inline-block;
+    }
+    
+    &__text {
+      margin-right: 30px;
+    }
+
+    &__social-media {
+      margin-top: -10px;
+      @include breakpoint("xs") {
+        margin-top: 20px;
+      }
+      
+      &__link {
+        display: inline-block;
+        padding: 10px;
+        @include social-hover;
+        transition: all 0.3s ease-in-out;
+        
+        & + & {
+          margin-left: 10px;
+        }
+      }
+
+      &__icon {
+        color: darken($color-white, 50%);
+        @include breakpoint("xs") {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
