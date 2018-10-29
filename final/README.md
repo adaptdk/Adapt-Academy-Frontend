@@ -94,10 +94,12 @@ All your code will be putted in this directory. This folder already includes rec
 │   ├── Dashboard3
 │   │   └── Dashboard3Box1.js
 │   ├── Home
-│   │   ├── HomeBox1.js
-│   │   ├── HomeBox2.js
-│   │   ├── HomeBox3.js
-│   │   └── HomeBox4.js
+│   │   ├── VideoBox.js
+│   │   ├── VideoText.js
+│   │   ├── PriceBox.js
+│   │   ├── HistoricalBox.js
+│   │   ├── TopListBox.js
+│   │   └── SliderBox.js
 │   └── base
 │       ├── Box.js
 │       ├── Columns.js
