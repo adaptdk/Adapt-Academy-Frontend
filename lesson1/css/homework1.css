@@ -6,6 +6,9 @@ p, input, textarea {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+h2 {
+  text-transform: uppercase;
+}
 header {
   position: relative;
   width: 100%;
@@ -36,24 +39,57 @@ h1 {
   margin: 0 auto;
 }
 main {
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   margin: 0 auto;
 }
 section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
+section > h2 {
+  /* border: 1px solid red; */
+  width: 100%;
+  /* line-height: 3em; */
+}
 article {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   background-color: #e1e1e1;
   margin: 2em;
   margin-bottom: 0;
-  transition: transform 1s linear;
+  transition: transform .5s linear;
+  border-radius: 5%;
+  position: relative;
 }
 article:hover{
   transform: scale(1.1);
+}
+article img {
+  width: 90%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+}
+article span {
+  display: none;
+}
+article:hover span {
+  display: block;
+  white-space: nowrap;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 1.5em;
+  font-family: 'Robot', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(173, 83, 137, 0.7);
 }
 h2 {
   /* text-transform: uppercase; */
@@ -98,3 +134,83 @@ footer p {
   text-align: center;
   color: white;
 }
+
+/* Shapes */
+
+/* .pentagon {
+  position: relative;
+  width: 15px;
+  box-sizing: content-box;
+  border-width: top horizontal bottom
+  border-width: 13px 3px 0;
+  border-style: solid;
+  border-color: red transparent;
+}
+.pentagon:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -22px;
+  left: -3px;
+  border-width: 0 10px 9px;
+  border-style: solid;
+  border-color: transparent transparent red;
+}
+.hexagon {
+  width: 21px;
+  height: 9px;
+  background: red;
+  position: relative;
+}
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 7px solid red;
+}
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 7px solid red;
+}
+
+section > article:nth-of-type(1) {
+  border: 1px solid yellow;
+  position: relative;
+}
+section > article:nth-of-type(1):hover {
+}
+.pentagon-shape1 {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  opacity: 0.7;
+}
+.pentagon-shape1:hover {
+  transform: rotate(-15deg);
+  transform: translateY();
+  animation: rotate s infinite;
+  animation-iteration-count: 5;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
