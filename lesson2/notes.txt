@@ -1,0 +1,19 @@
+$
+
+@mixin bordered($width) {
+border : $width
+}
+
+.block
+p {
+  @extend .block;
+}
+// p, .block {}
+
+color operations
+
+@if lightness($color) > 30% {
+  color: this and that
+}
+
+npm --watch

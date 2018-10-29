@@ -1,0 +1,35 @@
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  // height: 80vh;
+  padding: $padding;
+  justify-content: center;
+
+  &__title {
+    width: 100%;
+    display: inline-block;
+    // text-transform: capitalize;
+    // text-align: center;
+    // font-weight: bold;
+    // vertical-align: middle;
+    // line-height: 50px;
+    // font-size: rem(40px);
+    @include titleStyling();
+  }
+  &__icon i {
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+  }
+}
+
+.benefit {
+  padding: $padding;
+  width: 100px;
+  flex-basis: 20%;
+  border: 1px solid black;
+  &:nth-of-type(2) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

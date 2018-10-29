@@ -1,0 +1,37 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: $color--grey;
+  &__title {
+    // float: left;
+
+    width: 50%;
+    // display: inline-block;
+    @include titleStyling();
+  }
+  &__con {
+    // float: left;
+    padding: $padding;
+    align-self: center;
+    border: 1px solid green;
+    margin: 0 auto;
+    width: 50%;
+    &__address > * {
+      @include mainText($color--white);
+    }
+  }
+  .map {
+    // float: right;
+    width: 50%;
+    position: relative;
+    iframe {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+  }
+}

@@ -38,3 +38,54 @@ $browser-context: 16; // Default
     font-size: $size; //Fallback in px
     font-size: rem($size);
 }
+
+// type- su borderiu ar be
+@mixin button($type: primary, $color: $color--yellow) {
+  @if $type == primary {
+    background-color: $color;
+    color: $color--black;
+    &:hover {
+      background: darken($color, 15%);
+    }
+  }
+  @if $type == secondary {
+    background: transparent;
+    border: 3px solid $color;
+    color: $color--white;
+    &:hover {
+      border: 3px solid darken($color, 15%);
+    }
+  }
+}
+
+  .button {
+    @include button("primary")
+    &--primary {
+      @include button("primary")
+    }
+    &--secondary {
+      @include button("secondary")
+
+    }
+  }
+@mixin centerImg() {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+@mixin titleStyling() {
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: rem(40px);
+}
+@mixin mainText($color) {
+  // padding: $padding;
+  color: $color;
+  font-size: rem(20px);
+  margin: 0 0 15px 0;
+  line-height: 2rem;
+}
