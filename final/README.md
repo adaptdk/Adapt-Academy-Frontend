@@ -169,17 +169,17 @@ In addition your application has to have a multistep form and optionally an auth
 During final task you will be responsible for creating application which will provide some information about crypto currency that will display main information about exchange, crypto currency news and so on. You will:
 
 1. create a landing page;
-
 2. integrate D3 library for displaying graphics;
-
 3. widgets with dynamic data;
-
 4. separate pages with data filtering, editing and so on;
-
 5. multistep form;
-
 6. learn how to deploy app to cloud based hosting service - heroku;
 
+#### Crypto currency API
+
+We will use [https://min-api.cryptocompare.com/](https://min-api.cryptocompare.com/)  - a free api for getting basic information about crypto currences (prices, historical data and so on). All documentation regardin this API cam be found in link that are provided above.
+
+![Api page](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/crypto-compare-api.png)
 
 
 ## Landing page
@@ -190,10 +190,11 @@ Create a static landing page based on the given wireframe (https://wireframe.cc/
 
 ## User story (general)
 
-| User story                                                   | Epic                | Skills                                                |
-| :----------------------------------------------------------- | ------------------- | ----------------------------------------------------- |
-| Create a sticky header with logo and menu navigation (burger menu). | Landing page        | HTML / CSS                                      |
-| Implement third party video with custom play button and descriptive text. | Landing page        | HTML / CSS                                            |
-| List benefits/functionality of your service with icons and descriptive text. Implement CSS animation on your icons for more interactivity. Consider making one of the icons with pure CSS. Inspiration: https://cssicon.space | Landing page        | HTML / CSS / Animations Creative usage of psuedo elements |
-| Implement slider by using third part library library and add texts, call to action button on different slides. Consider dynamic layouting, each slide could be different. | Landing page        | JS                                                    |
-| Add a basic footer with social media icons and links.        | Landing page        | HTML / CSS                                           |
+| User story                                                   | Epic         | Skills                                                    |
+| :----------------------------------------------------------- | ------------ | --------------------------------------------------------- |
+| Create a sticky header with logo and menu navigation (burger menu - optional). | Landing page | HTML / CSS                                                |
+| Implement third party video about cryptocurrency with custom play button and descriptive text. | Landing page | HTML / CSS                                                |
+| Create three widgets with icons and descriptive text (price widget, historical data widget, toplists widget). Implement CSS animation on your icons for more interactivity. Consider making one of the icons with pure CSS. Inspiration: https://cssicon.space | Landing page | HTML / CSS / Animations Creative usage of psuedo elements |
+| Implement slider by using third part library library and add texts, call to action button on different slides. Consider dynamic layouting, each slide could be different. | Landing page | JS                                                        |
+| Add a basic footer with social media icons and links.        | Landing page | HTML / CSS                                                |
+
