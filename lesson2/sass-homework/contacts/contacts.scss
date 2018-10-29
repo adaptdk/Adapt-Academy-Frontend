@@ -1,0 +1,13 @@
+.contacts {
+    margin-top: 20px;
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    &__text {
+        margin-top: 10px;
+        text-align: center;
+    }
+}

@@ -138,6 +138,114 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(15, 15, 15, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 10; }
+
+.branding {
+  width: 300px; }
+  .branding__logo {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle; }
+  .branding__name {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; }
+
+.primary-nav__element {
+  display: inline-block; }
+  .primary-nav__element + .primary-nav__element {
+    margin-left: 20px; }
+
+.primary-nav__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 15px 10px;
+  position: relative;
+  overflow: hidden; }
+  .primary-nav__link::after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+  .primary-nav__link:hover::after {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+.welcome--img {
+  width: 100%; }
+
+.products__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px; }
+
+.products__div {
+  display: flex; }
+  .products__div__article {
+    width: 50%;
+    text-align: center; }
+    .products__div__article__title {
+      font-weight: bold;
+      text-align: center; }
+    .products__div__article__img {
+      width: 100%; }
+
+.aboutus__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px; }
+
+.aboutus__text {
+  margin-top: 10px;
+  text-align: center; }
+
+.contacts {
+  margin-top: 20px; }
+  .contacts__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px; }
+  .contacts__text {
+    margin-top: 10px;
+    text-align: center; }
+
+.footer {
+  margin-top: 40px;
+  background-color: rgba(15, 15, 15, 0.8);
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center; }
+  .footer__text, .footer__href {
+    color: #FFFFFF; }
+  .footer__href:hover {
+    color: #999999;
+    transition: color 0.3s linear; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-family: 'Exo 2', sans-serif; }
