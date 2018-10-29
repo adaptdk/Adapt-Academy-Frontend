@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import Box from '../base/Box';
 import paragraphImg from '../../assets/wireframes/paragraph.png';
 
-const HomeBox2 = () => (
+import Box from '../base/Box';
+
+const HistoricalBox = () => (
   <Box>
     <div className="home-box__header home-box__header--right-link">
-      <h3>Home dashboard 2</h3>
+
+      <h3>Historical data widget</h3>
       <Link to="dashboard2">See more</Link>
     </div>
     <div className="divider margin--small-bottom" />
@@ -18,4 +19,4 @@ const HomeBox2 = () => (
   </Box>
 );
 
-export default HomeBox2;
+export default HistoricalBox;
