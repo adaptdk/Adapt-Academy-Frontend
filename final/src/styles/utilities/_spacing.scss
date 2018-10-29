@@ -1,4 +1,8 @@
 .padding {
+  &--large {
+    padding: $large-padding;
+  }
+
   &--small-bottom {
     padding-bottom: $small-padding;
   }
