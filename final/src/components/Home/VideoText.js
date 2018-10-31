@@ -1,19 +1,17 @@
 import React from 'react';
-
-import Box from '../base/Box';
 import paragraphImg from '../../assets/wireframes/paragraph.png';
 
-const HomeBox4 = () => (
-  <Box>
+const VideoText = () => (
+  <div className="box--padding">
     <div className="home-box__header">
-      <h3>Home news</h3>
+      <h3>Some video text</h3>
     </div>
     <div className="divider margin--small-bottom" />
     <img
       className="home__wireframe-img"
       src={ paragraphImg }
     />
-  </Box>
+  </div>
 );
 
-export default HomeBox4;
+export default VideoText;
