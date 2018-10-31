@@ -312,5 +312,5 @@ function getZodiacSign(day, month) {
     } 
 
   return zodiac;
-    
+
 }
