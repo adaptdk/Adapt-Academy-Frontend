@@ -1,0 +1,35 @@
+var array1 = ['a', 'b', 'c'];
+
+array1.forEach(function(element) {
+  console.log(element);
+});
+
+arr.forEach(
+    function(el) {
+        el * 2;
+});
+
+let arr = [1, 2, 3, 4];
+arr.reduce(function() {
+    return arguments[1] + arguments[0];
+})
+
+arr.map( function (item) {
+    return {name: item.name, age: item.age};
+})
+
+var person = {
+    name: 'Test',
+    surname: 'Test2'
+};
+
+Object.keys(person).forEach((item) => console.log(item));
+Object.values(person).forEach((item) => console.log(item));
+
+promises
+synch
+await genratoriai
+skirtumas naudojant synch await generators
+fetch aPI nukopijuot githubo raw
+pollyfill js service
+pollyfill.io
