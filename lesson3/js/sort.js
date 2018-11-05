@@ -2,9 +2,7 @@
   fetch('https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/lesson3/users.json')
   .then(function(response){ return response.json()})
   .then(function(data) {
-    const dataString = JSON.stringify(data);
-    const parsedData = JSON.parse(dataString);
-    //console.log(parsedData[1].name);
+    const parsedData = JSON.parse(JSON.stringify(data));
     sortNames(parsedData);
   })
 
