@@ -1,0 +1,9 @@
+#Agile
+
+    - scrum
+    - planning poker
+    - uzduotys vadinamos: user stories
+    - dar mazesnes: tasks
+
+    -
+

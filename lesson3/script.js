@@ -87,6 +87,8 @@ function getZodiacSign(day, month, signs) {
   console.log(atrinktas[0].sign);
 }
 
+let surikiuotas = masyvas.sort();
+
 getZodiacSign(22, 5, signs);
 
 // other
