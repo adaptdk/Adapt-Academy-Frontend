@@ -19,7 +19,10 @@
     .catch(error => console.error(error))
 })();
 
+// let json = passData();
+
 function outputSalaryName(obj) {
+    // passData();
     obj.forEach(element => {
         if (element.salary > 1000) {
             console.log( `${element.name}: ${element.salary}`)
