@@ -71,7 +71,7 @@ getCountries(); // 62
 ```
 var personnel = [
   {
-    id: š,
+    id: 5,
     name: "Luke Skywalker",
     pilotingScore: 98,
     shootingScore: 56,
