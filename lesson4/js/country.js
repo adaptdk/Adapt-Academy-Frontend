@@ -4,7 +4,8 @@ const array = [
     {"name": "Albania", "code": "AL"},
     {"name": "Algeria", "code": "DZ"}
 ];
-  const getCountryByCode = (code) =>{ let output =  array.filter( x => code == x.code )
-    console.log(output[0].name);
-  };
-getCountryByCode('AL');
+const getCountryByCode = (code) =>{ let output =  array.filter( item => code == item.code )
+  console.log(output[0].name);
+};
+
+getCountryByCode('DZ');
