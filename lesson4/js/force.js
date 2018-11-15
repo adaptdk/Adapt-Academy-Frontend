@@ -36,7 +36,5 @@ var personnel = [
     },
 ];
 
-let forceUser = personnel.filter(item => item.isForceUser);
-let forceScoreArr = forceUser.map(item => item.pilotingScore + item.shootingScore);
-let forceTotalScore = forceScoreArr.reduce((acum, cur) => acum + cur);
-console.log(forceTotalScore);
+let forceScore = personnel.filter(item => item.isForceUser).map(item => item.pilotingScore + item.shootingScore).reduce((acum, cur) => acum + cur);
+console.log(forceScore);
