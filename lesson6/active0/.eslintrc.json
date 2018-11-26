@@ -12,9 +12,6 @@
     "ecmaVersion": 2017,
     "sourceType": "module"
   },
-  "plugins": [
-    "react"
-  ],
   "rules": {
     "no-var": 2,
     "no-console": 1,
