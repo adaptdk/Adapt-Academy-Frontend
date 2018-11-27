@@ -1,4 +1,4 @@
-1. Write function getZodiacSign(day, month) which will return zodiac sign depending on input. 
+1. Write function getZodiacSign(day, month) which will return zodiac sign depending on input.
 
    Dates for concrete zodiac sign can be found in https://www.horoscopedates.com/zodiac-signs/
 
