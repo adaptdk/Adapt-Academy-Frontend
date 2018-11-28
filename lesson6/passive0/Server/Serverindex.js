@@ -1,7 +1,7 @@
-import App from './App';
+import App from '../Components/App';
 import { Provider } from 'react-redux';
 import React from 'react';
-import configureStore from './configureStore';
+import configureStore from '../Reducers/configureStore';
 import express from 'express';
 import { fetchCounter } from './src/common/api/counter';
 import qs from 'qs';
