@@ -1,0 +1,40 @@
+%right-link {
+  & a {
+    cursor: pointer;
+    margin-left: auto;
+    color: $gray;
+
+    &:hover {
+      transition: all 300ms ease-in-out;
+      transform: translateX($unit-2);
+    }
+
+    &::after {
+      display: inline-block;
+      content: '>';
+      text-decoration: none;
+      margin-right: $unit-3;
+      margin-left: $unit-3;
+    }
+  }
+}
+
+%left-link {
+  & a {
+    cursor: pointer;
+    color: $gray;
+
+    &:hover {
+      transition: all 300ms ease-in-out;
+      transform: translateX(-$unit-2);
+    }
+
+    &::before {
+      display: inline-block;
+      content: '<';
+      text-decoration: none;
+      margin-right: $unit-3;
+      margin-left: $unit-3;
+    }
+  }
+}
