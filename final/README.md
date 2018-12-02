@@ -172,8 +172,7 @@ During final task you will be responsible for creating application which will pr
 2. integrate D3 library for displaying graphics;
 3. widgets with dynamic data;
 4. separate pages with data filtering, editing and so on;
-5. multistep form;
-6. learn how to deploy app to cloud based hosting service - heroku;
+5. deploy app to cloud based hosting service;
 
 #### Crypto currency API
 
@@ -194,7 +193,7 @@ Create a static landing page based on the given wireframe (https://wireframe.cc/
 | :----------------------------------------------------------- | ------------ | --------------------------------------------------------- |
 | Create a sticky header with logo and menu navigation (burger menu - optional). | Landing page | HTML / CSS                                                |
 | Implement third party video about cryptocurrency with custom play button and descriptive text. | Landing page | HTML / CSS                                                |
-| Create three widgets with icons and descriptive text (price widget, historical data widget, toplists widget). Implement CSS animation on your icons for more interactivity. Consider making one of the icons with pure CSS. Inspiration: https://cssicon.space | Landing page | HTML / CSS / Animations Creative usage of psuedo elements |
+| Create 2 widgets with icons and descriptive text (price widget, historical exchange data widget). Implement CSS animation on your icons for more interactivity. Consider making one of the icons with pure CSS. Inspiration: https://cssicon.space | Landing page | HTML / CSS / Animations Creative usage of psuedo elements |
 | Implement slider by using third part library library and add texts, call to action button on different slides. Consider dynamic layouting, each slide could be different. | Landing page | JS                                                        |
 | Add a basic footer with social media icons and links.        | Landing page | HTML / CSS                                                |
 
@@ -229,10 +228,47 @@ If your answer is a negative number then this is a percentage increase.
 
 Read more at: https://www.skillsyouneed.com/num/percent-change.html
 
-Basically you will use such api call: 
+For usage of API examples look at documentation: 
 
-* https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=EUR&limit=10
-* https://min-api.cryptocompare.com/data/histohour?fsym=BTC&tsym=EUR&limit=10
-* https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=EUR&limit=10
+* https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistoday
+* https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistohour
+* https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistominute
 
 
+
+Note: user **close** property as a price.
+
+
+
+## Currency exchange page
+
+Create currency  page based on the given wireframe: 
+
+![exchange page](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/exchange-page.png)
+
+Exchange page should be accesible from landing page by pressing url link in exchange widget.
+
+## User story
+
+* From landing page user should be able go to exchange page by pressing link like it is with price widget.
+
+* Exchange page should contain four input fields:
+
+  - Title of line chart (text field);
+  - Currency selection dropdown box;
+  - Date picker (from);
+  - Date picker (to);
+
+* Exchange page should contain bar chart that will display currency exchange volume historical data:
+
+![bar exchange example](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/bar-exchange-example.png)
+
+For usage of API examples look at documentation: 
+* https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataExchangeHistoday
+* https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataExchangeHistoHour
+
+* User should be able to enter title of chart bar.
+* User should be able to select currency type (BTC, ETH and so on).
+* User should be able to select date from;
+* User should be able to select date to;
+* After user press Update / Submit button chart should be updated by new entered values (title, date range, currency type).
