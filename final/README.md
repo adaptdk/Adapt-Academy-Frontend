@@ -215,9 +215,9 @@ Price page should be accesible from landing page by pressing url link in price w
 ![price page flow](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/price-page-flow.png)
 
 * Price page should contain two input fields:
-1. Time change interval (10 min, 3 hour, every day);
-2. Currency type (Bitcoin, Ethereum and so on.);
-* Price page should contain table where cryptocurrency price and price change (how price is changed every 3 hours for exmaple) in percentage should be displayed depending on values that was selected in fields;
+	* Time change interval (10 min, 3 hour, every day);
+	* Currency type (Bitcoin, Ethereum and so on.);
+* Price page should contain table where currency price and price change in percentage (how price is changed every 3 hours for exmaple) should be displayed depending on values that was selected in fields;
 
 You can use such formula for estimating percantage decrease / increase:
 
@@ -232,8 +232,9 @@ If your answer is a negative number then this is a percentage increase.
 Read more at: https://www.skillsyouneed.com/num/percent-change.html
 
 Basically you will use such api call: 
-https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=EUR&limit=10
-https://min-api.cryptocompare.com/data/histohour?fsym=BTC&tsym=EUR&limit=10
-https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=EUR&limit=10
+
+* https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=EUR&limit=10
+* https://min-api.cryptocompare.com/data/histohour?fsym=BTC&tsym=EUR&limit=10
+* https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=EUR&limit=10
 
 
