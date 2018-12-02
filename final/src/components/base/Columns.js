@@ -36,7 +36,7 @@ class Columns extends Component {
     this.updateColumns(this.props);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { options, columns, query } = this.props;
     const optionsChanged = options !== nextProps.options;
     const columnsChanged = columns !== nextProps.columns;
