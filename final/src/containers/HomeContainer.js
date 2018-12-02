@@ -3,13 +3,12 @@ import React from 'react';
 import Columns from '../components/base/Columns';
 import {
   TWO_COLUMNS_60_40_LAYOUT,
-  THREE_COLUMNS_EQUAL_LAYOUT,
+  TWO_COLUMNS_LAYOUTS,
 } from '../constants/layouts';
 import VideoBox from '../components/Home/VideoBox';
 import VideoText from '../components/Home/VideoText';
 import PriceBox from '../components/Home/PriceBox';
 import HistoricalBox from '../components/Home/HistoricalBox';
-import TopListBox from '../components/Home/TopListBox';
 import SliderBox from '../components/Home/SliderBox';
 
 const HomeContainer = () => (
@@ -22,12 +21,11 @@ const HomeContainer = () => (
       <VideoText />
     </Columns>
     <Columns
-      options={ THREE_COLUMNS_EQUAL_LAYOUT }
+      options={ TWO_COLUMNS_LAYOUTS }
       fill
     >
       <PriceBox />
       <HistoricalBox />
-      <TopListBox />
     </Columns>
     <SliderBox />
   </div>
