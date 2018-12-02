@@ -164,8 +164,6 @@ Your main goal is to create a landing page that will display different widgets. 
 
 ![Dashboard 1 page](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/dashboard-1.png)
 
-In addition your application has to have a multistep form and optionally an authentication service (register/login). App will be deployed to herokuapp.
-
 #### Crypto currency application
 
 During final task you will be responsible for creating application which will provide some information about crypto currency that will display main information about exchange, crypto currency news and so on. You will:
