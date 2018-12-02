@@ -234,11 +234,7 @@ For usage of API examples look at documentation:
 * https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistohour
 * https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistominute
 
-
-
 Note: user **close** property as a price.
-
-
 
 ## Currency exchange page
 
@@ -261,9 +257,9 @@ Exchange page should be accesible from landing page by pressing url link in exch
 
 * Exchange page should contain bar chart that will display currency exchange volume historical data:
 
-![bar exchange example](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/bar-exchange-example.png)
+![bar exchange example](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/bar-chart-example.png)
 
-For usage of API examples look at documentation: 
+For usage of API examples look at documentation:
 * https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataExchangeHistoday
 * https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataExchangeHistoHour
 
