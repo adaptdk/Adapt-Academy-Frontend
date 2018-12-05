@@ -5,7 +5,6 @@ import RootRedirector from './components/base/RootRedirector';
 import HomeContainer from './containers/HomeContainer';
 import Dashboard1Container from './containers/Dashboard1Container';
 import Dashboard2Container from './containers/Dashboard2Container';
-import Dashboard3Container from './containers/Dashboard3Container';
 
 const routes = [
   {
@@ -30,12 +29,6 @@ const routes = [
     displayName: 'Dashboard 2',
     exact: true,
     Component: Dashboard2Container,
-  },
-  {
-    path: '/dashboard3',
-    displayName: 'Dashboard 3',
-    exact: true,
-    Component: Dashboard3Container,
   },
 ];
 

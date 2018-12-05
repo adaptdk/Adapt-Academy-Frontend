@@ -6,9 +6,9 @@
 
   &-box {
     &__header {
+      align-items: center;
       display: flex;
       flex-flow: row nowrap;
-      align-items: center;
 
       & > h3 {
         display: inline;
