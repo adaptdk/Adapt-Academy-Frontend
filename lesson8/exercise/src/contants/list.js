@@ -1,5 +1,6 @@
 export const LIST_ITEMS = [
   {
+    id: 1,
     title: 'About',
     data: [
       {
@@ -29,6 +30,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 2,
     title: 'Experience',
     data: [
       {
@@ -46,6 +48,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 3,
     title: 'Education',
     data: [
       {
@@ -63,6 +66,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 5,
     title: 'Skills',
     data: [
       {
@@ -72,6 +76,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 6,
     title: 'Contact',
     data: [
       {
