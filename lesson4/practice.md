@@ -1,3 +1,5 @@
+1
+=======
 ```
 [ 
 {"name": "Afghanistan", "code": "AF"}, 
@@ -11,7 +13,8 @@
 
 Write function to which will get getCountryByCode('DZ');     Use array functions
 
-
+2
+=======
 ```
 var fetch = require("node-fetch")
 
@@ -34,7 +37,8 @@ getCountries()
 
 Rewrite function using es7 await / async 
 
-
+3
+=======
 ```
 var personnel = [
   {
