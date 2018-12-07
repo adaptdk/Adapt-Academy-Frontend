@@ -3,28 +3,45 @@ import React from 'react';
 // Components.
 import ListHeaderItem from '../components/list/ListHeaderItem';
 import ListImage from '../components/list/ListImage';
-import Listitems from '../components/list/ListItems';
+import ListItems from '../components/list/ListItems';
 
 // Constants.
 import { LIST_ITEMS } from '../contants/list'
 
 class List extends React.Component {
+  state = {
+    activeId: undefined,
+  };
+
+  onClick = (id) => {
+    this.setState(({ activeId }) => ({
+      activeId: id === activeId ? undefined : id,
+    }))
+  };
+
   render() {
+    const { activeId } = this.state;
+    const activeItems = LIST_ITEMS.find(({ id }) => (id === activeId));
     return (
       <article>
 
-        {LIST_ITEMS.map(({ title }, key) => (
+        {LIST_ITEMS.map(({ title, id }) => (
           <ListHeaderItem
-            key={key}
+            key={id}
+            id={id}
+            isActive={id === activeId}
             title={title}
+            onCLickCallback={this.onClick}
           />
         ))}
 
         <ListImage/>
 
-        <Listitems
-          items={LIST_ITEMS[0].data}
+        {activeItems &&
+        <ListItems
+          items={activeItems.data}
         />
+        }
 
       </article>
     );
