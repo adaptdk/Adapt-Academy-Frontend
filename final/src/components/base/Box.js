@@ -16,7 +16,7 @@ const defaultProps = {
 const Box = (props) => {
   const { children, className, noPadding } = props;
   return (
-    <div className={ classNames(className, 'box', { 'box--no-padding': noPadding }) }>
+    <div className={ classNames(className, 'box box--padding', { 'box--no-padding': noPadding }) }>
       { children }
     </div>
   );
