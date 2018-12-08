@@ -6,12 +6,19 @@
 
   &-box {
     &__header {
-      display: flex;
-      flex-flow: row wrap;
       align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+
+      & > h3 {
+        display: inline;
+        @extend %text--overflow;
+      }
 
       &--right-link {
         @extend %right-link;
+        @extend %text--overflow;
+        padding-left: $small-padding;
       }
     }
   }
