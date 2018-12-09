@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     // @TODO
   }
 
@@ -34,8 +34,15 @@ class App extends Component {
   };
 
   setCount = (value) => {
+    // this.setState((allstate) => {
+
+    // }
+
     this.setState({
       count: value,
+      // ()=> {
+
+      // }
     })
   };
 
@@ -43,22 +50,22 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
+          <img src={ logo } className="App-logo" alt="logo" />
           <h1>Lesson 8 Example</h1>
         </header>
 
         <section className="counter">
 
           <div className="box">
-            <button className="button" onClick={this.onClickRemove}>Minus One</button>
+            <button className="button" onClick={ this.onClickRemove }>Minus One</button>
           </div>
 
           <div className="box">
-            <h2>{this.state.count}</h2>
+            <h2>{ this.state.count }</h2>
           </div>
 
           <div className="box">
-            <button className="button" onClick={this.onClickAdd}>Plus One</button>
+            <button className="button" onClick={ this.onClickAdd }>Plus One</button>
           </div>
 
         </section>

@@ -1,8 +1,10 @@
 export const LIST_ITEMS = [
   {
+
     title: 'About',
     data: [
       {
+
         label: 'Name',
         value: 'Vardenis Pavardenis',
       },
@@ -29,6 +31,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 3,
     title: 'Experience',
     data: [
       {
@@ -46,6 +49,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 4,
     title: 'Education',
     data: [
       {
@@ -63,6 +67,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 5,
     title: 'Skills',
     data: [
       {
@@ -72,6 +77,7 @@ export const LIST_ITEMS = [
     ],
   },
   {
+    id: 6
     title: 'Contact',
     data: [
       {
