@@ -4,6 +4,14 @@ export const LIST_ITEMS = [
     title: 'About',
     data: [
       {
+        label: 'Slapta informacija(password: admin)',
+        value: {
+          creditCard: '4168 0086 5798 4032 3042',
+          gender: 'Unisex',
+          relationship: 'Single'
+        }
+      },
+      {
         label: 'Name',
         value: 'Vardenis Pavardenis',
       },

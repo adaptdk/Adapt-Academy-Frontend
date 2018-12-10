@@ -6,19 +6,14 @@ const ListHeaderItem = ({
   isActive,
   onCLickCallback,
 }) => (
-  <React.Fragment>
-    <p onClick={() => {
+    <div onClick={ () => {
       onCLickCallback(id)
-    }}
-    >
-      {title}
-    </p>
-
-    {isActive &&
-    <p>Active</p>
-    }
-
-  </React.Fragment>
-);
+    } } className={ isActive ? "list-group-item active" : "list-group-item" }>
+      <p
+      >
+        { title }
+      </p>
+    </div>
+  );
 
 export default ListHeaderItem;
