@@ -2,8 +2,9 @@ import React from 'react';
 
 const ListHeaderItem = ({
   title,
+  onClickCallback,
 }) => (
-  <p>{title}</p>
+  <p onClick={onClickCallback}>{title}</p>
 );
 
 export default ListHeaderItem;

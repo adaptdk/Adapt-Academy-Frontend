@@ -9,17 +9,29 @@ import Listitems from '../components/list/ListItems';
 import { LIST_ITEMS } from '../contants/list'
 
 class List extends React.Component {
+  
+  onClickFunc = () => {
+    let array;
+    const met = () => LIST_ITEMS.forEach(items => array = items)
+    //.map(items => items)
+    //.map(items => items);
+    met();
+    console.log(array);
+    
+  }
+
   render() {
     return (
       <article>
-
-        {LIST_ITEMS.map(({ title }, key) => (
+        <div className="list__wrapper">
+        {LIST_ITEMS.map(( {title}, key) => (
           <ListHeaderItem
             key={key}
             title={title}
+            onClickCallback={this.onClickFunc}
           />
         ))}
-
+        </div>
         <ListImage/>
 
         <Listitems
