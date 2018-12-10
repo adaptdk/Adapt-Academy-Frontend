@@ -94,3 +94,5 @@ export const LIST_ITEMS = [
     ],
   },
 ];
+
+export const LIST_SET_ACTIVE = 'LIST_SET_ACTIVE';
