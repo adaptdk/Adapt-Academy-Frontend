@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 // Components.
 import ListHeaderItem from '../components/list/ListHeaderItem';
@@ -8,22 +10,30 @@ import ListItems from '../components/list/ListItems';
 // Constants.
 import { LIST_ITEMS } from '../contants/list'
 
+// Actions.
+import listSetActive from '../actions/list/listSetActive';
+
 class List extends React.Component {
-  state = {
-    activeId: undefined,
+  onClick = (id) => {
+    this.props.actions.listSetActive({
+      id,
+    });
   };
 
-  onClick = (id) => {
-    this.setState(({ activeId }) => ({
-      activeId: id === activeId ? undefined : id,
-    }))
+  onClickButton = () => {
+    console.log("click");
   };
 
   render() {
-    const { activeId } = this.state;
-    const activeItems = LIST_ITEMS.find(({ id }) => (id === activeId));
+    const { items, activeId } = this.props;
+
+    //console.log(this.props);
+
+    const activeItems = items.find(({ id }) => (id === activeId));
     return (
       <article>
+
+        <button onClick={this.onClickButton}>Test</button>
 
         {LIST_ITEMS.map(({ title, id }) => (
           <ListHeaderItem
@@ -48,4 +58,16 @@ class List extends React.Component {
   }
 }
 
-export default List;
+const mapStateToProps = ({ list }) => {
+  return {
+    ...list,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  actions: bindActionCreators({
+    listSetActive,
+  }, dispatch),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);
