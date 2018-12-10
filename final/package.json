@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
+    "serve": "serve -s build",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "lint": "./node_modules/.bin/eslint ./src --fix",
@@ -16,7 +17,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
@@ -45,20 +46,34 @@
     "eslint-plugin-react": "7.11.1",
     "file-loader": "2.0.0",
     "fs-extra": "7.0.0",
-    "history": "^4.7.2",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "jest": "23.6.0",
     "jest-pnp-resolver": "1.0.1",
     "jest-resolve": "23.6.0",
-    "lodash": "^4.17.11",
     "mini-css-extract-plugin": "0.4.3",
+    "node-sass": "^4.9.3",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.0.6",
     "postcss-safe-parser": "4.0.1",
+    "resolve": "1.8.1",
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.14.4",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.0",
+    "terser-webpack-plugin": "1.1.0",
+    "url-loader": "1.1.1",
+    "webpack": "4.19.1",
+    "webpack-dev-server": "3.1.9",
+    "webpack-manifest-plugin": "2.0.4",
+    "workbox-webpack-plugin": "3.6.2"
+  },
+  "dependencies": {
+    "history": "^4.7.2",
+    "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-app-polyfill": "^0.1.3",
@@ -72,18 +87,7 @@
     "redux-api-middleware": "^2.3.0",
     "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0",
-    "resolve": "1.8.1",
-    "sass-loader": "7.1.0",
-    "style-loader": "0.23.0",
-    "terser-webpack-plugin": "1.1.0",
-    "url-loader": "1.1.1",
-    "webpack": "4.19.1",
-    "webpack-dev-server": "3.1.9",
-    "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "3.6.2",
-    "node-sass": "^4.9.3",
-    "sass-lint": "^1.12.1",
-    "sass-lint-auto-fix": "^0.14.4"
+    "serve": "^10.1.1"
   },
   "jest": {
     "collectCoverageFrom": [

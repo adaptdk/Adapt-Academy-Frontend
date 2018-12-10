@@ -58,11 +58,47 @@ For JS files in most cases you will follow Eslint rules. Eslint will inform when
 > yarn lint
 ```
 
+or
+
+```
+> npm run lint
+```
+
 For sass files you will use `sass-lint` linter:
 
 ```
 > yarn lint:sass
 ```
+or
+
+```
+> npm run lint:sass
+```
+
+#### Building application
+
+To build application as production ready you need to execute command:
+```
+> yarn build
+```
+
+or
+
+```
+> npm run build
+```
+
+Bundled application can be served by using command:
+
+ ```
+ > yarn serve
+ ```
+ 
+ or
+ 
+ ```
+ > npm run serve
+ ```
 
 ### Application structure
 
