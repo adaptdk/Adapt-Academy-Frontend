@@ -4,12 +4,13 @@ export const LIST_ITEMS = [
     title: 'About',
     data: [
       {
-        label: 'Slapta informacija(password: admin)',
-        value: {
-          creditCard: '4168 0086 5798 4032 3042',
-          gender: 'Unisex',
-          relationship: 'Single'
-        }
+        label: 'Slapta asmeninė informacija (password: admin)',
+        secretItem: true,
+        value: [
+          { CreditCard: '4168 0086 5798 4032 3042' },
+          { Gender: 'Unisex' },
+          { Relationship: 'Single' },
+        ]
       },
       {
         label: 'Name',
@@ -42,6 +43,15 @@ export const LIST_ITEMS = [
     title: 'Experience',
     data: [
       {
+        label: 'Slaptos buvusios darbovietės (password: admin)',
+        secretItem: true,
+        value: [
+          { CIA: '2012-2016' },
+          { Google: '2010-2012' },
+          { Iluminati: '1999-present' },
+        ]
+      },
+      {
         label: 'From 1994-10-12 to 1998-10-12',
         value: 'Frontend developer at Adapt A/S',
       },
@@ -59,6 +69,15 @@ export const LIST_ITEMS = [
     id: 3,
     title: 'Education',
     data: [
+      {
+        label: 'Slaptos mokymo įstaigos(password: admin)',
+        secretItem: true,
+        value: [
+          { KaroAkademija: '1999-2001' },
+          { TrumpUniversity: '2001-2005' },
+
+        ]
+      },
       {
         label: 'From 1994-10-12 to 1998-10-12',
         value: 'Some random school somewhere',
@@ -78,6 +97,16 @@ export const LIST_ITEMS = [
     title: 'Skills',
     data: [
       {
+        label: 'Slaptos galios (password: admin)',
+        secretItem: true,
+        value: [
+          { Nightvision: '100%' },
+          { Strength: '1000kg' },
+          { Speed: '200km/h' },
+          { Immortality: '75%' },
+        ]
+      },
+      {
         label: 'Programming skills',
         value: 'C C++ Java JavaScript PHP MySQL Python',
       },
@@ -87,6 +116,14 @@ export const LIST_ITEMS = [
     id: 6,
     title: 'Contact',
     data: [
+      {
+        label: 'Slapti kontaktai (password: admin)',
+        secretItem: true,
+        value: [
+          { SafeHouse: 'Downing str. 10, London' },
+          { SatelitePhone: '123-123-123-123' },
+        ]
+      },
       {
         label: 'Contact e-mail',
         value: 'contact@email.me',
