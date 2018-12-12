@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+// HOCs.
+//import withNewProps from '../hocs/withNewProps';
+
 // Assets.
 import logo from '../assets/svg/logo.svg';
 import '../assets/styles/App.css';
@@ -13,6 +16,11 @@ import {
 } from '../actions/counter';
 
 class App extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.myRef = React.createRef();
+  // }
+
   onClickAdd = () => {
     this.props.actions.counterIncrement();
   };
@@ -21,15 +29,19 @@ class App extends Component {
     this.props.actions.counterDecrement();
   };
 
+  setRef = (element) => {
+    //this.myRef = element;
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
-          <h1>Lesson 10 Redux Example Middleware</h1>
+          <h1>Lesson 10 Example</h1>
         </header>
 
-        <section className="counter">
+        <section ref={this.setRef} className="counter">
 
           <div className="box">
             <button className="button" onClick={this.onClickRemove}>Minus One</button>
