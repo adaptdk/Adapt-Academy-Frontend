@@ -96,3 +96,4 @@ export const LIST_ITEMS = [
 ];
 
 export const LIST_SET_ACTIVE = 'LIST_SET_ACTIVE';
+export const DO_RANDOM_STUFF = 'DO_RANDOM_STUFF';

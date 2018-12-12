@@ -7,11 +7,9 @@ import ListHeaderItem from '../components/list/ListHeaderItem';
 import ListImage from '../components/list/ListImage';
 import ListItems from '../components/list/ListItems';
 
-// Constants.
-import { LIST_ITEMS } from '../contants/list'
-
 // Actions.
-import listSetActive from '../actions/list/listSetActive';
+import { listSetActive } from '../actions/list/listSetActive';
+import { doRandomStuff } from '../actions/list/listSetActive';
 
 class List extends React.Component {
   onClick = (id) => {
@@ -27,15 +25,13 @@ class List extends React.Component {
   render() {
     const { items, activeId } = this.props;
 
-    //console.log(this.props);
-
     const activeItems = items.find(({ id }) => (id === activeId));
     return (
       <article>
 
         <button onClick={this.onClickButton}>Test</button>
 
-        {LIST_ITEMS.map(({ title, id }) => (
+        {items.map(({ title, id }) => (
           <ListHeaderItem
             key={id}
             id={id}
@@ -67,6 +63,7 @@ const mapStateToProps = ({ list }) => {
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({
     listSetActive,
+    doRandomStuff,
   }, dispatch),
 });
 
