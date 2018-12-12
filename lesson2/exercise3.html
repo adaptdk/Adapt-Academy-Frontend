@@ -31,12 +31,249 @@ https://github.com/neutraltone/awesome-stock-resources
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Homework site</title>
     <link rel="stylesheet" type="text/css" href="css/main-homework.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700" rel="stylesheet">
 </head>
-
-<body>
-
+<!-- Main design paterns from https://konform.com/ -->
+<body class="font-family">
+    <header class="header">
+        <h5 class="header__brand-name">COMPANY</h5>
+        <nav class="header__nav-bar">
+            <ul class="header__nav-bar__ul">
+                <li class="header__nav-bar__element"><a class="header__nav-bar__link" href="">Services</a></li>
+                <li class="header__nav-bar__element"><a class="header__nav-bar__link" href="">Cases</a></li>
+                <li class="header__nav-bar__element"><a class="header__nav-bar__link" href="">About US</a></li>
+                <li class="header__nav-bar__element"><a class="header__nav-bar__link" href="">Contacts</a></li>  
+            </ul>
+            <div class="header__nav-bar__contacts">
+                <div class="header__nav-bar__contacts__tel-email">
+                    <p class="header__nav-bar__contacts__item">E: <a class="header__nav-bar__contacts__item__email"href="">email@email.com</a></p>
+                    <p class="header__nav-bar__contacts__item">T: 555-555-5555</p>
+                </div>
+                <div class="header__nav-bar__contacts__address">
+                    <p class="header__nav-bar__contacts__item">Gedimino pr. 13, 5th floor <br>
+                    LT-11111, Vilnius</p>
+                </div>
+            </div>  
+        </nav>
+        <div class="header__flex-content">
+            <div class="header__text-content">
+                <h3 class="header__title">Lorem ipsum dolor sit amet.</h3>
+                <p class="header__text">Aenean tempor eleifend lorem semper mattis. Duis sollicitudin fermentum tortor vel convallis. Duis ac fermentum elit. Phasellus a diam nisl. Nulla eleifend vitae velit eget faucibus. Aliquam euismod fermentum molestie.</p>
+            </div>
+            <div class="header__social-media-box">
+                <a class="header__social-media-box__link" href="">  <i class="fab fa-facebook-f header__social-media-box__icon"> </i> </a>
+                <a class="header__social-media-box__link" href=""><i class="fab fa-linkedin-in header__social-media-box__icon"></i></a>
+                <a class="header__social-media-box__link" href=""><i class="fab fa-instagram header__social-media-box__icon"></i></a>
+                <a class="header__social-media-box__link" href=""><i class="fab fa-twitter header__social-media-box__icon"></i></a>
+            </div>
+        </div>
+    </header>
+    <div class="hero">
+        <!-- <a class="hero__arrow-link" href="">arrow</a> -->
+        <figure class="hero__video-container">
+            <iframe class="hero__video" width="560" height="315" src="https://www.youtube.com/embed/zgsIAtn8zSY?rel=0;&autoplay=1&mute=1&controls=0&loop=1&playlist=zgsIAtn8zSY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </figure>
+        <article class="hero__about-us">
+            <p class="hero__about-us__text">Curabitur in luctus nunc. Duis feugiat eros vitae metus consectetur, id viverra erat gravida. Quisque scelerisque blandit ligula sed viverra. Sed tincidunt purus non tempor bibendum. Cras ac quam at turpis faucibus convallis. Nulla sed elementum justo, a porttitor nisl. Nulla condimentum rutrum leo, non vestibulum mauris imperdiet eu.</p>
+            <a class="hero__about-us__read-link" href="#">Read more</a>
+        </article>
+    </div>
+    <section class="portfolio">
+        <h4 class="portfolio__heading">Relevant cases</h4>
+        <div class="portfolio__content-box">
+            <div class="portfolio__content-box__item">
+                <a href="#" class="portfolio__content-box__item__link">
+                    <img src="https://placeimg.com/300/300/arch" alt="" class="portfolio__content-box__item__img">
+                    <div class="portfolio__content-box__item__text">
+                        <span class="portfolio__content-box__item__category">Nulla ultricies</span>
+                        <h6 class="portfolio__content-box__item__heading">Donec sagittis</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio__content-box__item">
+                <a href="#" class="portfolio__content-box__item__link">
+                    <img src="https://placeimg.com/300/300/nature" alt="" class="portfolio__content-box__item__img">
+                    <div class="portfolio__content-box__item__text">
+                        <span class="portfolio__content-box__item__category">Aenean quis</span>
+                        <h6 class="portfolio__content-box__item__heading">Duis sollicitudin</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio__content-box__item">
+                <a href="#" class="portfolio__content-box__item__link">
+                    <img src="https://placeimg.com/300/300/people" alt="" class="portfolio__content-box__item__img">
+                    <div class="portfolio__content-box__item__text">
+                        <span class="portfolio__content-box__item__category">Aliquam euismod</span>
+                        <h6 class="portfolio__content-box__item__heading">Quisque scelerisque</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio__content-box__item">
+                <a href="#" class="portfolio__content-box__item__link">
+                    <img src="https://placeimg.com/300/300/tech" alt="" class="portfolio__content-box__item__img">
+                    <div class="portfolio__content-box__item__text">
+                        <span class="portfolio__content-box__item__category">Morbi fermentum</span>
+                        <h6 class="portfolio__content-box__item__heading">Pellentesque facilisis</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio__content-box__item">
+                <a href="#" class="portfolio__content-box__item__link">
+                    <img src="https://placeimg.com/300/300/animals" alt="" class="portfolio__content-box__item__img">
+                    <div class="portfolio__content-box__item__text">
+                        <span class="portfolio__content-box__item__category">Vivamus elementum</span>
+                        <h6 class="portfolio__content-box__item__heading">Sed accumsan</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio__content-box__item">
+                <a href="#" class="portfolio__content-box__item__link">
+                    <img src="https://placeimg.com/300/300/animals/grayscale" alt="" class="portfolio__content-box__item__img">
+                    <div class="portfolio__content-box__item__text">
+                        <span class="portfolio__content-box__item__category">Curabitur blandit</span>
+                        <h6 class="portfolio__content-box__item__heading">Fusce risus</h6>
+                    </div>
+                </a>
+            </div>  
+        </div>
+    </section>
+    <section class="services">
+        <div class="services__background-1">
+            <h4 class="services__heading">Services</h4>
+            <p class="services__text">In hac habitasse platea dictumst. Fusce risus lorem, egestas eu nisi vel, sodales ultrices eros. Nunc et mi nisi. Vestibulum id odio lorem. Pellentesque et sem placerat, gravida massa ut, pretium odio. Nulla eleifend sem et magna porta mollis. Cras rhoncus augue sit amet elit hendrerit, sit amet laoreet turpis fermentum. Nullam luctus nulla non ex euismod, vel convallis leo dapibus.</p>
+        </div> 
+        <div class="services__content"> 
+            <div class="services__content__item">
+                <a href="#" class="services__content__item__link">
+                    <img src="https://placeimg.com/200/200/animals/grayscale" alt="" class="services__content__item__img">
+                    <div class="services__content__item__text-box">
+                        <h6 class="services__content__item__heading">Web shops</h6>
+                        <p class="services__content__item__text">Sed viverra porttitor ultricies. Aenean quis ligula porttitor.</p> 
+                    </div>
+                </a>
+            </div>
+            <div class="services__content__item">
+                <a href="#" class="services__content__item__link">
+                    <img src="https://placeimg.com/200/200/arch/sepia" alt="" class="services__content__item__img">
+                    <div class="services__content__item__text-box">
+                        <h6 class="services__content__item__heading">Web shops</h6>
+                        <p class="services__content__item__text">Quisque scelerisque blandit ligula sed viverra. </p>
+                         
+                    </div>
+                </a>
+            </div>
+            <div class="services__content__item">
+                <a href="#" class="services__content__item__link">
+                    <img src="https://placeimg.com/200/200/tech/grayscale" alt="" class="services__content__item__img">
+                    <div class="services__content__item__text-box">
+                        <h6 class="services__content__item__heading">Web shops</h6>
+                        <p class="services__content__item__text">Aenean tempor eleifend lorem semper mattis. Duis sollicitudin fermentum tortor vel convallis.</p>
+                        
+                    </div>
+                </a>
+            </div>
+            <div class="services__content__item">
+                <a href="#" class="services__content__item__link">
+                    <img src="https://placeimg.com/200/200/people" alt="" class="services__content__item__img">
+                    <div class="services__content__item__text-box">
+                        <h6 class="services__content__item__heading">Web shops</h6>
+                        <p class="services__content__item__text">Sed at tellus mollis, sollicitudin turpis nec, mollis est. Curabitur sodales vitae enim eget finibus.</p>
+                        
+                    </div>
+                </a>
+            </div>   
+        </div>
+    </section>
+    <section class="customers">
+        <h4 class="customers__heading">Selection of our customers</h4>
+        <div class="customers__box">
+            <div class="customers__box__item__div">
+                <img src="https://www.freepnglogos.com/uploads/adidas-logo-png-black-0.png" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://vignette.wikia.nocookie.net/gallowmere/images/9/9a/PlayStation_1_Logo.png/revision/latest?cb=20120804223608" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/HP_logo_630x630.png" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://vignette.wikia.nocookie.net/logopedia/images/e/ee/Burger_King_Logo.svg.png/revision/20120422044236" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://diylogodesigns.com/wp-content/uploads/2016/02/Total-png-logo-download.png" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="http://pngimg.com/uploads/car_logo/car_logo_PNG1667.png" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://s.w.org/style/images/about/WordPress-logotype-wmark.png" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://vignette.wikia.nocookie.net/uncyclopedia/images/4/4c/Striped_apple_logo.png/revision/latest?cb=20090104011038" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://img00.deviantart.net/2bc9/i/2011/108/d/d/google_chrome_logo_png___psd_by_ockre-d3ebsqy.png" alt="" class="customers__box__item">
+            </div>
+            <div class="customers__box__item__div">
+                <img src="https://i2.wp.com/banjos.com.au/wp-content/uploads/2016/05/instagram-Logo-PNG-Transparent-Background-download.png" alt="" class="customers__box__item">
+            </div>
+        </div>
+    </section>
+    <div class="footer-background">
+        <footer class="footer">
+            <div class="footer__flex-content">
+                <h3 class="footer__heading">Shall we talk</h3>
+                <address class="footer__address-box">
+                    <div class="footer__address-box__flex-content">
+                        <p class="footer__address__box__item">Very contact</p>
+                        <p class="footer__address__box__item">Much contact</p>
+                    </div>
+                    <div class="footer__address-box__flex-content">
+                        <p class="footer__address__box__item">Gedimino pr. 13, 5th floor <br>
+                            LT-11111, Vilnius</p>
+                    </div>
+                </address>
+            </div>
+            <p class="footer__text">In hac habitasse platea dictumst. Fusce risus lorem, egestas eu nisi vel, sodales ultrices eros. Nunc et mi nisi. Vestibulum id odio lorem. Pellentesque et sem placerat, gravida massa ut, pretium odio. Nulla eleifend sem et magna porta mollis. Cras rhoncus augue sit amet elit hendrerit, sit amet laoreet turpis fermentum. Nullam luctus nulla non ex euismod, vel convallis leo dapibus.</p>
+            <div class="footer__contacts">
+                <p class="footer__contacts__item">mail@mail.com</p>
+                <p class="footer__contacts__item">555-555-5555</p>
+            </div>
+            <nav class="footer__nav-bar">
+                <ul class="footer__nav-bar__ul">
+                    <li class="footer__nav-bar__element"><a class="footer__nav-bar__link" href="">
+                        <h6 class="footer__nav-bar__element__heading">Services</h6>
+                        <p class="footer__nav-bar__element__text">Curabitur vitae posuere nibh.</p>
+                    </a></li>
+                    <li class="footer__nav-bar__element"><a class="footer__nav-bar__link" href="">
+                        <h6 class="footer__nav-bar__element__heading">Cases</h6>
+                        <p class="footer__nav-bar__element__text">Pellentesque facilisis varius consequat.</p>
+                    </a></li>
+                    <li class="footer__nav-bar__element"><a class="footer__nav-bar__link" href="">
+                        <h6 class="footer__nav-bar__element__heading">About Us</h6>
+                        <p class="footer__nav-bar__element__text">Morbi blandit posuere pulvinar.</p>
+                    </a></li>
+                    <li class="footer__nav-bar__element"><a class="footer__nav-bar__link" href="">
+                        <h6 class="footer__nav-bar__element__heading">Contacts</h6>
+                        <p class="footer__nav-bar__element__text">Vestibulum id odio lorem.</p>
+                    </a></li>
+                    
+                </ul>
+            </nav>
+        </footer>
+        <footer class="footer-mini">
+            <p class="footer-mini__copyrights"><i class="far fa-copyright"></i>Domantas Stankus</p>
+            <div class="footer-mini__follow-us">
+                <p class="footer-mini__follow-us__text">Follow us -</p>
+                <div class="footer-mini__follow-us__social-media">
+                    <a href="#" class="footer-mini__follow-us__social-media__link"><i class="fab fa-linkedin-in footer-mini__follow-us__social-media__icon"></i></a>
+                    <a href="#" class="footer-mini__follow-us__social-media__link"><i class="fab fa-instagram footer-mini__follow-us__social-media__icon"></i></a>
+                    <a href="#" class="footer-mini__follow-us__social-media__link"><i class="fab fa-twitter footer-mini__follow-us__social-media__icon"></i></a>
+                    <a href="#" class="footer-mini__follow-us__social-media__link"><i class="fab fa-facebook-f footer-mini__follow-us__social-media__icon"></i></a>
+                </div>
+            </div>  
+        </footer>
+    </div>
 </body>
-
 </html>

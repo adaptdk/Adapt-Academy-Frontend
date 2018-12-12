@@ -1,0 +1,77 @@
+
+.portfolio {
+  margin-top: -($negative-margin + $medium-vertical-margin);
+  padding-bottom: 15px;
+  @include breakpoint("xs") {
+    margin-top: $small-vertical-margin;
+  }
+
+  &__heading {
+    font-size: $heading-font-size;
+    font-weight: 300;
+    @include margins("textiual");
+    @include breakpoint("md") {
+      @include margins("textiual-mQ");
+    }
+    @include breakpoint("xs") {
+      @include margins("xs");
+      margin-top: $small-vertical-margin;
+    }
+  }
+
+  &__content-box {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    @include margins("media");
+    @include breakpoint("xs") {
+      @include margins("xs");
+      margin-top: $small-vertical-margin;
+    }
+  
+    &__item {
+      width: (100% / 3);
+      @include breakpoint("sm") {
+        width: (100% / 2);
+      }
+      @include breakpoint("xs") {
+        width: 70%;
+        margin: 0 auto; 
+      }
+
+      @include breakpoint("xxs") {
+        width: 100%;
+        margin: 0; 
+      }
+
+      &__link {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding-bottom: $medium-vertical-margin; 
+        @include breakpoint("xs") { 
+          padding-bottom: $very-small-vertical-margin;
+        }
+      }
+      @include image-hover;
+      
+      &__img {
+        width: 100%;
+        height: auto;
+        transition: all 0.4s ease-in-out;  
+      }
+
+      &__category {
+        font-size: 12px;
+      }
+
+      &__heading {
+        font-size: 25px;
+      }
+
+      &__text {
+        margin-top: 15px;
+      }
+    }
+  }
+}

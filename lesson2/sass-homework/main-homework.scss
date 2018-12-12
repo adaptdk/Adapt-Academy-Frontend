@@ -5,6 +5,13 @@
 @import "base";
 @import "layout";
 
+@import "modules/header";
+@import "modules/hero";
+@import "modules/portfolio";
+@import "modules/services";
+@import "modules/customers";
+@import "modules/footer";
+
 //main
 
 body {

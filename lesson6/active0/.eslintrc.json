@@ -13,7 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-var": 2,
+    "no-var": 0,
     "no-console": 1,
     "no-multi-spaces": 1,
     "no-multiple-empty-lines": 1,
@@ -27,25 +27,10 @@
         "code": 80
       }
     ],
-    "max-depth": [
-      "error",
-      2
-    ],
-    "indent": [
-      "error",
-      "tab"
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ]
+    "max-depth": ["error", 2],
+    "indent": ["error", "tab"],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": [0, "always"]
   }
 }

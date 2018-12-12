@@ -1,0 +1,170 @@
+//headers styling 
+
+.header {
+  background: $color-white;
+  padding-bottom: $big-vertical-margin + $negative-margin + $medium-vertical-margin;
+  @include breakpoint("xs") {
+    padding-bottom: $very-small-vertical-margin;
+  }
+  
+  &__brand-name {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    transform: rotate(-90deg);
+    font-size: $heading-font-size;
+    @include breakpoint ("md") {
+      display: none;
+    } 
+  }
+  
+  &__nav-bar {
+    display: flex;
+    justify-content: space-between;
+    @include margins("textiual");
+    @include breakpoint ("md") {
+      @include margins("textiual-mQ");
+    } 
+    @include breakpoint("xs") {
+      @include margins("xs");
+      justify-content: center;
+    }
+    
+    &__ul {
+      display: inline-block;
+      
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+
+    &__element {
+      color: $color-black;
+      font-weight: 300;
+      float:left;
+      @include breakpoint("xs") {
+        float: none;
+        text-align: center;
+      }
+    
+      & + & {
+        margin-left: 60px;
+        @include breakpoint("xs") {
+          margin-left: 0px;
+        }
+      }
+    }
+    
+    &__link {
+      text-decoration: none;
+      display: block;
+      color: $color-black;
+      padding-bottom: 15px;
+      border-bottom: 2px solid transparent;
+      overflow:hidden;
+      position: relative;
+      
+      &:hover {
+        &::after {
+          transform: translateX(0);
+        }
+      }
+
+      &::after {
+        content: "";
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: $color-black;
+        transform: translateX(-101%); //on 100% small dot is left not on hover (below About US)
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+  
+    &__contacts {
+      
+      display: flex;
+      font-size: 14px;
+      font-weight: 100;
+      color: $color-address;
+      line-height: 1.5;
+      @include breakpoint ("lg") {
+        display: none;
+      } 
+      
+      &__item__email {
+        color: $color-address;
+        text-decoration: none;
+      }
+      
+      &__address {
+        margin-left: $address-margin;
+      }
+    }
+  }
+
+  &__flex-content {
+    @include margins("textiual");
+    @include breakpoint ("md") {
+      @include margins("textiual-mQ");
+    }
+    @include breakpoint("xs") {
+      @include margins("xs");
+      padding: 10px;
+    }
+  }
+
+  &__text-content {
+    margin-top: $big-vertical-margin;
+    max-width: 700px;
+    line-height: 1.1;
+    font-weight: 300;
+    @include breakpoint("xs") {
+      width: 100%;
+      line-height: 1;
+      margin-top: $very-small-vertical-margin;
+      margin-bottom: $medium-vertical-margin;
+    } 
+  }
+
+  &__title {
+    font-size: $main-heading;
+    @include breakpoint("xs") {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    margin-top: $very-small-vertical-margin;
+    line-height: 1.8;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+  }
+  
+  &__social-media-box {
+    text-align: right;
+    
+    &__icon {
+      color: $color-black;
+    }
+
+    &__link {
+      padding: 10px;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+      @include social-hover;
+
+      &+& {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,103 @@
+
+.services {
+  
+  margin-bottom: 100px;
+  color: $color-white;
+  @include breakpoint("xs") {
+    margin-bottom: $very-small-vertical-margin;
+  }
+  &__background-1 {
+    background: $color-background-2;
+    padding-top: 100px;
+    padding-bottom: $negative-margin + $medium-vertical-margin;
+    @include breakpoint("xs") {
+      padding-top: $very-small-vertical-margin;
+      padding-bottom: $medium-vertical-margin;
+    }
+  }
+
+  &__heading {
+    font-size: $heading-font-size;
+    font-weight: 300;
+    @include margins("textiual");
+    @include breakpoint("md") {
+      @include margins("textiual-mQ");
+    }
+  }
+
+  &__text {
+    margin-top: $small-vertical-margin;
+    line-height: 1.6;
+    font-size: 25px;
+    font-weight: 200;
+    @include margins("textiual", $margin-right: $text-content-left-margin);
+    @include breakpoint("md") {
+      @include margins("textiual-mQ");
+    }
+    @include breakpoint("xs") {
+      @include margins("xs");
+      font-size: 18px;
+      line-height: 1.2;
+      padding: 10px;
+    }
+  }
+
+  &__content {
+    margin-top: -$negative-margin;
+    display: flex;
+    flex-wrap: wrap;
+    @include margins("media");
+    @include breakpoint("xs") {
+      @include margins("xs");
+      margin-top: 0;
+    }
+    &__item {
+      width: (100% / 4);
+      @include breakpoint("md") {
+        width: (100% / 2);    
+      }
+      @include breakpoint("xs") {
+        width: 70%;
+        margin: 0 auto; 
+      }
+      @include breakpoint("xxs") {
+        width: 100%;
+        margin: 0;  
+      }
+
+      &__link {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding-bottom: 15px;
+      }
+      @include image-hover;
+
+      &__text-box {
+        margin-top: 15px;
+        padding-right: 15px;
+        @include breakpoint("xs") {
+          padding: 10px;
+        }
+      }
+
+      &__img {
+        width: 100%;
+        height: auto;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &__heading {
+        font-size: 25px;
+      }
+
+      &__text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 200;
+        line-height: 1.5;
+      } 
+    }
+  }
+}
