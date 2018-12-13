@@ -25,7 +25,7 @@ class Dashboard3Container extends Component {
   render() {
         const { pristine, reset, submitting } = this.props;
         console.log(this.state.value.curency);
-        let store = createStore(test);
+        //let store = createStore(test);
     return(
       
       <div className="dashboard3">
