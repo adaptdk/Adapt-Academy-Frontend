@@ -1,19 +1,31 @@
 import React from 'react';
-import paragraphImg from '../../assets/wireframes/paragraph.png';
+import videoPoster from '../../assets/poster2.png';
+import cryptoVideo from '../../assets/crypto.mp4';
+import { Player, ControlBar, ReplayControl,
+  ForwardControl, CurrentTimeDisplay,
+  TimeDivider, PlaybackRateMenuButton, VolumeMenuButton
+} from 'video-react';
 
-import Box from '../base/Box';
 
 const VideoBox = () => (
-  <Box>
-    <div className="home-box__header">
-      <h3>Video Box</h3>
-    </div>
-    <div className="divider margin--small-bottom" />
-    <img
-      className="home__wireframe-img"
-      src={ paragraphImg }
+  <Player
+  poster={ videoPoster }
+>
+  <source src={ cryptoVideo } />
+
+
+  <ControlBar>
+    <ReplayControl seconds={ 10 } order={ 1.1 } />
+    <ForwardControl seconds={ 30 } order={ 1.2 } />
+    <CurrentTimeDisplay order={ 4.1 } />
+    <TimeDivider order={ 4.2 } />
+    <PlaybackRateMenuButton
+      rates={ [5, 2, 1, 0.5, 0.1] }
+      order={ 7.1 }
     />
-  </Box>
+    <VolumeMenuButton />
+  </ControlBar>
+</Player>
 );
 
 export default VideoBox;

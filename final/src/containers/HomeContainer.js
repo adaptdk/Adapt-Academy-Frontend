@@ -17,8 +17,11 @@ const HomeContainer = () => (
       options={ TWO_COLUMNS_60_40_LAYOUT }
       fill
     >
-      <VideoBox />
-      <VideoText />
+
+        <VideoBox />
+   
+        <VideoText />
+
     </Columns>
     <Columns
       options={ TWO_COLUMNS_LAYOUTS }
