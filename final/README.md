@@ -205,7 +205,7 @@ Your main goal is to create a landing page that will display different widgets. 
 During final task you will be responsible for creating application which will provide some information about crypto currency that will display main information about exchange, crypto currency news and so on. You will:
 
 1. create a landing page;
-2. integrate D3 library for displaying graphics;
+2. integrate D3 (C3, react-c3-component) library for displaying graphics;
 3. widgets with dynamic data;
 4. separate pages with data filtering, editing and so on;
 5. deploy app to cloud based hosting service;
@@ -227,7 +227,7 @@ Create a static landing page based on the given wireframe (https://wireframe.cc/
 
 | User story                                                   | Epic         | Skills                                                    |
 | :----------------------------------------------------------- | ------------ | --------------------------------------------------------- |
-| Create a sticky header with logo and menu navigation (burger menu - optional). | Landing page | HTML / CSS                                                |
+| Create a header with logo and menu navigation (burger menu - optional). | Landing page | HTML / CSS                                                |
 | Implement third party video about cryptocurrency with custom play button and descriptive text. | Landing page | HTML / CSS                                                |
 | Create 2 widgets with icons and descriptive text (price widget, historical exchange data widget). Implement CSS animation on your icons for more interactivity. Consider making one of the icons with pure CSS. Inspiration: https://cssicon.space | Landing page | HTML / CSS / Animations Creative usage of psuedo elements |
 | Implement slider by using third part library library and add texts, call to action button on different slides. Consider dynamic layouting, each slide could be different. | Landing page | JS                                                        |
