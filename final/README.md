@@ -239,7 +239,7 @@ Create a price  page based on the given wireframe:
 
 ![price page flow](https://raw.githubusercontent.com/adaptdk/Adapt-Academy-Frontend/master/images/price-page.png)
 
-Price page should be accesible from landing page by pressing url link in price widget.
+Price page should be accessible from landing page by pressing url link in price widget.
 
 ## User story
 
@@ -252,7 +252,7 @@ Price page should be accesible from landing page by pressing url link in price w
 	* Currency type (Bitcoin, Ethereum and so on.);
 * Price page should contain table where currency price and price change in percentage (how price is changed every 3 hours for exmaple) should be displayed depending on values that was selected in fields;
 
-You can use such formula for estimating percantage decrease / increase:
+You can use such formula for estimating percentage decrease / increase:
 
 Decrease = Original Number - New Number (after 10 min for example)
 
@@ -270,7 +270,7 @@ For usage of API examples look at documentation:
 * https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistohour
 * https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistominute
 
-Note: user **close** property as a price.
+Note: use **close** property as a price.
 
 ## Currency exchange page
 
