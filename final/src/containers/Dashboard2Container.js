@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { take, map } from 'lodash';
+import connect from 'react-redux/es/connect/connect';
 
-import Columns from '../components/base/Columns';
-import { TWO_COLUMNS_LAYOUTS } from '../constants/layouts';
 import { bindActionCreators } from 'redux';
 import { getExchanges } from '../actions';
-import connect from 'react-redux/es/connect/connect';
-import moment from 'moment';
+import Box from '../components/base/Box';
+import ExchangesChart from '../components/Dashboard2/ExchangesChart';
 
 class Dashboard2Container extends Component {
   static propTypes = {
@@ -22,27 +20,16 @@ class Dashboard2Container extends Component {
   }
 
   render() {
-    const { exchanges } = this.props;
-    const data = take(exchanges.data, 10);
+    const { exchanges: { data} } = this.props;
 
     return (
       <div className="dashboard2">
         <div className="dashboard2__section dashboard2__section--left-link margin--small-bottom">
           <Link to="home">Go back</Link>
         </div>
-        <Columns
-          options={ TWO_COLUMNS_LAYOUTS }
-        >
-          <ul>
-            {
-              map(data, ({ time, volume }, index) => (
-                <li key={ index }>
-                  { `${moment.unix(time).format('YYYY-MM-DD h:mm a')} - ${volume}` }
-                </li>
-              ))
-            }
-          </ul>
-        </Columns>
+        <Box>
+          <ExchangesChart data={ data }/>
+        </Box>
       </div>
     );
   }
