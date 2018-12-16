@@ -1,33 +1,51 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import { map } from 'lodash';
 
 import Columns from '../components/base/Columns';
-import { TWO_COLUMNS_LAYOUTS } from '../constants/layouts';
-// import Dashboard1Box1 from '../components/Dashboard1/Dashboard1Box1';
-import Dashboard1Box2 from '../components/Dashboard1/Dashboard1Box2';
-import Dashboard1Box3 from '../components/Dashboard1/Dashboard1Box3';
-import { getPrices } from '../actions/pricesActions';
+import {
+  defaultGetPricesParams,
+  getPrices,
+  updatePrices,
+  updatePricesForm
+} from '../actions/pricesActions';
+import Box from '../components/base/Box';
+import TableView from '../components/Dashboard1/TableView';
+import UpdateForm from '../components/Dashboard1/UpdateForm';
 
-class Dashboard1Container extends Component {
+class Dashboard1Container extends PureComponent {
   static propTypes = {
     getPrices: PropTypes.func.isRequired,
+    updatePrices: PropTypes.func.isRequired,
+    updatePricesForm: PropTypes.func.isRequired,
     prices: PropTypes.shape({
       data: PropTypes.array.isRequired,
-    })
+      timeFrequency: PropTypes.number.isRequired,
+      cryptoType: PropTypes.string.isRequired,
+    }).isRequired
   };
 
   componentDidMount() {
-    const { getPrices } = this.props;
+    const { getPrices, prices: { timeFrequency } } = this.props;
 
-    getPrices();
+    if (timeFrequency >= 60) {
+      getPrices({ ...defaultGetPricesParams, timePeriod: 'histohour'});
+    } else {
+      getPrices({ ...defaultGetPricesParams, timePeriod: 'histominute'});
+    }
   }
 
+  onFormChange = (type, value) => {
+    const { updatePrices, updatePricesForm } = this.props;
+    const { cryptoType, timeFrequency } =  { ...this.props.prices, [type]: value };
+    updatePricesForm({ cryptoType, timeFrequency: parseInt(timeFrequency, 10) });
+    updatePrices({ cryptoType, timeFrequency });
+  };
+
   render() {
-    const { prices: { data } } = this.props;
+    const { prices: { data, timeFrequency, cryptoType } } = this.props;
 
     return (
       <div className="dashboard1">
@@ -35,21 +53,14 @@ class Dashboard1Container extends Component {
           <Link to="home">Go back</Link>
         </div>
         <Columns>
-          <ul>
-            {
-              map(data, ({ close }, index) => (
-                <li key={ index }>
-                  { close }
-                </li>
-              ))
-            }
-          </ul>
-        </Columns>
-        <Columns
-          options={ TWO_COLUMNS_LAYOUTS }
-        >
-          <Dashboard1Box2 />
-          <Dashboard1Box3 />
+          <Box>
+            <UpdateForm
+              onChange={ this.onFormChange }
+              cryptoType={ cryptoType }
+              timeFrequency={ timeFrequency }
+            />
+            <TableView data={ data }/>
+          </Box>
         </Columns>
       </div>
     );
@@ -61,7 +72,9 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  getPrices
+  getPrices,
+  updatePrices,
+  updatePricesForm,
 }, dispatch);
 
 export default connect(
