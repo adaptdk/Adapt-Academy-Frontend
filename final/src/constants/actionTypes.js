@@ -1,1 +1,3 @@
-// All constants that will describe action types will be exposed by this file
+export const PRICES_REQUEST = 'PRICES_REQUEST';
+export const PRICES_SUCCESS = 'PRICES_SUCCESS';
+export const PRICES_ERROR = 'PRICES_ERROR';
