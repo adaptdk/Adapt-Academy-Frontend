@@ -15,6 +15,11 @@
     @include respond-to(small-up) {
       margin-top: $medium-margin;
     }
+    
+    @include respond-to(medium-up) {
+      margin-top: $medium-margin;
+      padding-top: 90px;
+    }
   }
 }
 

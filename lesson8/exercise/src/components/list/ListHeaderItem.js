@@ -3,22 +3,9 @@ import React from 'react';
 const ListHeaderItem = ({
   id,
   title,
-  isActive,
-  onCLickCallback,
+  onClickCallback,
 }) => (
-  <React.Fragment>
-    <p onClick={() => {
-      onCLickCallback(id)
-    }}
-    >
-      {title}
-    </p>
-
-    {isActive &&
-    <p>Active</p>
-    }
-
-  </React.Fragment>
+  <p onClick={onClickCallback}>{title}</p>
 );
 
 export default ListHeaderItem;

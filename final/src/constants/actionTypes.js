@@ -1,1 +1,3 @@
-// All constants that will describe action types will be exposed by this file
+export const CRYPTO_DATA_REQUEST = 'CRYPT_DATA_REQUEST';
+export const CRYPTO_DATA_SUCCESS = 'CRYPT_DATA_SUCCESS';
+export const CRYPTO_DATA_FAILURE = 'CRYPT_DATA_FAILURE';

@@ -9,32 +9,33 @@ import ListItems from '../components/list/ListItems';
 import { LIST_ITEMS } from '../contants/list'
 
 class List extends React.Component {
-  state = {
-    activeId: undefined,
-  };
-
-  onClick = (id) => {
-    this.setState(({ activeId }) => ({
-      activeId: id === activeId ? undefined : id,
-    }))
-  };
+  
+  onClickFunc = () => {
+    let array;
+    const met = () => LIST_ITEMS.forEach(items => array = items)
+    //.map(items => items)
+    //.map(items => items);
+    met();
+    console.log(array);
+    
+  }
 
   render() {
     const { activeId } = this.state;
     const activeItems = LIST_ITEMS.find(({ id }) => (id === activeId));
     return (
       <article>
-
-        {LIST_ITEMS.map(({ title, id }) => (
+        <div className="list__wrapper">
+        {LIST_ITEMS.map(( {title}, key) => (
           <ListHeaderItem
             key={id}
             id={id}
             isActive={id === activeId}
             title={title}
-            onCLickCallback={this.onClick}
+            onClickCallback={this.onClickFunc}
           />
         ))}
-
+        </div>
         <ListImage/>
 
         {activeItems &&
