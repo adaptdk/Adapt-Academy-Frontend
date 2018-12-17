@@ -39,16 +39,7 @@ export function updatePrices({ cryptoType, timeFrequency } = defaultUpdatePrices
     pricesParams = { ...defaultGetPricesParams, timePeriod: 'histohour' };
   }
 
-  switch(cryptoType) {
-    case 'BTC':
-      pricesParams = { ...pricesParams, cryptoType: 'BTC' };
-      break;
-    case 'ETH':
-      pricesParams = { ...pricesParams, cryptoType: 'ETH' };
-      break;
-    default:
-      pricesParams = { ...pricesParams, cryptoType: 'BTC' };
-  }
+  pricesParams = { ...pricesParams, cryptoType };
 
   return getPrices(pricesParams);
 }
