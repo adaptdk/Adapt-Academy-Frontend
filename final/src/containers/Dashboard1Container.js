@@ -40,6 +40,7 @@ class Dashboard1Container extends PureComponent {
   onFormChange = (type, value) => {
     const { updatePrices, updatePricesForm } = this.props;
     const { cryptoType, timeFrequency } =  { ...this.props.prices, [type]: value };
+    
     updatePricesForm({ cryptoType, timeFrequency: parseInt(timeFrequency, 10) });
     updatePrices({ cryptoType, timeFrequency });
   };
