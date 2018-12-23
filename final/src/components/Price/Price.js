@@ -25,7 +25,7 @@ class Price extends React.Component {
       currencyType: formValues.currency,
       timeType: this.findText(formValues.timeInterval),
     });
-    getPrices(formValues).then(properties => {
+    return getPrices(formValues).then(properties => {
       this.setState({
         data: filterPrice(properties),
       });
@@ -35,7 +35,7 @@ class Price extends React.Component {
   findText = text => {
     let goodText = '';
 
-    timeInterval.map(item => {
+    timeInterval.forEach(item => {
       if (item.value === text) {
         goodText = item.text;
       }
@@ -45,7 +45,7 @@ class Price extends React.Component {
   }
 
   componentDidMount() {
-    getPrices(initial).then(properties => {
+    return getPrices(initial).then(properties => {
       this.setState({
         data: filterPrice(properties),
       });
@@ -98,7 +98,7 @@ class Price extends React.Component {
               <Table.Row key={ item.time }>
                 <Table.Cell>{ item.time }</Table.Cell>
                 <Table.Cell>{ item.close }</Table.Cell>
-                <Table.Cell className = { (item.change).split('%')[0] < 0 ? 'negative-change' : 'positive-change'}>{ item.change }</Table.Cell>
+                <Table.Cell className = { (item.change).split('%')[0] < 0 ? 'negative-change' : 'positive-change' }>{ item.change }</Table.Cell>
               </Table.Row>
             )) }
           </Table.Body>

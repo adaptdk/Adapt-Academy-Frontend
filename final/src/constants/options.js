@@ -16,7 +16,7 @@ export const currency = [
   { key: 'EUR', value: 'EUR', text: 'EUR' },
 ];
 
-export const limitPrice = 10;
+export const limitPrice = 20;
 
 export const initialValuesPrice = {
   timeInterval: 'histohour 3',
