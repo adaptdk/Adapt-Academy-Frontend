@@ -14,6 +14,16 @@
   }
 }
 
+.video-divider {
+  height: unset !important;
+  border: unset !important;
+
+  &__frame {
+    width: 100%;
+    border: unset;
+  }
+}
+
 .divider {
   border-top: $border-width solid $border-color;
   height: $border-width;

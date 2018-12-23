@@ -23,3 +23,18 @@
     }
   }
 }
+
+.video {
+  &__text {
+    width: 100%;
+    line-height: 33px;
+    position: relative;
+
+    &__paragraph {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%)
+    }
+  }
+}

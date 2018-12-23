@@ -1,10 +1,15 @@
 .app {
   margin: 0 auto;
-  max-width: $max-content-width;
-  padding: 0 $small-padding;
+
+  margin-top: $ultra-margin + 20px;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: $ultra-margin;
+  padding-right: $large-margin;
+  padding-left: $large-margin;
 
   @include respond-to(medium-up) {
-    padding: 0 $large-padding;
+    //padding: 0 $large-padding;
   }
 
   .main {
@@ -13,7 +18,7 @@
     margin-top: $small-margin;
 
     @include respond-to(small-up) {
-      margin-top: $medium-margin;
+      margin-top: $ultra-margin;
     }
   }
 }

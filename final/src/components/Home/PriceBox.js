@@ -8,7 +8,7 @@ const PriceBox = () => (
   <Box>
     <div className="home-box__header home-box__header--right-link">
       <h3>Price widget</h3>
-      <Link to="dashboard1">See more</Link>
+      <Link to="price">See more</Link>
     </div>
     <div className="divider margin--small-bottom" />
     <img

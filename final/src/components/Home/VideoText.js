@@ -1,16 +1,15 @@
 import React from 'react';
-import paragraphImg from '../../assets/wireframes/paragraph.png';
 
 const VideoText = () => (
-  <div className="box--padding">
-    <div className="home-box__header">
-      <h3>Some video text</h3>
-    </div>
-    <div className="divider margin--small-bottom" />
-    <img
-      className="home__wireframe-img"
-      src={ paragraphImg }
-    />
+  <div className="video__text box--padding">
+    <p className="video__text__paragraph">
+      A digital or virtual currency that uses cryptography for security. 
+      A cryptocurrency is difficult to counterfeit because of this security feature. 
+      Cryptocurrencies have skyrocketed in value over the last few years. 
+      Almost everyone has heard about Bitcoin, but how many people actually know what Bitcoin is? 
+      How many people know where they come from and how they work? 
+      This video will tell you everything you need to know about cryptocurrencies in an easy to understand format. 
+    </p>
   </div>
 );
 

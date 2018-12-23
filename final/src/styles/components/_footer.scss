@@ -1,0 +1,26 @@
+$nav-active-color: $san-marino;
+
+.footer {
+  bottom: 0;
+  position: absolute;
+  height: $ultra-margin;
+  width: 100%;
+  left: 0;
+  background-color: $white;
+  border-top: 3px solid black;
+
+  h1, section {
+    margin: unset;
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+    margin-top: $small-margin;
+
+    span:nth-child(2) {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

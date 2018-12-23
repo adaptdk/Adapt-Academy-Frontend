@@ -1,80 +1,72 @@
 $nav-active-color: $san-marino;
 
-.nav {
-  background-color: $white;
-  bottom: 0;
-  left: 0;
-  margin-top: $medium-margin;
+.header {
+  border-bottom: 3px solid black;
+  display: flex;
+  align-items: center;
+  background-color: transparentize($color: $white, $amount: 0.1);
   position: fixed;
-  right: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 20;
+  height: $ultra-margin;
+}
 
-  @include box-shadow;
+.branding {
+  display: contents;
 
-  @include respond-to(medium-up) {
-    margin-bottom: $large-margin;
-    position: relative;
+  &__logo {
+    margin-left: $small-margin;
+    max-width: $extra-margin;
+    height: auto;
   }
 
+  &__name {
+    color: $black;
+  }
+}
+
+h1:last-child.branding {
+  &__name {
+    margin: unset;
+    margin-left: $small-margin;
+  }
+}
+
+.nav {
+  width: 100%;
+  
   ul {
-    @include clearfix;
     list-style: none;
     padding: 0;
-    width: 100%;
   }
 
   &__items {
-    background-color: $white;
-    box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, .2);
-    display: flex;
     margin: 0;
-    position: relative;
+    box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, .2);
     z-index: 10;
 
     @include respond-to(medium-up) {
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
-      display: block;
-      margin: 6px 0;
     }
   }
 
   &__item {
+    margin-left: $small-margin;
     background-position: center top 12px;
     background-repeat: no-repeat;
     background-size: 22px 22px;
     flex-basis: 0;
     flex-grow: 1;
-    float: left;
+    float: right;
     position: relative;
     width: 20%;
-
-    &::before {
-      background-color: transparent;
-      content: '';
-      display: block;
-      height: 6px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transition: top .2s ease-out;
-      width: 100%;
-    }
-
-    &::after {
-      background-color: transparent;
-      bottom: 0;
-      content: '';
-      display: block;
-      height: 6px;
-      left: 0;
-      position: absolute;
-      transition: bottom .2s ease-out;
-      width: 100%;
-    }
+    border-radius: $small-margin;
 
     > a {
       align-items: flex-end;
-      color: $blue-contrast;
+      color: $black;
       display: flex;
       font-size: .8rem;
       height: 60px;
@@ -82,8 +74,9 @@ $nav-active-color: $san-marino;
       padding-bottom: 20px;
       text-align: center;
       text-decoration: none;
-      text-transform: uppercase;
       width: 100%;
+      transition: background-color 0.5s ease-in-out;
+      border-radius: $small-margin;
 
       @include respond-to(medium-up) {
         align-items: center;
@@ -92,7 +85,7 @@ $nav-active-color: $san-marino;
         padding: 0 10px;
 
         &:hover {
-          background-color: $gray-ultralight;
+          background-color: $gray-light;
         }
       }
 
@@ -107,15 +100,10 @@ $nav-active-color: $san-marino;
 
     &--active {
       background-color: $nav-active-color;
-
-      &::before {
-        background-color: $nav-active-color;
-        top: -5px;
-      }
+      transition: background-color 0.5s ease-in-out;
 
       &::after {
         @include respond-to(medium-up) {
-          background-color: $nav-active-color;
           bottom: -6px;
           display: block;
         }
