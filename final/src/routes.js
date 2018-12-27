@@ -4,7 +4,7 @@ import RootRedirector from './components/base/RootRedirector';
 // Pages.
 import HomeContainer from './containers/HomeContainer';
 import PriceContainer from './containers/PriceContainer';
-import Dashboard2Container from './containers/Dashboard2Container';
+import ExchangeContainer from './containers/ExchangeContainer';
 
 const routes = [
   {
@@ -13,10 +13,10 @@ const routes = [
     Component: () => <RootRedirector to="/home" />,
   },
   {
-    path: '/dashboard2',
-    displayName: 'Dashboard 2',
+    path: '/exchange',
+    displayName: 'Exchange',
     exact: true,
-    Component: Dashboard2Container,
+    Component: ExchangeContainer,
   },
   {
     path: '/price',

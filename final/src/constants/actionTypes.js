@@ -1,2 +1,9 @@
-// All constants that will describe action types will be exposed by this file
-export const SEND_PRICE_DATA = 'SEND_PRICE_DATA';
+export const PRICE_SUCCESS = 'PRICE_SUCCESS';
+export const PRICE_REQUEST = 'PRICE_REQUEST';
+export const PRICE_ERROR = 'PRICE_ERROR';
+export const UPDATE_PRICE_DATA = 'UPDATE_PRICE_DATA';
+
+export const EXCHANGE_SUCCESS = 'EXCHANGE_SUCCESS';
+export const EXCHANGE_REQUEST = 'EXCHANGE_REQUEST';
+export const EXCHANGE_ERROR = 'EXCHANGE_ERROR';
+export const UPDATE_EXCHANGE_DATA = 'UPDATE_EXCHANGE_DATA';

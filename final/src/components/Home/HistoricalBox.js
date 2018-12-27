@@ -9,7 +9,7 @@ const HistoricalBox = () => (
     <div className="home-box__header home-box__header--right-link">
 
       <h3>Historical data widget</h3>
-      <Link to="dashboard2">See more</Link>
+      <Link to="exchange">See more</Link>
     </div>
     <div className="divider margin--small-bottom" />
     <img

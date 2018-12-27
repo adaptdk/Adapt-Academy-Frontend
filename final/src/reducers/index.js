@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { reducer as formReducer } from 'redux-form';
-import dataReducer from './dataReducer';
+import priceReducer from './priceReducer';
+import exchangeReducer from './exchangeReducer';
 
 export default combineReducers({
   routing: routerReducer,
   form: formReducer,
-  data: dataReducer,
+  price: priceReducer,
+  exchange: exchangeReducer,
 });

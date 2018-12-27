@@ -12,3 +12,14 @@
     }
   }
 }
+
+.exchange-form {
+  &__title-section {
+    display: inline-grid;
+  }
+
+  &__from-section, &__to-section {
+    display: grid;
+  }
+}
+

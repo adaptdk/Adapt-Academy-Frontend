@@ -1,16 +1,29 @@
-const filterPrice = ({ data: { Data }, limitIndentifier }) => {
-  let newData = [];
-  const limit = limitIndentifier;
-  const data = Data;
+import { timeIntervalPrice } from '../../constants/options';
 
-  for (let i = data.length - 1; i >= 0; i -= limit) {
+export const getPriceText = text => {
+  let goodText = '';
+
+  timeIntervalPrice.forEach(item => {
+    if (item.value === text) {
+      goodText = item.text;
+    }
+  });
+
+  return goodText;
+};
+
+export const filterPriceData = data => {
+  let newData = [];
+
+  for (let i = data.length - 1; i >= 0; i--) {
     let inside = {
       time: data[i].time * 1000,
       close: data[i].close,
       change: undefined,
+      id: i,
     };
     if (i !== 0) {
-      inside.change = ((data[i].close - data[i - limit].close) / data[i].close * 100).toFixed(2) + '%'; 
+      inside.change = ((data[i].close - data[i - 1].close) / data[i].close * 100).toFixed(3) + '%'; 
     } else {
       inside.change = '0%';
     }
@@ -31,7 +44,6 @@ const filterPrice = ({ data: { Data }, limitIndentifier }) => {
     data[i] = inside;
     newData.push(data[i]);
   }
+
   return newData;
 };
-
-export default filterPrice;

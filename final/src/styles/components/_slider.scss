@@ -1,0 +1,15 @@
+.slider {
+  &__list {
+    display: grid !important;
+    justify-content: center;
+
+    &__title, &--div {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__image {
+      max-height: 90px;
+    }
+  }
+}
