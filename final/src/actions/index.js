@@ -1,1 +1,1 @@
-export { fetchCryptoData } from './requests';
+export { fetchCryptoData } from './fetchCryptoData';

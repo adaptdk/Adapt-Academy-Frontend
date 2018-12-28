@@ -1,40 +1,58 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, getFormValues } from 'redux-form';
 import PropTypes from 'prop-types';
-//import { createStore } from 'redux'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-class Dashboard3Container extends Component {
+import { fetchCryptoData } from '../actions';
+import { FORM_SUBMIT } from '../constants/actionTypes';
 
-  state = {
-    value: ''
+function mapStateToProps(state) {
+  return { cryptoData: state.cryptoData,
+    formValues: getFormValues('simple')(state)
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ 
+    fetchCryptoData 
+  }, dispatch);
+}
+
+class Dashboard3Container extends PureComponent {
+
+  componentDidMount() {
+    const { fetchCryptoData } = this.props;
+    fetchCryptoData();
   }
-
-
 
   testt = (e) => {
     e.preventDefault();
     const { handleSubmit } = this.props;
     handleSubmit((values) => {
-      
-      this.setState({
-        value: values
-      });
+      const action = () => {
+        return {
+        type: FORM_SUBMIT,
+        payload: values}
+      }
+      // dispatch(action())
     })();
     ;
+
   };
   
   render() {
         const { pristine, reset, submitting } = this.props;
-        console.log(this.state.value.curency);
-        //let store = createStore(test);
+        let cryptoDatas = this.props.cryptoData;
+        let met = Object.keys(cryptoDatas);
+          console.log(this.props.formValues)
     return(
       
       <div className="dashboard3">
         <div className="dashboard2__section dashboard2__section--left-link margin--small-bottom">
           <Link to="home">Go back</Link>
         </div>
-        { /* <button onClick={this.cryptoData}>Data</button> */ }
         <form onSubmit={ this.testt }>
         <div>
           <label>Input field</label>
@@ -52,10 +70,9 @@ class Dashboard3Container extends Component {
   
           <div>
           <Field name="curency" component="select">
-              <option/>
-              <option value="ff0000">Bit</option>
-              <option value="00ff00">Lite</option>
-              <option value="0000ff">Dogge</option>
+            { met.map((item, index) =>  
+               <option key={ index } value={ item }>{ item }</option>
+            )}
             </Field>
           </div>
         </div>
@@ -93,9 +110,15 @@ Dashboard3Container.propTypes = {
   handleSubmit: PropTypes.func,
   reset: PropTypes.func,
   pristine: PropTypes.bool,
-  submitting: PropTypes.bool
+  submitting: PropTypes.bool,
+  cryptoData: PropTypes.object,
+  fetchCryptoData: PropTypes.func,
+  formValues: PropTypes.object
 };
 
+Dashboard3Container = connect(mapStateToProps, mapDispatchToProps)(Dashboard3Container);
+
 export default reduxForm({
-  form: 'simple' // a unique identifier for this form
+  form: 'simple', // a unique identifier for this form
+  fields: ['inputfield', 'curency', 'date-to', 'date-from']
 })(Dashboard3Container);

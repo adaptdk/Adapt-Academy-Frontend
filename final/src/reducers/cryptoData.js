@@ -11,3 +11,4 @@ export default function cryptoData(state = {}, action) {
       return state;
   }
 }
+
