@@ -1,0 +1,28 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slider {
+    &__slide {
+      outline: none;
+    }
+
+    &__container, 
+    &__title {
+        display: flex;
+        justify-content: center;
+      }
+
+    &__image {
+        max-height: 300px;
+        margin: 0 auto;
+      }
+
+    &__text {
+      font-style: italic;
+      padding: 30px 0;
+      text-align: center;
+      line-height: 1.5;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }

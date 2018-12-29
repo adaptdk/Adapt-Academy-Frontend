@@ -1,23 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-import Columns from '../components/base/Columns';
-import { TWO_COLUMNS_LAYOUTS } from '../constants/layouts';
+import PropTypes from 'prop-types';
+import connect from 'react-redux/es/connect/connect';
 import Dashboard2Box1 from '../components/Dashboard2/Dashboard2Box1';
-import Dashboard2Box2 from '../components/Dashboard2/Dashboard2Box2';
+import { bindActionCreators } from 'redux';
+import { getExchanges } from '../actions';
+import Box from '../components/base/Box';
+import ExchangesChart from '../components/Dashboard2/ExchangesChart';
 
-const Dashboard2Container = () => (
-  <div className="dashboard2">
-    <div className="dashboard2__section dashboard2__section--left-link margin--small-bottom">
-      <Link to="home">Go back</Link>
-    </div>
-    <Columns
-      options={ TWO_COLUMNS_LAYOUTS }
-    >
-      <Dashboard2Box1 />
-      <Dashboard2Box2 />
-    </Columns>
-  </div>
-);
+class Dashboard2Container extends Component {
+  static propTypes = {
+    getExchanges: PropTypes.func.isRequired,
+    exchanges: PropTypes.object.isRequired,
+  };
 
-export default Dashboard2Container;
+  componentDidMount() {
+    const { getExchanges } = this.props;
+    getExchanges();
+  }
+
+  render() {
+    const { exchanges: { data} } = this.props;
+
+    return (
+      <div className="dashboard2">
+        <div className="dashboard2__section dashboard2__section--left-link margin--small-bottom">
+          <Link to="home">Go back</Link>
+        </div>
+        <Box>
+          <Dashboard2Box1 />
+          <ExchangesChart data={ data }/>
+        </Box>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  exchanges: state.exchanges,
+});
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  getExchanges,
+}, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Dashboard2Container);

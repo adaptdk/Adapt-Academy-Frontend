@@ -1,4 +1,4 @@
-$_gap: -5px;
+$_gap: calc(5px * -1);
 
 .columns {
   padding: 0;
@@ -13,10 +13,6 @@ $_gap: -5px;
   &__column {
     padding-left: 5px;
     padding-right: 5px;
-
-  &__video {
-    padding-bottom: 15px;
-  }
 
     &--fill {
       display: flex;

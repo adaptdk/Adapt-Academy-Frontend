@@ -1,14 +1,15 @@
 import React from 'react';
 
 import Box from '../base/Box';
-import paragraphImg from '../../assets/wireframes/paragraph.png';
+import Dashboard1Heading from './Dashboard1Heading';
+import Dashboard1Form from './Dashboard1Form';
+import List from './List';
 
 const Dashboard1Box1 = () => (
-  <Box>
-    <img
-      className="dashboard1__wireframe-img"
-      src={ paragraphImg }
-    />
+  <Box className="box-height">
+    <Dashboard1Heading />
+    <Dashboard1Form />
+    <List />
   </Box>
 );
 

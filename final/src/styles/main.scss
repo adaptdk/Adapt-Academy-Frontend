@@ -1,6 +1,8 @@
 // Vendors.
-@import "~video-react/styles/scss/video-react";
 @import 'vendors/normalize';
+@import '~purecss/build/pure-min.css';
+@import '~c3/c3.min.css';
+@import "~video-react/styles/scss/video-react";
 // Base.
 @import 'base/colors';
 @import 'base/variables';
@@ -19,9 +21,15 @@
 // Components.
 @import 'components/app';
 @import 'components/nav';
+@import 'components/slider';
+@import 'components/footer';
 // Pages.
 @import 'components/home';
 @import 'components/dashboard1';
 @import 'components/dashboard2';
 @import 'components/dashboard3';
 @import 'components/layouts';
+
+// dasboard1
+@import 'components/dashboard1/form';
+@import 'components/dashboard1/list';

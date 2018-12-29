@@ -1,1 +1,1 @@
-export { fetchCryptoData } from './fetchCryptoData';
+export * from './exchangesActions';

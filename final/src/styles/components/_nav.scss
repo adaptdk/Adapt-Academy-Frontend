@@ -21,14 +21,6 @@ $nav-active-color: $san-marino;
     list-style: none;
     padding: 0;
     width: 100%;
-
-    @include respond-to(medium-up) {
-      list-style: none;
-      max-width: 1400px;
-      padding: 0;
-      position: fixed;
-      width: 100%;
-    }
   }
 
   &__items {

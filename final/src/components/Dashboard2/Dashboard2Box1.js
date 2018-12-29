@@ -1,14 +1,11 @@
 import React from 'react';
 
 import Box from '../base/Box';
-import paragraphImg from '../../assets/wireframes/paragraph.png';
+import Dashboard2Heading from './Dashboard2Heading';
 
 const Dashboard2Box1 = () => (
-  <Box>
-    <img
-      className="dashboard2__wireframe-img"
-      src={ paragraphImg }
-    />
+  <Box className="box-height">
+    <Dashboard2Heading />
   </Box>
 );
 
