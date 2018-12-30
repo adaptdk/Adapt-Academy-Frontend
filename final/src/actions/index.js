@@ -1,1 +1,2 @@
-// All actions will be exposed by this file
+export * from './pricesActions';
+export * from './exchangesActions';

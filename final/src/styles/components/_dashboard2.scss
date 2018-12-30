@@ -1,4 +1,16 @@
 .dashboard2 {
+  &__submit-btn{
+    margin: 0.5rem 0 0.5rem 18%;
+    transform: translate(-50%);
+    background: $san-marino;
+    color: $white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  &__title-chart{
+    margin: 0.5rem 0 0.5rem 50%;
+    font-size: $font-size-lg;
+  }
   &__wireframe-img {
     height: 200px;
     width: 100%;
@@ -10,5 +22,9 @@
     &--left-link {
       @extend %left-link;
     }
+  }
+
+  &__chart {
+    height: 500px;
   }
 }

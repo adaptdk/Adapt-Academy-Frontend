@@ -19,14 +19,14 @@ const routes = [
     Component: HomeContainer,
   },
   {
-    path: '/dashboard1',
-    displayName: 'Dashboard 1',
+    path: '/prices',
+    displayName: 'Prices',
     exact: true,
     Component: Dashboard1Container,
   },
   {
-    path: '/dashboard2',
-    displayName: 'Dashboard 2',
+    path: '/crypto_volumes',
+    displayName: 'Exchange volume',
     exact: true,
     Component: Dashboard2Container,
   },

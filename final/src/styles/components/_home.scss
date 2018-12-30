@@ -4,6 +4,15 @@
     width: 100%;
   }
 
+  &__play-btn{
+    margin: 0.5rem 0 0 50%;
+    transform: translate(-50%);
+    background: $san-marino;
+    color: $white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
   &-box {
     &__header {
       align-items: center;
