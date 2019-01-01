@@ -5,15 +5,18 @@ import PropTypes from 'prop-types';
 
 const List = props => {
   const { list, error } = props;
+  console.log(list);
   return (
     <React.Fragment>
-      { list && list.length > 0 && (
+      { !error && list && list.length > 0 && (
         <table className="table">
           <thead>
             <tr className="table__header-row">
-              <th>Time</th>
-              <th>Price({ props.currency })</th>
-              <th>Change</th>
+              <th className="table__header-row__cell">Time</th>
+              <th className="table__header-row__cell">
+                Price({ props.currency })
+              </th>
+              <th className="table__header-row__cell">Change</th>
             </tr>
           </thead>
           <tbody>

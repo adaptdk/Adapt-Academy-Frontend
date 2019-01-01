@@ -22,15 +22,15 @@ class Dashboard1Form extends Component {
     e.preventDefault();
     const { timeInterval, cryptoCurrency, currency } = this.state;
     const aggregate = timeInterval.value.match(/\d+/g)[0];
-    const interval = timeInterval.value.match(/[a-zA-Z]+/g)[0];
 
+    const interval = timeInterval.value.match(/[a-zA-Z]+/g)[0];
+    console.log(interval);
     this.props.actions.getData(
       interval,
       cryptoCurrency.value,
       currency.value,
       aggregate,
     );
-
     this.props.actions.setCurrency(this.state.currency.value);
   };
 
@@ -44,7 +44,7 @@ class Dashboard1Form extends Component {
     const { timeInterval, cryptoCurrency, currency } = this.state;
 
     return (
-      <form onSubmit={ this.onSubmit }>
+      <form onSubmit={ this.onSubmit } className="form">
         <label>
           Time interval:
           <Select
@@ -79,7 +79,10 @@ class Dashboard1Form extends Component {
             isSearchable={ false }
           />
         </label>
-        <button type="submit">See price</button>
+
+        <button className="form__btn" type="submit">
+          See price
+        </button>
       </form>
     );
   }

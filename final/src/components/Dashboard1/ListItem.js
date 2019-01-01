@@ -2,28 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ListItem = props => {
-  const { open, time } = props.item;
+  const { close, time } = props.item;
   const { lastItem, currency } = props;
 
-  let change;
-  if (lastItem && open) {
-    change = (((open - lastItem.open) / open) * 100).toFixed(2);
+  let change = 0; //default value;
+  if (lastItem && close) {
+    change = (((close - lastItem.close) / close) * 100).toFixed(2);
+    console.log(close, lastItem.close);
   }
 
   const date = new Date(time * 1000);
-  const fyear = date.getUTCFullYear();
+  const fyear = date.getFullYear();
   const fmonth =
-    date.getUTCMonth() + 1 < 10
-      ? '0' + (date.getUTCMonth() + 1)
-      : date.getUTCMonth() + 1;
-  const fday =
-    date.getUTCDate() < 10 ? '0' + date.getUTCDate() : date.getUTCDate();
-  const fhours =
-    date.getUTCHours() < 10 ? '0' + date.getUTCHours() : date.getUTCHours();
+    date.getMonth() + 1 < 10
+      ? '0' + (date.getMonth() + 1)
+      : date.getMonth() + 1;
+  const fday = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+  const fhours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
   const fminutes =
-    date.getUTCMinutes() < 10
-      ? '0' + date.getUTCMinutes()
-      : date.getUTCMinutes();
+    date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
 
   const formattedDate = `${fyear}-${fmonth}-${fday} ${fhours}:${fminutes}`;
 
@@ -38,14 +35,33 @@ const ListItem = props => {
     currencySign = '£';
   }
 
+  let changeCell;
+  if (change > 0) {
+    changeCell = (
+      <td className="table__row__cell table__row__cell--up">
+        &#8679;{ change }%
+      </td>
+    );
+  }
+  if (change < 0) {
+    changeCell = (
+      <td className="table__row__cell table__row__cell--down">
+        &#8681;{ Math.abs(change) }%
+      </td>
+    );
+  }
+  if (change === 0) {
+    changeCell = <td className="table__row__cell">{ change }%</td>;
+  }
+
   return (
     <tr className="table__row">
-      <td>{ formattedDate }</td>
-      <td>
+      <td className="table__row__cell">{ formattedDate }</td>
+      <td className="table__row__cell">
         { currencySign }
-        { open.toFixed(2) }
+        { close.toFixed(2) }
       </td>
-      <td>{ change ? change + '%' : '0%' }</td>
+      { changeCell }
     </tr>
   );
 };

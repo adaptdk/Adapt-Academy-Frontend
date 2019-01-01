@@ -2,11 +2,33 @@
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+
+  &__header-row {
+    line-height: 40px;
+    color: white;
+
+    &__cell {
+      border: 1px solid #a0a0a0;
+      background-color: $san-marino;
+    }
+  }
 
   &__row {
     line-height: 30px;
     &:nth-of-type(even) {
-      background: #f2f2f2;
+      background: #b4b4b4;
+    }
+    &__cell {
+      border: 1px solid #a0a0a0;
+
+      &--up {
+        color: green;
+      }
+      &--down {
+        color: red;
+      }
     }
   }
 }
