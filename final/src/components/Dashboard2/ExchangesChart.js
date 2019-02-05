@@ -16,7 +16,8 @@ const ExchangesChart = ({ data }) => (
           keys: {
             x: 'time',
             value: ['volume'],
-          }
+            type:'bar'
+          },
         },
         axis: {
           x: {

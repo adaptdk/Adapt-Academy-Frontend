@@ -2,6 +2,7 @@ import {
   EXCHANGES_ERROR,
   EXCHANGES_REQUEST,
   EXCHANGES_SUCCESS,
+  EXCHANGES_UPDATE_FORM
 } from '../constants/actionTypes';
 import { chain } from 'lodash';
 import moment from 'moment';
@@ -28,6 +29,12 @@ export default function exchanges(state = initialState, action) {
         ...state,
         data: exchangesTransformer(Data),
       };
+    case EXCHANGES_UPDATE_FORM:
+    const { currencyType, timePeriod, to, limit } = action.payload;
+    return {
+      ...state,
+      currencyType, timePeriod, to, limit
+    };
     case EXCHANGES_REQUEST:
     case EXCHANGES_ERROR:
     default:
