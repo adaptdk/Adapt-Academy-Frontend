@@ -30,6 +30,8 @@ class Dashboard2Container extends Component {
     getExchanges();
   }
 
+
+
   newTimestamp = e => {
     let myDate= e.target.value;
     this.setState({ to: moment(myDate).unix()});
@@ -38,11 +40,12 @@ class Dashboard2Container extends Component {
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
   onSubmit = (e) => {
-    const { updateExchanges } = this.props;
-    const { currencyType, timePeriod, to, limit } =this.state;
+  //   const { updateExchanges } = this.props;
+    const { currencyType, to } =this.state;
     e.preventDefault();
-    updateExchanges(currencyType, timePeriod, to, limit);
-    console.log(this.state);
+    updateExchanges(currencyType, to);
+    // getExchanges(updateExchanges.payload);
+    // console.log(this.props);
   };
 
   render() {
@@ -50,7 +53,7 @@ class Dashboard2Container extends Component {
       exchanges: { data }
     } = this.props;
 
-    console.log(data);
+    // console.log(data);
     return (
       <div className='dashboard2'>
         <nav className='dashboard2__section dashboard2__section--left-link margin--small-bottom'>

@@ -30,10 +30,10 @@ export default function exchanges(state = initialState, action) {
         data: exchangesTransformer(Data),
       };
     case EXCHANGES_UPDATE_FORM:
-    const { currencyType, timePeriod, to, limit } = action.payload;
+    const { currencyType, to} = action.payload;
     return {
       ...state,
-      currencyType, timePeriod, to, limit
+      currencyType, to
     };
     case EXCHANGES_REQUEST:
     case EXCHANGES_ERROR:

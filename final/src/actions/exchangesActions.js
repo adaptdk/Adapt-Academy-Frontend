@@ -26,14 +26,13 @@ export function getExchanges({ currencyType, timePeriod, to, limit } = defaultGe
   };
 }
 
-export function updateExchanges(currencyType, timePeriod, to, limit) {
+
+export function updateExchanges(currencyType, to) {
   return {
     type: EXCHANGES_UPDATE_FORM,
     payload: {
       currencyType,
-      timePeriod,
       to,
-      limit
     }
   };
   }
