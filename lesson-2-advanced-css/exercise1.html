@@ -4,12 +4,11 @@
 
 You have been given a task to create interactive banner
 0. Set background to cosmos.png which is located in assets folder
-1. Create an animation of goku floating in the air left side of screen
-2. Style modal to be in a fixed position right of screen. Make it look pretty. Use google fonts.
+1. Create an animation of goku floating in the middle of the screen
+2. Style modal to be in a fixed position right bottom of screen. Make it look pretty. Use google fonts.
 3. Add appropriate classes according to BEM logic
-4. When hovering on modal a ball of energys grow big and stops at the last point.
+4. Make the animation togglable by controls
 5. On mobile screen goku should not be visible, modal should take all screen and become little transparent.
-6. Can we make typograpghy in modal responsive?
 
 HTML CANT BE CHANGED - ONLY ATTRIBUTES [CLASS]
 
@@ -43,11 +42,18 @@ https://media1.tenor.com/images/f5f29f0b72946fad44bdd38a65dda368/tenor.gif?itemi
 
 <body>
     <section>
+        <input class="hidden-input" type="radio" name="play" id="play"/>
+        <input class="hidden-input" type="radio" name="play" id="reset"/>
+        <input class="hidden-input" type="checkbox" name="modal" id="modal"/>
 
-        <div class="content">
+        <div class="controls">
+            <label class="controls__label" for="play">Play</label>
+            <label class="controls__label" for="reset">Reset</label>
+            <label class="controls__label" for="modal">Modal</label>
+        </div>
+        <div class="modal">
             <figure>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/I9IylKGDVJ0" frameborder="0" allow="autoplay; encrypted-media"
-                    allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/e4nEV7BmTmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
             <h2>DBZ is Awesome</h2>
             <p>And this is a proof it indeed is. Are you sayian it's not? </p>
