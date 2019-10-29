@@ -1,0 +1,73 @@
+// General
+@keyframes sceneProgress {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0%);
+  }
+}
+
+@keyframes opacityChange {
+  from {
+       opacity: 0.75
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+      @include circle-center(150px);
+  }
+  60% {
+      @include circle-center(300px);
+  }
+  80% {
+      @include circle-center(300px); 
+      top: -400px;
+  }
+  100% {
+      @include circle-center(600px);
+      top: -800px;
+  }
+}
+
+@keyframes float {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-15px);
+  }
+}
+
+@keyframes glow {
+  from {
+      box-shadow: 0 0 14px 10px transparentize($sb-outer-border, 0.4), 0 0 9px 5px transparentize($sb-inner-border, 0.4);
+  }
+  to {
+      box-shadow: 0 0 20px 15px transparentize($sb-outer-border, 0.4), 0 0 9px 8px transparentize($sb-inner-border, 0.4);
+  }
+}
+
+@keyframes energyGlow {
+  from {
+      box-shadow: 0 0 14px 10px transparentize($sb-outer-border, 0.4), 0 0 9px 5px transparentize($sb-inner-border, 0.4);
+  }
+  to {
+      box-shadow: 0 0 20px 15px transparentize($sb-outer-border, 0.4), 0 0 9px 8px transparentize($sb-inner-border, 0.4);
+  }
+  
+}
+
+@keyframes zoomGokuOut {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(0.6);
+  }
+}
+

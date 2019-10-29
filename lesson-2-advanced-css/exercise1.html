@@ -3,7 +3,7 @@
 *** EXERCISE BRIEF ***
 
 You have been given a task to create interactive banner
-0. Set background to cosmos.png which is located in assets folder
+0. Set background to namek.png which is located in assets folder
 1. Create an animation of goku floating in the middle of the screen
 2. Style modal to be in a fixed position right bottom of screen. Make it look pretty. Use google fonts.
 3. Add appropriate classes according to BEM logic
@@ -13,9 +13,11 @@ You have been given a task to create interactive banner
 HTML CANT BE CHANGED - ONLY ATTRIBUTES [CLASS]
 
 Colors:
-spirit-bomb-inner : #7afffd
-spirit-bomb-outer : #3EC8EB
-spirit-bomb-border : #92fefb
+$sb-middle: #faf7ff;
+$sb-inner : #90e7fe;
+$sb-outer : #79e2fa;
+$sb-inner-border : #baf3fe;
+$sb-outer-border: #b7f3fe;
 
 fonts:
 https://fonts.google.com
@@ -40,20 +42,21 @@ https://media1.tenor.com/images/f5f29f0b72946fad44bdd38a65dda368/tenor.gif?itemi
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
-<body>
+<body class="exercise1">
     <section>
-        <input class="hidden-input" type="radio" name="play" id="play" />
-        <input class="hidden-input" type="radio" name="play" id="reset" />
-        <input class="hidden-input" type="checkbox" name="modal" id="modal" />
+        <input class="hidden-input input--play" type="radio" name="controls" id="play" />
+        <input class="hidden-input input--reset" checked="checked" type="radio" name="controls" id="reset" />
+        <input class="hidden-input input--modal" type="checkbox" name="modal" id="modal" />
 
         <div class="controls">
-            <label class="controls__label" for="play">Play</label>
-            <label class="controls__label" for="reset">Reset</label>
-            <label class="controls__label" for="modal">Modal</label>
+            <label class="controls__label controls__label--play" for="play">Play</label>
+            <label class="controls__label controls__label--reset" for="reset">Reset</label>
+            <label class="controls__label controls__label--modal" for="modal">Modal</label>
         </div>
+
         <div class="modal">
             <figure>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/e4nEV7BmTmk" frameborder="0"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/F5wi-sXGgE8" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </figure>
@@ -65,6 +68,109 @@ https://media1.tenor.com/images/f5f29f0b72946fad44bdd38a65dda368/tenor.gif?itemi
         <div class="goku">
             <img src="https://mbtskoudsalg.com/images/goku-spirit-bomb-png-2.png" />
             <span>This is a ball full of spirit power stuff</span>
+
+            <div class="goku__spirit-bomb-energy">
+                <span class="energy-stuff energy-stuff-1"></span>
+                <span class="energy-stuff energy-stuff-2"></span>
+                <span class="energy-stuff energy-stuff-3"></span>
+                <span class="energy-stuff energy-stuff-4"></span>
+                <span class="energy-stuff energy-stuff-5"></span>
+                <span class="energy-stuff energy-stuff-6"></span>
+                <span class="energy-stuff energy-stuff-7"></span>
+                <span class="energy-stuff energy-stuff-8"></span>
+                <span class="energy-stuff energy-stuff-9"></span>
+                <span class="energy-stuff energy-stuff-10"></span>
+                <span class="energy-stuff energy-stuff-11"></span>
+                <span class="energy-stuff energy-stuff-12"></span>
+                <span class="energy-stuff energy-stuff-13"></span>
+                <span class="energy-stuff energy-stuff-14"></span>
+                <span class="energy-stuff energy-stuff-15"></span>
+                <span class="energy-stuff energy-stuff-16"></span>
+                <span class="energy-stuff energy-stuff-17"></span>
+                <span class="energy-stuff energy-stuff-18"></span>
+                <span class="energy-stuff energy-stuff-19"></span>
+                <span class="energy-stuff energy-stuff-20"></span>
+                <span class="energy-stuff energy-stuff-21"></span>
+                <span class="energy-stuff energy-stuff-22"></span>
+                <span class="energy-stuff energy-stuff-23"></span>
+                <span class="energy-stuff energy-stuff-24"></span>
+                <span class="energy-stuff energy-stuff-25"></span>
+                <span class="energy-stuff energy-stuff-26"></span>
+                <span class="energy-stuff energy-stuff-27"></span>
+                <span class="energy-stuff energy-stuff-28"></span>
+                <span class="energy-stuff energy-stuff-29"></span>
+                <span class="energy-stuff energy-stuff-30"></span>
+                <span class="energy-stuff energy-stuff-31"></span>
+                <span class="energy-stuff energy-stuff-32"></span>
+                <span class="energy-stuff energy-stuff-33"></span>
+                <span class="energy-stuff energy-stuff-34"></span>
+                <span class="energy-stuff energy-stuff-35"></span>
+                <span class="energy-stuff energy-stuff-36"></span>
+                <span class="energy-stuff energy-stuff-37"></span>
+                <span class="energy-stuff energy-stuff-38"></span>
+                <span class="energy-stuff energy-stuff-39"></span>
+                <span class="energy-stuff energy-stuff-40"></span>
+                <span class="energy-stuff energy-stuff-41"></span>
+                <span class="energy-stuff energy-stuff-42"></span>
+                <span class="energy-stuff energy-stuff-43"></span>
+                <span class="energy-stuff energy-stuff-44"></span>
+                <span class="energy-stuff energy-stuff-45"></span>
+                <span class="energy-stuff energy-stuff-46"></span>
+                <span class="energy-stuff energy-stuff-47"></span>
+                <span class="energy-stuff energy-stuff-48"></span>
+                <span class="energy-stuff energy-stuff-49"></span>
+                <span class="energy-stuff energy-stuff-50"></span>
+                <span class="energy-stuff energy-stuff-51"></span>
+                <span class="energy-stuff energy-stuff-52"></span>
+                <span class="energy-stuff energy-stuff-53"></span>
+                <span class="energy-stuff energy-stuff-54"></span>
+                <span class="energy-stuff energy-stuff-55"></span>
+                <span class="energy-stuff energy-stuff-56"></span>
+                <span class="energy-stuff energy-stuff-57"></span>
+                <span class="energy-stuff energy-stuff-58"></span>
+                <span class="energy-stuff energy-stuff-59"></span>
+                <span class="energy-stuff energy-stuff-60"></span>
+                <span class="energy-stuff energy-stuff-61"></span>
+                <span class="energy-stuff energy-stuff-62"></span>
+                <span class="energy-stuff energy-stuff-63"></span>
+                <span class="energy-stuff energy-stuff-64"></span>
+                <span class="energy-stuff energy-stuff-65"></span>
+                <span class="energy-stuff energy-stuff-66"></span>
+                <span class="energy-stuff energy-stuff-67"></span>
+                <span class="energy-stuff energy-stuff-68"></span>
+                <span class="energy-stuff energy-stuff-69"></span>
+                <span class="energy-stuff energy-stuff-70"></span>
+                <span class="energy-stuff energy-stuff-71"></span>
+                <span class="energy-stuff energy-stuff-72"></span>
+                <span class="energy-stuff energy-stuff-73"></span>
+                <span class="energy-stuff energy-stuff-74"></span>
+                <span class="energy-stuff energy-stuff-75"></span>
+                <span class="energy-stuff energy-stuff-76"></span>
+                <span class="energy-stuff energy-stuff-77"></span>
+                <span class="energy-stuff energy-stuff-78"></span>
+                <span class="energy-stuff energy-stuff-79"></span>
+                <span class="energy-stuff energy-stuff-80"></span>
+                <span class="energy-stuff energy-stuff-81"></span>
+                <span class="energy-stuff energy-stuff-82"></span>
+                <span class="energy-stuff energy-stuff-83"></span>
+                <span class="energy-stuff energy-stuff-84"></span>
+                <span class="energy-stuff energy-stuff-85"></span>
+                <span class="energy-stuff energy-stuff-86"></span>
+                <span class="energy-stuff energy-stuff-87"></span>
+                <span class="energy-stuff energy-stuff-88"></span>
+                <span class="energy-stuff energy-stuff-89"></span>
+                <span class="energy-stuff energy-stuff-90"></span>
+                <span class="energy-stuff energy-stuff-91"></span>
+                <span class="energy-stuff energy-stuff-92"></span>
+                <span class="energy-stuff energy-stuff-93"></span>
+                <span class="energy-stuff energy-stuff-94"></span>
+                <span class="energy-stuff energy-stuff-95"></span>
+                <span class="energy-stuff energy-stuff-96"></span>
+                <span class="energy-stuff energy-stuff-97"></span>
+                <span class="energy-stuff energy-stuff-98"></span>
+                <span class="energy-stuff energy-stuff-99"></span>
+                <span class="energy-stuff energy-stuff-100"></span>
+            </div>
         </div>
 
 
