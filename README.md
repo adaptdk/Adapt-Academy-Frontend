@@ -120,7 +120,7 @@ In *lesson* folders you will find resources for lessons.
 
 * **Final task**
 
-1. Boilerplate for final task can be found in [ https://github.com/adaptdk/Adapt-Academy-Frontend-2019-task ]( https://github.com/adaptdk/Adapt-Academy-Frontend-2019-task ) . Look at slides in repository. More details will be explained in one of the lessons after some introduction to ReactJS.
+1. Boilerplate for final task can be found in [ https://github.com/adaptdk/Adapt-Academy-Frontend-2019-task ]( https://github.com/adaptdk/Adapt-Academy-Frontend-2019-task ). Look at slides in repository in final directory. More details will be explained in one of the lessons after some introduction to ReactJS.
 2. Demo of completed solution can be accessed by entering url [https://adaptdk.github.io/Adapt-Academy-Frontend-2019-solution/ ]( https://adaptdk.github.io/Adapt-Academy-Frontend-2019-solution/)
 
   
