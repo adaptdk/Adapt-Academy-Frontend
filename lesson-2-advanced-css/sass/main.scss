@@ -8,7 +8,7 @@
 //main
 
 @import "modules/exercise1/exercise1";
-@import "modules/exercise1/exercise2";
+@import "modules/exercise2/exercise2";
 //@import "modules/exercise1/exercise1-solved";
 
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300,500,700|Open+Sans:300,400,700&subset=latin-ext');
@@ -16,7 +16,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Exo 2', sans-serif;
-    padding: em(32) em(60); 
+    padding: em(32) em(60);
 }
 
 .grid-example{ 
