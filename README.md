@@ -48,21 +48,28 @@ In *lesson* folders you will find resources for lessons.
 
 * **Lesson 3: Javascript (1).**
 
-1. Introduction (data types, variables, variable assignments, statement).
+1. Introduction (What is javascript? Ways to execute Javacript code).
 
-2. Control flow statements (if, else, switch and so on.).
+2. Document object model (DOM api common methods)
 
-3. Loops (for, while).
+3. Variables, operators, data types and structures
 
-4. Existing data structure (array, associative array (object literal)).
+4. Program control flow (if ... else, switch, falsy values)
 
-5. Function as a way to structure your code into smaller pieces.
+5. Data structures (array, object)
 
-6. Scope (visibility of variables), closures (accessing variables outside of function).
+6. Loops and iteratios (for, while, For ... in, For .. of)
 
-7. Functional programming, OOP (prototype-based programming).
+7. Functions.
 
-8. Practical exercise.
+8. JSON format. API interaction.
+
+9. AJAX. XMLHttpRequest and Fetch.
+
+10. Javascript Frameworks
+
+11. Practical exercise.
+
 * **Lesson 4: Javascript (2).**
 
 1. ES7 (arrow function, bind, spread operator, class, const, let keywords; new collections - Map, Set, WeakMap, WeakSet).
