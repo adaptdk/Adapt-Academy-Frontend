@@ -5,11 +5,15 @@
 
 2. Take data from file users.json and output person names with salary that are bigger than 1000. Try to use *Array* object methods like *forEach*.
 
-3. Take data from file *users.json* and create Users array. Sort this array by users name. Try to use *Array sort* method.
+3. Print current bitcoin price using https://api.gdax.com/products/BTC-USD/book
 
-4. Take data from file *users.json* and create Users array. Filter this array so output will contains only that users that have salary bigger than 1000. Try to use *Array filter* method.
+   More advanced. Optional:
 
-5. Take data from file *users.json* and create Users array. Create a new array that will have users with name prefixed with `Hello from` string. Try to use *Array map* method.
+4. Take data from file *users.json* and create Users array. Sort this array by users name. Try to use *Array sort* method.
+
+5. Take data from file *users.json* and create Users array. Filter this array so output will contains only that users that have salary bigger than 1000. Try to use *Array filter* method.
+
+6. Take data from file *users.json* and create Users array. Create a new array that will have users with name prefixed with `Hello from` string. Try to use *Array map* method.
 
    ```json
    [
@@ -24,7 +28,6 @@
        ...
    ]
    ```
-
 
 
 
