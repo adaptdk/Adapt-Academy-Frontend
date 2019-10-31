@@ -1,8 +1,0 @@
-// Helper functions
-@mixin circle-center($width, $height:$width) {
-  width: $width;
-  height: $width;
-  position: absolute;
-  left: 50%;
-  margin-left: - $width / 2;
-}
