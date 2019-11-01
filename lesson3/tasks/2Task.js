@@ -8,9 +8,9 @@ function loadUsers(path) {
         return response.json();
       })
       .then(users => {
-        users.forEach(u => {
-            if (u.salary > 1000) {
-                console.log(u.name);
+        users.forEach(user => {
+            if (user.salary > 1000) {
+                console.log(user.name);
             }
         });
       })
