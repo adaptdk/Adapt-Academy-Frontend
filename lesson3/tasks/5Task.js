@@ -1,6 +1,3 @@
-/*5. Take data from file *users.json* and create Users array. 
-Filter this array so output will contains only that users that have salary bigger than 1000.
-Try to use *Array filter* method.*/
 function loadUsers(path, usersArray) {
     return fetch(path)
       .then(response => {
