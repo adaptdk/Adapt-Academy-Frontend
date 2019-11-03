@@ -1,0 +1,26 @@
+
+/*                    Adapt Academy 2019 lesson 03 - JS introduction | task 03 by Donatas Dereškevičius                     */
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrap {
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.price-title, .bid-price, .ask-price {
+    display: flex;
+    justify-content: center;
+}

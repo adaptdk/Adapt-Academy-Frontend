@@ -1,0 +1,91 @@
+
+/*                    Adapt Academy 2019 lesson 03 - JS introduction | task 01 by Donatas Dereškevičius                     */
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.wrap {
+    margin: 3rem;
+    padding: 1rem;
+}
+
+.wrap-title, .wrap-subtitle, .form, .answer {
+    display: flex;
+    justify-content: center;
+}
+
+.wrap-subtitle {
+    margin-top: 3rem;
+}
+
+.form {
+    margin-top: 5rem;
+    padding: 2rem;
+}
+
+.form-title, .form-input, .form-button, .answer {
+    margin: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.form-input, .form-button, .button {
+    border: none;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    border-radius: 5%;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+.form-button, .button {
+    background-color: #ffffff;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.answer {
+    display: none;
+}
+
+.answer-title, .answer-text, .answer-image {
+    margin: 3rem;
+}
+
+.button {
+    margin-top: 10rem;
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    justify-content: flex-end;
+    bottom: 0;
+    padding-right: 5rem;
+    width: 100vw;
+}
+
+.footer-text {
+    margin-right: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
