@@ -80,7 +80,17 @@ var personnel = [
 ```
 Our objective: get the total score of force users only. Let’s do it step by step!
 
+3
+=======
+Write a prototype based counter which has methods `start()`, `stop()`, `resume()` and `reset()`.
+`start()` method will receive a time parameter with format `hh:mm:ss` which as example is `00:01:10`.
+It will count up to the given time and then it will stop automatically. If parameter is not supplied then it will count indefinitely.
+If poorly formmatted time string will be supplied to the method it will throw an error.
+`stop()` will stop (pause) the counter.
+`resume()` will start counting once again from the time value it has stopped on.
+`reset()` will reset time to 0.
 
+A counter constructor will receive a formatted time parameter `hh:mm:ss` which we will use as a start time to start counting from.
 
 
 https://medium.com/@habibridho/javascript-es7-async-await-tutorial-64275c81ce2e
