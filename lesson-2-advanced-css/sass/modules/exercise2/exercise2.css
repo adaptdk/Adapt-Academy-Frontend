@@ -1,0 +1,116 @@
+@-webkit-keyframes opacityChange {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityChange {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav {
+  margin-top: 0;
+}
+
+.main-nav__list {
+  background-color: black;
+  color: white;
+  display: table;
+  width: 100%;
+  margin: 0;
+}
+
+.main-nav__list__item {
+  display: table-cell;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 3vh;
+  border-style: solid;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.main-nav__list__item:hover {
+  background-color: #333333;
+  text-decoration: none;
+  color: white;
+  display: table-cell;
+  border-bottom: 2px solid #f8c365;
+  -webkit-animation: opacityChange;
+          animation: opacityChange;
+}
+
+.main-img {
+  width: 100%;
+  -webkit-animation: float 100s ease-in infinite alternate;
+          animation: float 100s ease-in infinite alternate;
+}
+
+.page-welcome {
+  padding: 1vh;
+  border-width: 2pxvh;
+  border-bottom: 4px solid #f8c365;
+  border-top: 4px solid #f8c365;
+  text-align: center;
+  text-align: center;
+  background-color: black;
+  padding-bottom: 3.5vh;
+  color: white;
+}
+
+.page-welcome__title {
+  font-size: 12vh;
+  font-weight: bold;
+}
+
+.page-welcome__par {
+  font-size: 4vh;
+  padding: 1vh;
+  background-color: black;
+  margin-bottom: 4vh;
+  margin-top: 2vh;
+  border-bottom: 2px solid #f8c365;
+  border-top: 2px solid #f8c365;
+}
+
+.page-welcome__link {
+  font-size: 5vh;
+  margin-left: 7vh;
+  margin-right: 7vh;
+  color: white;
+  text-decoration: none;
+}
+
+.page-welcome__link__nope {
+  font-size: 5vh;
+  margin-left: 7vh;
+  margin-right: 7vh;
+  color: white;
+  text-decoration: none;
+}
+
+.page-welcome__link__nope:hover {
+  color: black;
+  cursor: none;
+}
+
+.page-welcome__link:hover {
+  color: #f8c365;
+}
+/*# sourceMappingURL=exercise2.css.map */

@@ -1,0 +1,87 @@
+@import "_animations.scss";
+$color--back: #000;
+.container {
+    display: flex;
+}
+
+.main-nav {
+    margin-top: 0;
+    &__list {
+        background-color: black;
+        color: white;
+        display: table;
+        width: 100%;
+        margin: 0;
+        &__item {
+            display: table-cell;
+            text-decoration: none;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 3vh;
+            border-style: solid;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            &:hover {
+                background-color: #333333;
+                text-decoration: none;
+                color: white;
+                display: table-cell;
+                border-bottom: 2px solid #f8c365;
+                animation: opacityChange;
+            }
+        }
+    }
+}
+
+.main-img {
+    width: 100%;
+    animation: float 100s ease-in infinite alternate;
+}
+
+.page-welcome {
+    padding: 1vh;
+    border-width: 2pxvh;
+    border-bottom: 4px solid #f8c365;
+    border-top: 4px solid #f8c365;
+    text-align: center;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 3.5vh;
+    color: white;
+    &__title {
+        font-size: 12vh;
+        font-weight: bold;
+    }
+    &__par {
+        font-size: 4vh;
+        padding: 1vh;
+        background-color: black;
+        margin-bottom: 4vh;
+        margin-top: 2vh;
+        border-bottom: 2px solid #f8c365;
+        border-top: 2px solid #f8c365;
+    }
+    &__par:hover {}
+    &__link {
+        font-size: 5vh;
+        margin-left: 7vh;
+        margin-right: 7vh;
+        color: white;
+        text-decoration: none;
+        &__nope {
+            font-size: 5vh;
+            margin-left: 7vh;
+            margin-right: 7vh;
+            color: white;
+            text-decoration: none;
+        }
+        &__nope:hover {
+            color: black;
+            cursor: none;
+        }
+    }
+    &__link:hover {
+        color: #f8c365;
+    }
+}

@@ -18,7 +18,6 @@ images: <img src="https://via.placeholder.com/350x150" />
 *** *** *** *** *** ***
 
 -->
-
 <!DOCTYPE html>
 <html>
 
@@ -27,46 +26,45 @@ images: <img src="https://via.placeholder.com/350x150" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Batcave shop</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="/sass/modules/exercise2/exercise2.css">
 
 </head>
 
 <body>
-    <header class="site-header">
-        <div>
-            <img src="assets/bat-logo.svg" />
-            <h1>Wicked site</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+    <header>
+        <!-- <div class="site-header"> -->
+        <!-- <img src="assets/bat-logo.svg" /> -->
+        <!-- <img src="https://i.pinimg.com/originals/3a/da/b2/3adab240e8c9daa6c41df9c2993fccd0.jpg"> -->
+        <!-- <h1>Wicked site</h1> -->
+        <!-- </div> -->
+        <nav class="main-nav ">
+            <ul class="main-nav__list">
+                <li class="main-nav__list__item"><a>Welcome</a></li>
+                <li class="main-nav__list__item"><a>Benefits</a></li>
+                <li class="main-nav__list__item"><a>Products</a></li>
+                <li class="main-nav__list__item"><a>Blog</a></li>
+                <li class="main-nav__list__item"><a>Contacts</a></li>
             </ul>
         </nav>
     </header>
 
     <div>
         <figure>
-            <img src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
-         assets/bat-screen-landscape.jpg 525w'
-                sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
+            <img class="main-img" src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+         assets/bat-screen-landscape.jpg 525w' sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
                 100vw' />
 
             <div>
                 <h2>Welcome</h2>
-                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
-                    gadgets</p>
+                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat gadgets
+                </p>
                 <a href="#">Take my cash</a><a href="#">Nope.</a>
             </div>
         </figure>
     </div>
 
-    <section>
+    <section class="container">
         <article>
             <h2>Benefits</h2>
             <span><i class="fas fa-balance-scale"></i></span>
@@ -117,37 +115,37 @@ images: <img src="https://via.placeholder.com/350x150" />
     </section>
 
     <section>
-            <header>
-                    <h2>Blog</h2>
-                    <a href="#">Take my cash</a>
-            </header>
-            
-            <div>
-                <article>
-                    <img src="assets/bat-weapon.jpg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-    
-                <article>
-                    <img src="assets/bat-weapon2.jpg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-    
-                <article>
-                    <img src="assets/bat-weapon3.png" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-    
-                <article>
-                    <img src="assets/bat-weapon4.jpeg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-            </div>
-        </section>
+        <header>
+            <h2>Blog</h2>
+            <a href="#">Take my cash</a>
+        </header>
+
+        <div>
+            <article>
+                <img src="assets/bat-weapon.jpg" />
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+
+            <article>
+                <img src="assets/bat-weapon2.jpg" />
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+
+            <article>
+                <img src="assets/bat-weapon3.png" />
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+
+            <article>
+                <img src="assets/bat-weapon4.jpeg" />
+                <h3>product name</h3>
+                <a href=""></a>
+            </article>
+        </div>
+    </section>
 
     <section>
         <article>
@@ -161,15 +159,14 @@ images: <img src="https://via.placeholder.com/350x150" />
         </article>
         <div class="map">
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                <div class="gmap_canvas"><iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
                 <style>
                     .mapouter {
                         text-align: right;
                         height: 597px;
                         width: 600px;
                     }
-
+                    
                     .gmap_canvas {
                         overflow: hidden;
                         background: none !important;

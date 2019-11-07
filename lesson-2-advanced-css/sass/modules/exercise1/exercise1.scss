@@ -95,7 +95,7 @@ $cubic: cubic-bezier(.05, 1.34, .78, -0.35);
 }
 
 body.exercise1 {
-    background: url(../assets/namek.png) center center no-repeat;
+    background: url("/assets/namek.png") center center no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
@@ -136,7 +136,7 @@ body.exercise1 {
     &__body {
         width: 100%;
         height: auto;
-        animation: float 3s ease-in-out infinite alternate;
+        animation: float 2s ease-in-out infinite alternate;
     }
     &__spirit-bomb {
         left: 10%;
