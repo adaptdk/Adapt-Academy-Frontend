@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+h1 {
+  height: 8vh;
+  width: auto;
+  float: left;
+  padding-top: 3vh;
+  font-size: $font-size*1.6;
+  color: $color--white;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+//===========
+//HEADER
+//===========
+}
+.site-header {
+  background: $color--black;
+  height: 10vh;
+}
+.logo {
+  height: 8vh;
+  width: auto;
+  float: left;
+  margin: 1vh 5vh;
+}
+.main-nav {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 1vh;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 4vh 5vh 0 0;
+  li {
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    margin-left: 3vh;
+    
+    a {
+      font-size: $font-size;
+      color: $color--white;
+      border-bottom: 0px solid transparent;
+    }
+    
+  }
+  .li__underlined {
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom-color: $color--red;
+    }
+  }
+}
+
+.hero-text-box {
+  position: relative;
+  text-align: center;
+  color: $color--white;
+  .intro-cover {
+    height: 45vh;
+    width: 100%;
+    opacity: 0.8;
+    background-color: $color--black;
+  }
+  .text-over-image {
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  font-size: $font-size;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    p {
+      margin: 1vh 0 2vh 0;
+    }
+  }
+}
+  //BUTTONS
+
+  .btn {
+    padding: 1vh 2vh;
+    border: 2px solid $color--orange;
+    color: $color--black;
+    &__full {
+      float: left;
+      margin-right: 1vh;
+      background-color: $color--orange;
+    }
+    &__ghost {
+      float: left;
+    }
+  }

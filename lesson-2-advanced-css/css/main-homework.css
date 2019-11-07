@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2:300,500,700|Open+Sans:300,400,700&subset=latin-ext");
+@-webkit-keyframes animation {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes animation {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* h1 {
+  height: 8vh;
+  width: auto;
+  float: left;
+  padding-top: 3vh;
+  font-size: 32px;
+  color: #FFFFFF;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+.site-header {
+  background: #000000;
+  height: 10vh;
+}
+
+.logo {
+  height: 8vh;
+  width: auto;
+  float: left;
+  margin: 1vh 5vh;
+}
+
+.main-nav {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-preferred-size: 1vh;
+  flex-basis: 1vh;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 4vh 5vh 0 0;
+}
+
+.main-nav li {
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  margin-left: 3vh;
+}
+
+.main-nav li a {
+  font-size: 20px;
+  color: #FFFFFF;
+  border-bottom: 0px solid transparent;
+}
+
+.main-nav .li__underlined {
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav .li__underlined:hover {
+  border-bottom-color: #ff0000;
+}
+
+.hero-text-box {
+  position: relative;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.hero-text-box .intro-cover {
+  height: 45vh;
+  width: 100%;
+  opacity: 0.8;
+  background-color: #000000;
+}
+
+.hero-text-box .text-over-image {
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hero-text-box .text-over-image p {
+  margin: 1vh 0 2vh 0;
+}
+
+.btn {
+  padding: 1vh 2vh;
+  border: 2px solid #ff4500;
+  color: #000000;
+}
+
+.btn__full {
+  float: left;
+  margin-right: 1vh;
+  background-color: #ff4500;
+}
+
+.btn__ghost {
+  float: left;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.grid-example {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 1em;
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.box2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 1em;
+}

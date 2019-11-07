@@ -26,7 +26,7 @@ images: <img src="https://via.placeholder.com/350x150" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Batcave shop</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main-homework.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
 
@@ -36,14 +36,14 @@ images: <img src="https://via.placeholder.com/350x150" />
 <body>
     <header class="site-header">
         <div>
-            <img src="assets/bat-logo.svg" />
+            <img src="assets/bat-logo.svg" alt="Bat logo" class="logo"/>
             <h1>Wicked site</h1>
         </div>
         <nav>
-            <ul>
+            <ul class="main-nav">
                 <li><a href="#">Welcome</a></li>
                 <li><a href="#">Benefits</a></li>
-                <li><a href="#">Products</a></li>
+                <li class="li__underlined"><a href="#">Products</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
@@ -51,17 +51,15 @@ images: <img src="https://via.placeholder.com/350x150" />
     </header>
 
     <div>
-        <figure>
-            <img src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
-         assets/bat-screen-landscape.jpg 525w'
-                sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
-                100vw' />
+        <figure class="hero-text-box">
+            <img class="intro-cover" src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+         assets/bat-screen-landscape.jpg 525w' />
 
-            <div>
+            <div class="text-over-image">
                 <h2>Welcome</h2>
-                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
-                    gadgets</p>
-                <a href="#">Take my cash</a><a href="#">Nope.</a>
+                <p >This is the cover text for super secret and awesome batsy site. <br> I will sell you some cool bat
+                    gadgets!</p>
+                <a class="btn btn__full" href="#">Take my cash</a><a class="btn btn__ghost" href="#">Nope.</a>
             </div>
         </figure>
     </div>

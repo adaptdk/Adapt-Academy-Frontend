@@ -45,7 +45,7 @@ gulp.task('vendor', function (cb) {
 // For homework change source to sass-homework folder
 function css() {
   return gulp
-    .src("./sass/*.scss")
+    .src("./sass-homework/*.scss")
     .pipe(plumber())
     .pipe(sass({
       outputStyle: "expanded"
@@ -91,7 +91,7 @@ function browserSyncReload(done) {
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./sass/**/*", css); //For homework change to sass-homework
+  gulp.watch("./sass-homework/**/*", css); //For homework change to sass-homework
   gulp.watch("./*.html", browserSyncReload);
 }
 
