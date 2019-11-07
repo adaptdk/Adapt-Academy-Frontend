@@ -1,0 +1,90 @@
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    width: 80%;
+
+    .header-navigation__menu {
+        background-color: #cfae81;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        .header-navigation__button {
+            float: left;
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 1rem;
+
+            .header-navigation__link {
+                color: #000000;
+                text-decoration: none;
+            }
+
+            .header-navigation__link:hover {
+                border-bottom: solid #ffffff 3px;
+                color: #f8f3ed;
+                text-shadow: 0px 0px 10px #000000;
+            }
+        }
+    }
+
+    .header-navigation__mobile {
+        display: none;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1400px) {
+
+    .header-navigation {
+        .header-navigation__menu {
+            .header-navigation__button {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .header-navigation {
+        justify-content: center;
+        margin-right: 0;
+        width: 100%;
+
+        .header-navigation__menu {
+            display: none;
+        }
+
+        .header-navigation__mobile {
+            display: block;
+            background-color: #43789e;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            list-style-type: none;
+            width: 100%;
+            z-index: 1;
+    
+            .header-navigation__mobile_logo {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 2rem;
+            }
+
+            .header-navigation__mobile_button {
+                padding: 2rem;
+
+                .header-navigation__mobile_link {
+                    color: #000000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

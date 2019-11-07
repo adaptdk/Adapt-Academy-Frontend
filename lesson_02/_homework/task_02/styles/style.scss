@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
+
+@import './layout';
+@import '../components/header/header';
+@import '../components/header/logo/logo';
+@import '../components/header/navigation/navigation';
+@import '../components/slider/slider';
+@import '../components/benefits/benefits';
+@import '../components/products/products';
+@import '../components/blog/blog';
+@import '../components/contacts/contacts';
+@import '../components/footer/footer';
+
+.hide {
+    display: none;
+}
+
+.show_block {
+    display: block;
+}

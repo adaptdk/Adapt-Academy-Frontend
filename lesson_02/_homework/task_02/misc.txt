@@ -1,0 +1,1 @@
+﻿ srcset='./src/slider_landscape.jpg 1920w,./src/slider_portrait.jpg 525w'sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,100vw'
