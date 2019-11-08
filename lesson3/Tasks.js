@@ -1,46 +1,47 @@
 function getZodiacSign(day, month) {
-    console.log("Your zodiac is: ");
-    switch (month) {
-        case 1:
-            day < 20 ? console.log("Capricorn") : console.log("Aquarius");
-            break;
-        case 2:
-            day < 18 ? console.log("Aquarius") : console.log("Pisces");
-            break;
-        case 3:
-            day < 20 ? console.log("Pisces") : console.log("Aries");
-            break;
-        case 4:
-            day < 20 ? console.log("Aries") : console.log("Taurus");
-            break;
-        case 5:
-            day < 21 ? console.log("Taurus") : console.log("Gemini");
-            break;
-        case 6:
-            day < 21 ? console.log("Gemini") : console.log("Cancer");
-            break;
-        case 7:
-            day < 23 ? console.log("Cancer") : console.log("Leo");
-            break;
-        case 8:
-            day < 23 ? console.log("Leo") : console.log("Virgo");
-            break;
-        case 9:
-            day < 23 ? console.log("Virgo") : console.log("Libra");
-            break;
-        case 10:
-            day < 23 ? console.log("Libra") : console.log("Scorpio");
-            break;
-        case 11:
-            day < 22 ? console.log("Scorpio") : console.log("Sagittarius");
-            break;
-        case 12:
-            day < 22 ? console.log("Sagittarius") : console.log("Capricorn");
-            break;
-        default:
-            console.log("Wrong Data");
-
-    }
+    if (day > 0 && day < 32 && month < 13 && month > 0) {
+        console.log("Your zodiac is: ");
+        switch (month) {
+            case 1:
+                day < 20 ? console.log("Capricorn") : console.log("Aquarius");
+                break;
+            case 2:
+                day < 18 ? console.log("Aquarius") : console.log("Pisces");
+                break;
+            case 3:
+                day < 20 ? console.log("Pisces") : console.log("Aries");
+                break;
+            case 4:
+                day < 20 ? console.log("Aries") : console.log("Taurus");
+                break;
+            case 5:
+                day < 21 ? console.log("Taurus") : console.log("Gemini");
+                break;
+            case 6:
+                day < 21 ? console.log("Gemini") : console.log("Cancer");
+                break;
+            case 7:
+                day < 23 ? console.log("Cancer") : console.log("Leo");
+                break;
+            case 8:
+                day < 23 ? console.log("Leo") : console.log("Virgo");
+                break;
+            case 9:
+                day < 23 ? console.log("Virgo") : console.log("Libra");
+                break;
+            case 10:
+                day < 23 ? console.log("Libra") : console.log("Scorpio");
+                break;
+            case 11:
+                day < 22 ? console.log("Scorpio") : console.log("Sagittarius");
+                break;
+            case 12:
+                day < 22 ? console.log("Sagittarius") : console.log("Capricorn");
+                break;
+            default:
+                console.log("Wrong Data");
+        }
+    } else { console.log("Bad parameters"); }
 
 };
 
