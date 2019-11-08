@@ -5,15 +5,15 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 
 @import './layout';
-@import '../components/header/header';
-@import '../components/header/logo/logo';
-@import '../components/header/navigation/navigation';
-@import '../components/slider/slider';
-@import '../components/benefits/benefits';
-@import '../components/products/products';
-@import '../components/blog/blog';
-@import '../components/contacts/contacts';
-@import '../components/footer/footer';
+@import './header/header';
+@import './header/logo';
+@import './header/navigation';
+@import './slider/slider';
+@import './benefits/benefits';
+@import './products/products';
+@import './blog/blog';
+@import './contacts/contacts';
+@import './footer/footer';
 
 .hide {
     display: none;

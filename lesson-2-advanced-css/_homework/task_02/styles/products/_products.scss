@@ -103,6 +103,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 0;
         height: auto;
     }
 
@@ -160,7 +161,7 @@
 @media (max-width: 1000px) {
 
     .products__title {
-        padding: 2rem;
+        padding: 1rem;
         margin: 1rem;
         text-align: center;
     }

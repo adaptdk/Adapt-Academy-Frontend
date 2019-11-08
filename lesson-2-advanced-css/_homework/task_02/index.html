@@ -32,11 +32,10 @@ ________________________________________________________________________________
 
         <title>Batcave shop</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./src/">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./src/favicon/site.webmanifest">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
@@ -201,20 +200,20 @@ ________________________________________________________________________________
             <div class="contacts-map">
                 <div class="mapouter">
                     <div class="gmap_canvas">
-                        <iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <iframe width="100%" height="auto" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     </div>
                     <style>
                         .mapouter {
                             text-align: right;
-                            height: 597px;
-                            width: 600px;
+                            height: auto;
+                            width: 100%;
                         }
 
                         .gmap_canvas {
                             overflow: hidden;
                             background: none !important;
-                            height: 597px;
-                            width: 600px;
+                            height: auto;
+                            width: 100%;
                         }
                     </style>
                 </div>
@@ -230,6 +229,6 @@ ________________________________________________________________________________
 
     </div>
 
-    <script src="./components/header/navigation/script.js"></script>
+    <script src="./components/navigation/script.js"></script>
 </body>
 </html>

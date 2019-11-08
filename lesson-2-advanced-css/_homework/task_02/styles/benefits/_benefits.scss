@@ -36,11 +36,12 @@
 
 @media (max-width: 1000px) {
 
-    .benefits-wrapper {
-        display: block;
-    }
-
     .page-benefits {
         background-color: #43789e;
+        padding: 0;
+    }
+
+    .benefits-wrapper {
+        display: block;
     }
 }

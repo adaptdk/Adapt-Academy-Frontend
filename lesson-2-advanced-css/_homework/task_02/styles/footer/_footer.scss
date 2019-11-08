@@ -9,6 +9,7 @@
 
 .footer__text {
     color: #ffffff;
+    padding: 2rem;
 }
 
 .footer__link {
@@ -28,12 +29,11 @@
 @media (max-width: 1000px) {
 
     .footer__text {
-        font-size: 1rem;
-        padding: 5rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 
-    .footer__link:hover {
-        font-size: 1rem;
+    .footer__link {
+        font-size: 1.5rem;
     }
 }

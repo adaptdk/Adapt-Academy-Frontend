@@ -41,10 +41,16 @@
     }
 
     .contacts-address {
+        padding: 2rem;
         margin-bottom: 3rem;
+        width: 100%;
     }
 
     .contacts-address-card__title {
+        font-size: 2rem;
+    }
+
+    .contacts-address-card {
         font-size: 1.5rem;
     }
 }
