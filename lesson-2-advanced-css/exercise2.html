@@ -26,7 +26,7 @@ images: <img src="https://via.placeholder.com/350x150" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Batcave shop</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main-homework.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
         crossorigin="anonymous">
 
@@ -35,155 +35,174 @@ images: <img src="https://via.placeholder.com/350x150" />
 
 <body>
     <header class="site-header">
-        <div>
-            <img src="assets/bat-logo.svg" />
-            <h1>Wicked site</h1>
+        <div class="site-logo">
+            <img class="site-logo__img" src="assets/bat-logo.svg" />
+            <h1 class="site-logo__title">Wicked site</h1>
+            <div class="controls">
+                <a class="controls__link" onclick="toggleNav()" href="javascript:void(0);"><i class="fas fa-bars fa-3x"></i></a>
+              </div>
         </div>
         <nav>
-            <ul>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+            <ul class="nav" id="topnav">
+                <li class="nav__item"><a class="nav__item--link" href="#">Welcome</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#">Benefits</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#">Products</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#">Blog</a></li>
+                <li class="nav__item"><a class="nav__item--link" href="#">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
     <div>
-        <figure>
-            <img src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+        <figure class="card">
+            <img class="card__img" src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
          assets/bat-screen-landscape.jpg 525w'
                 sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
                 100vw' />
 
-            <div>
-                <h2>Welcome</h2>
-                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
+            <div class="card-content">
+                <h2 class="card-content__title">Welcome</h2>
+                <p class="card-content__text">This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
                     gadgets</p>
-                <a href="#">Take my cash</a><a href="#">Nope.</a>
+                <div class="btn-wrapper">
+                    <a class="btn-wrapper__btn btn-wrapper__btn--default" href="#">Take my cash</a>
+                    <a class="btn-wrapper__btn btn-wrapper__btn--inverse" href="#">Nope.</a>
+                </div>
             </div>
         </figure>
     </div>
 
-    <section>
-        <article>
-            <h2>Benefits</h2>
-            <span><i class="fas fa-balance-scale"></i></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
+    <section class="benefits">
+        <h2 class="benefits__title">Benefits</h2>
+        <div class="benefit-wrapper">
+        <article class="benefit">
+            <span class="benefit__icon"><i class="fas fa-balance-scale"></i></span>
+            <h3 class="benefit__title">Benefit</h3>
+            <p class="benefit__text">This greatly describes how awesome this feature is.</p>
         </article>
 
-        <article>
-            <span></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
+        <article class="benefit">
+            <span class="benefit__icon"><i class="fas fa-hands-helping"></i></span>
+            <h3 class="benefit__title">Benefit</h3>
+            <p class="benefit__text">This greatly describes how awesome this feature is.</p>
         </article>
 
-        <article>
-            <span></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
+        <article class="benefit">
+            <span class="benefit__icon"><i class="fas fa-award"></i></span>
+            <h3 class="benefit__title">Benefit</h3>
+            <p class="benefit__text">This greatly describes how awesome this feature is.</p>
         </article>
-    </section>
-
-    <section>
-        <h2>Products</h2>
-        <div>
-            <article>
-                <img src="assets/bat-weapon.jpg" />
-                <h3>product name</h3>
-                <a href=""></a>
-            </article>
-
-            <article>
-                <img src="assets/bat-weapon2.jpg" />
-                <h3>product name</h3>
-                <a href=""></a>
-            </article>
-
-            <article>
-                <img src="assets/bat-weapon3.png" />
-                <h3>product name</h3>
-                <a href=""></a>
-            </article>
-
-            <article>
-                <img src="assets/bat-weapon4.jpeg" />
-                <h3>product name</h3>
-                <a href=""></a>
-            </article>
         </div>
     </section>
 
-    <section>
-            <header>
-                    <h2>Blog</h2>
-                    <a href="#">Take my cash</a>
+    <section class="products">
+        <h2 class="products__title">Products</h2>
+        <div class="product-wrapper">
+        <div class="product-wrapper__portrait">
+            <article class="product product__portrait">
+                <img class="product__img" src="assets/bat-weapon.jpg" />
+                <div class="product__group">
+                <h3 class="product__title">product name</h3>
+                <a class="product__btn" href="#">Add to basket</a>
+            </div>
+            </article>
+            </div>
+            <div class="product-wrapper__landscape">
+            <article class="product product__landscape">
+                <img class="product__img" src="assets/bat-weapon2.jpg" />
+                <div class="product__group">
+                <h3 class="product__title">product name</h3>
+                <a class="product__btn" href="#">Add to basket</a>
+            </div>
+            </article>
+            <article class="product product__landscape">
+                <img class="product__img" src="assets/bat-weapon3.png" />
+                <div class="product__group">
+                <h3 class="product__title">product name</h3>
+                <a class="product__btn" href="#">Add to basket</a>
+            </div>
+            </article>
+            </div>
+            <div class="product-wrapper__portrait">
+            <article class="product product__portrait">
+                <img class="product__img" src="assets/bat-weapon4.jpeg" />
+                <div class="product__group">
+                <h3 class="product__title">product name</h3>
+                <a class="product__btn" href="#">Add to basket</a>
+            </div>
+            </article>
+        </div>
+    </div>
+    </section>
+
+    <section class="blogs">
+            <header class="blog-header">
+                    <h2 class="blog-header__title">Blog</h2>
+                    <a class="blog-header__btn" href="#">Take my cash</a>
             </header>
             
-            <div>
-                <article>
-                    <img src="assets/bat-weapon.jpg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
+            <div class="blog-wrapper">
+                <article class="blog-item blog-item--right">
+                    <img class="blog-item__img" src="assets/bat-weapon.jpg" />
+                    <div class="blog-item__group">
+                        <h3 class="blog-item__title">product name</h3>
+                        <a class="blog-item__btn" href="#">More</a>
+                    </div>
                 </article>
     
-                <article>
-                    <img src="assets/bat-weapon2.jpg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
+                <article class="blog-item blog-item--right">
+                    <img class="blog-item__img" src="assets/bat-weapon2.jpg" />
+                    <div class="blog-item__group">
+                        <h3 class="blog-item__title">product name</h3>
+                        <a class="blog-item__btn" href="#">More</a>
+                    </div>
+                </article>
+                
+                <article class="blog-item blog-item--left">
+                    <img class="blog-item__img" src="assets/bat-weapon3.png" />
+                    <div class="blog-item__group">
+                        <h3 class="blog-item__title">product name</h3>
+                        <a class="blog-item__btn" href="#">More</a>
+                    </div>
                 </article>
     
-                <article>
-                    <img src="assets/bat-weapon3.png" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-    
-                <article>
-                    <img src="assets/bat-weapon4.jpeg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
+                <article class="blog-item blog-item--left">
+                    <img class="blog-item__img" src="assets/bat-weapon4.jpeg" />
+                    <div class="blog-item__group">
+                        <h3 class="blog-item__title">product name</h3>
+                        <a class="blog-item__btn" href="#">More</a>
+                    </div>
                 </article>
             </div>
         </section>
 
-    <section>
-        <article>
-            <address>
-                <h3>Mr. Batsy</h3>
-                <p>1007 Mountain Drive, Gotham</p>
-                <p>Dark dark cave where lives a lot of bats and no girl, ever.</p>
-                <p>And in case you want to talk to be, don't hesitate, I always reply, cuz <b>I'M BATMAN</b></p>
-                <a href="mailto:batman@batcave.io"></a>
+    <section class="site-contact">
+        <article class="site-contact__wrapper">
+            <address class="address">
+                <h3 class="address__title">Mr. Batsy</h3>
+                <p class="address__text">1007 Mountain Drive, Gotham</p>
+                <p class="address__text">Dark dark cave where lives a lot of bats and no girl, ever.</p>
+                <p class="address__text">And in case you want to talk to be, don't hesitate, I always reply, cuz <b>I'M BATMAN</b></p>
+                <a class="address__email" href="mailto:batman@batcave.io"><i class="far fa-envelope"></i> Send enquiry</a>
             </address>
         </article>
-        <div class="map">
+        <div class="map site-contact__wrapper">
             <div class="mapouter">
                 <div class="gmap_canvas"><iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed"
                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
-                <style>
-                    .mapouter {
-                        text-align: right;
-                        height: 597px;
-                        width: 600px;
-                    }
-
-                    .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 597px;
-                        width: 600px;
-                    }
-                </style>
             </div>
     </section>
 
     <footer class="site-footer">
-        <p>This is a super site designed by Bat engineers who are very batsy. Built in 2018 at <a href="#">Adapt
-                Academy</a></p>
+        <p class="site-footer__text">This is a super site designed by Bat engineers who are very batsy. Built in 2019 at - </p>
+            <a class="site-footer__link" href="#">Adapt Academy &COPY;</a>
     </footer>
+    <script>
+        function toggleNav() {
+          let link = document.getElementById("topnav");
+          link.className === "nav" ? link.className = 'nav--responsive' : link.className = "nav";
+        }
+        </script>
 </body>
 
 </html>

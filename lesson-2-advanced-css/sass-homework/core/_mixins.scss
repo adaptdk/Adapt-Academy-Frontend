@@ -1,0 +1,10 @@
+@mixin btn-default {
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  padding: 12px;
+  width: 150px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin: 10px;
+}
