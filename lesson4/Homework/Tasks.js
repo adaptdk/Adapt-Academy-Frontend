@@ -74,36 +74,3 @@ function getForcedUsersCount() {
 }
 
 console.log(getForcedUsersCount());
-
-// Task 4
-
-class Counter {
-    hours = "00"
-    minutes = "00";
-    seconds = "10";
-
-    setTimeout(() => {
-
-                constructor(h, m, s) {
-                        this.hours = h;
-                        this.minutes = m;
-                        this.seconds = s;
-                        console.log("Your time is: " + this.hours + ":" + this.minutes + ":" + this.seconds);
-                    }
-                    // constructor() {
-                    //     console.log("Your time is: " + this.hours + ":" + this.minutes + ":" + this.seconds);
-                    // }
-
-                start() {
-
-
-                }
-                stop() {}
-                resume() {}
-                reset() {}
-
-            }
-
-            c = new Counter(10, 10, 10);
-
-            console.log(c);

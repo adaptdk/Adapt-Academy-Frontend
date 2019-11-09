@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <h1>Results in console</h1>
+    <div class="timerApp">
+        <h2 class="title">Timer</h2>
+        <h2 class="text-enter">Enter your time:</h2>
+        <input class="text-enter inp" placeholder="hh:mm:ss" value="00:00:10" type="text" id="timerValues">
+        <div>
+            <div>
+                <h2 class="timer" id="timer">Hours:Minutes:Seconds</h2>
+            </div>
+            <button class="btn btn1" id="startBtn">Start</button>
+            <button class="btn btn3" id="stopBtn">Stop</button>
+            <button class="btn btn2" id="resumeBtn">Resume</button>
+            <button class="btn btn4" id="resetBtn">Reset</button>
+        </div>
+
+    </div>
+    <script src="timer.js"></script>
     <script src="Tasks.js"></script>
 </body>
 
