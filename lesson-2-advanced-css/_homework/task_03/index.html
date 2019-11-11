@@ -1,0 +1,77 @@
+
+<!--                            Adapt Academy 2019 lesson 02 - Advanced CSS | task 03 by Donatas Dereškevičius                                  
+
+______________________________________________________________________________________________________________________________________________                                                                                           
+
+>      task:
+
+    1. Pick any web design from the internet that you like. It has to contain different elements[components]. 
+       Good place to search for designs is dribble and google. If you need to do something personally, feel free to do that as well. 
+       As long as it's complex enough - it fits.
+    2. Make sure you use all the correct practices, modular approach, BEM and so on.
+    3. See if you can make reusable sass mixins, animations, functions or whatever else that you might need.
+    4. May the force be with you!
+
+______________________________________________________________________________________________________________________________________________
+2019-->
+
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+
+        <title>Task_03</title>
+
+    <link rel='stylesheet' type='text/css' href='./styles/style.css'>
+</head>
+
+<body class="page">
+    <div class="page-wrapper">
+        <div class="page-wrapper-intro">
+            <div class="page-wrapper-intro__title-starts"></div>
+            <h1 class="page-wrapper-intro__title-01">Adapt Academy 2019</h1>
+            <h1 class="page-wrapper-intro__title-02">lesson_02 - Advanced CSS</h1>
+            <h1 class="page-wrapper-intro__title-03">task_03</h1>
+            <h1 class="page-wrapper-intro__title-04">by Donatas Dereškevičius</h1>
+            <div class="page-wrapper-intro__title-ends"></div>
+        </div>
+        <div class="page-wrapper-transition">
+            <div class="page-wrapper-transition__gif"></div>
+        </div>
+        <div class="page-wrapper__bg"></div>
+        <header class="page-wrapper-header">
+            <h1 class="page-wrapper-header__title">Donato Dereškevičiaus websaitas</h1>
+        </header>
+        <nav class="page-wrapper-navigation">
+            <ul class="navigation-menu">
+                <li class="navigation-menu__button" onclick="aboutMe()">Apie mane</li>
+                <li class="navigation-menu__button" onclick="works()">Darbai</li>
+                <li class="navigation-menu__button" onclick="contacts()">Kontaktai</li>
+            </ul>
+        </nav>
+        <section class="page-wrapper-about-me">
+            <h2 class="page-wrapper-about-me__title">Donatas</h2>
+            <p class="page-wrapper-about-me__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex inventore. Voluptatibus labore aperiam expedita soluta sunt possimus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore est cum, nostrum aspernatur quaerat et autem aliquid minima laboriosam quasi aperiam. Iste architecto esse sequi eaque quidem ab? Labore.</p>
+        </section>
+        <section class="page-wrapper-works">
+            <p class="page-wrapper-works__text">Work it harder</p>
+            <p class="page-wrapper-works__text">Make it better</p>
+            <p class="page-wrapper-works__text">Do it faster</p>
+            <p class="page-wrapper-works__text">Makes us stronger</p>
+            <p class="page-wrapper-works__text">More than ever</p>
+            <p class="page-wrapper-works__text">Hour after</p>
+            <p class="page-wrapper-works__text">Our work is</p>
+            <p class="page-wrapper-works__text">Never over</p>
+        </section>
+        <section class="page-wrapper-contacts">
+            <p class="page-wrapper-contacts__address">KNS/LT_ES/earth\Orion arm | Milky Way ~ Virgo cluster | Laniakea supercluster </p>
+            <br />
+            <p class="page-wrapper-contacts__number">+37001_1001101_01011</p>
+        </section>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

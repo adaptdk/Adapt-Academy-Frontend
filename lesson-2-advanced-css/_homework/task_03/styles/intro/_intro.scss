@@ -1,0 +1,286 @@
+
+@import '../utilities/variables';
+
+.page-wrapper-intro, .page-wrapper-transition {
+    grid-column-start: c1;
+    grid-column-end: c4;
+    grid-row-start: r1;
+    grid-row-end: r4;
+    color: $white;
+    @include no_gap;
+    @include hw_100;
+}
+
+.page-wrapper-intro__title-starts, .page-wrapper-intro__title-01, .page-wrapper-intro__title-02, .page-wrapper-intro__title-03, .page-wrapper-intro__title-04, .page-wrapper-intro__title-ends, .page-wrapper-transition__gif {
+    @include flex_center;
+    font-family: 'Bungee Shade', cursive;
+    font-size: $h1_size_xxl;
+    @include no_gap;
+    @include hw_100;
+}
+
+.page-wrapper-intro__title-starts {
+    animation: intro_title_starts 3s $ease-out;
+}
+
+.page-wrapper-intro__title-01 {
+    animation: intro_title_01 3s $ease-out;
+}
+
+.page-wrapper-intro__title-02 {
+    animation: intro_title_02 3s $ease-out;
+}
+
+.page-wrapper-intro__title-03 {
+    animation: intro_title_03 3s $ease-out;
+}
+
+.page-wrapper-intro__title-04 {
+    animation: intro_title_04 3s $ease-out;
+}
+
+.page-wrapper-intro__title-ends {
+    animation: intro_title_ends 3s $ease-out;
+}
+
+.page-wrapper-transition__gif {
+    animation: transition_gif 5s $ease-out;
+}
+
+    @keyframes intro_title_starts {
+          0%    {background-image: url(../src/intro_bg_00.gif); @include bg_center_fixed;}
+         50%    {background-image: none;}
+         52%    {background-image: url(../src/intro_bg_00.gif); @include bg_center_fixed;}
+         80%    {background-image: none;}
+         82%    {background-image: url(../src/intro_bg_00.gif); @include bg_center_fixed;}
+        100%    {background-image: url(../src/intro_bg_00.gif); @include bg_center_fixed;}
+    }
+
+    @keyframes intro_title_01 {
+          0%    {background-image: url(../src/intro_bg_01.gif); @include bg_center_fixed; color: transparent; font-size: $h1_resize_effect_xxl;}
+         50%    {opacity: 0.3;}
+         75%    {background-image: none; @include w-b_color;}
+         76%    {@include b-w_color;}
+         95%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent;}
+        100%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent; font-size: $h1_size_xxl; opacity: 1.0;}
+    }
+
+    @keyframes intro_title_02 {
+          0%    {font-size: $h1_resize_effect_xxl;}
+         10%    {@include b-w_color;}
+         35%    {@include w-b_color;}
+         55%    {@include b-w_color;}
+        100%    {font-size: $h1_size_xxl;}
+    }
+
+    @keyframes intro_title_03 {
+          0%    {font-size: $h1_resize_effect_xxl;}
+          5%    {@include w-b_color;}
+         10%    {@include b-w_color;}
+         30%    {background-image: url(../src/intro_bg_04.gif); @include bg_center_fixed;}
+         60%    {background-image: none;}
+         75%    {@include w-b_color;}
+         78%    {background-image: url(../src/intro_bg_07.gif); @include bg_center_fixed; @include b-w_color;}
+         80%    {background-image: none; @include w-b_color;}
+         82%    {@include b-w_color;}
+        100%    {font-size: $h1_size_xxl;}
+    }
+
+    @keyframes intro_title_04 {
+          0% {font-size: $h1_resize_effect_xxl;}
+         50% {@include gradient_bg(#564c9b, #3cb7c2);}
+         70% {@include w-b_color;}
+         75% {@include b-w_color;}
+        100% {font-size: $h1_size_xxl;}
+    }
+
+    @keyframes intro_title_ends {
+          0% {background-image: url(../src/intro_bg_06.gif); @include bg_center_fixed; opacity: 1.0;}
+         10% {opacity: 1.0; background-image: none;}
+        100% {opacity: 0.1;}
+    }
+
+    @keyframes transition_gif {
+        from {background-image: url(../src/transition.gif); @include bg_center_fixed;}
+        to {background-image: url(../src/transition.gif); @include bg_center_fixed;}
+    }
+
+@media (max-width: 1800px){
+
+    .page-wrapper-intro__title-01, .page-wrapper-intro__title-02, .page-wrapper-intro__title-03, .page-wrapper-intro__title-04 {
+        font-size: $h1_size_xl;
+    }
+
+        @keyframes intro_title_01 {
+              0%    {background-image: url(../src/intro_bg_01.gif); @include bg_center_fixed; color: transparent; font-size: $h1_resize_effect_xl;}
+             50%    {opacity: 0.3;}
+             75%    {background-image: none; @include w-b_color;}
+             76%    {@include b-w_color;}
+             95%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent;}
+            100%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent; font-size: $h1_size_xl; opacity: 1.0;}
+        }
+
+        @keyframes intro_title_02 {
+              0%    {font-size: $h1_resize_effect_xl;}
+             10%    {@include b-w_color;}
+             35%    {@include w-b_color;}
+             55%    {@include b-w_color;}
+            100%    {font-size: $h1_size_xl;}
+        }
+
+        @keyframes intro_title_03 {
+              0%    {font-size: $h1_resize_effect_xl;}
+              5%    {@include w-b_color;}
+             10%    {@include b-w_color;}
+             30%    {background-image: url(../src/intro_bg_04.gif); @include bg_center_fixed;}
+             60%    {background-image: none;}
+             75%    {@include w-b_color;}
+             78%    {background-image: url(../src/intro_bg_07.gif); @include bg_center_fixed; @include b-w_color;}
+             80%    {background-image: none; @include w-b_color;}
+             82%    {@include b-w_color;}
+            100%    {font-size: $h1_size_xl;}
+        }
+
+        @keyframes intro_title_04 {
+              0%    {font-size: $h1_resize_effect_xl;}
+             50%    {@include gradient_bg(#564c9b, #3cb7c2);}
+             70%    {@include w-b_color;}
+             75%    {@include b-w_color;}
+            100%    {font-size: $h1_size_xl;}
+        }
+}
+
+@media (max-width: 1400px){
+
+    .page-wrapper-intro__title-01, .page-wrapper-intro__title-02, .page-wrapper-intro__title-03, .page-wrapper-intro__title-04 {
+        font-size: $h1_size_l;
+    }
+
+        @keyframes intro_title_01 {
+              0%    {background-image: url(../src/intro_bg_01.gif); @include bg_center_fixed; color: transparent; font-size: $h1_resize_effect_l;}
+             50%    {opacity: 0.3;}
+             75%    {background-image: none; @include w-b_color;}
+             76%    {@include b-w_color;}
+             95%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent;}
+            100%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent; font-size: $h1_size_l; opacity: 1.0;}
+        }
+
+        @keyframes intro_title_02 {
+              0%    {font-size: $h1_resize_effect_l;}
+             10%    {@include b-w_color;}
+             35%    {@include w-b_color;}
+             55%    {@include b-w_color;}
+            100%    {font-size: $h1_size_l;}
+        }
+
+        @keyframes intro_title_03 {
+              0%    {font-size: $h1_resize_effect_l;}
+              5%    {@include w-b_color;}
+             10%    {@include b-w_color;}
+             30%    {background-image: url(../src/intro_bg_04.gif); @include bg_center_fixed;}
+             60%    {background-image: none;}
+             75%    {@include w-b_color;}
+             78%    {background-image: url(../src/intro_bg_07.gif); @include bg_center_fixed; @include b-w_color;}
+             80%    {background-image: none; @include w-b_color;}
+             82%    {@include b-w_color;}
+            100%    {font-size: $h1_size_l;}
+        }
+
+        @keyframes intro_title_04 {
+              0%    {font-size: $h1_resize_effect_l;}
+             50%    {@include gradient_bg(#564c9b, #3cb7c2);}
+             70%    {@include w-b_color;}
+             75%    {@include b-w_color;}
+            100%    {font-size: $h1_size_l;}
+        }
+}
+
+@media (max-width: 1000px){
+
+    .page-wrapper-intro__title-01, .page-wrapper-intro__title-02, .page-wrapper-intro__title-03, .page-wrapper-intro__title-04 {
+        font-size: $h1_size_m;
+    }
+
+        @keyframes intro_title_01 {
+              0%    {background-image: url(../src/intro_bg_01.gif); @include bg_center_fixed; color: transparent; font-size: $h1_resize_effect_m;}
+             50%    {opacity: 0.3;}
+             75%    {background-image: none; @include w-b_color;}
+             76%    {@include b-w_color;}
+             95%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent;}
+            100%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent; font-size: $h1_size_m; opacity: 1.0;}
+        }
+
+        @keyframes intro_title_02 {
+              0%    {font-size: $h1_resize_effect_m;}
+             10%    {@include b-w_color;}
+             35%    {@include w-b_color;}
+             55%    {@include b-w_color;}
+            100%    {font-size: $h1_size_m;}
+        }
+
+        @keyframes intro_title_03 {
+              0%    {font-size: $h1_resize_effect_m;}
+              5%    {@include w-b_color;}
+             10%    {@include b-w_color;}
+             30%    {background-image: url(../src/intro_bg_04.gif); @include bg_center_fixed;}
+             60%    {background-image: none;}
+             75%    {@include w-b_color;}
+             78%    {background-image: url(../src/intro_bg_07.gif); @include bg_center_fixed; @include b-w_color;}
+             80%    {background-image: none; @include w-b_color;}
+             82%    {@include b-w_color;}
+            100%    {font-size: $h1_size_m;}
+        }
+
+        @keyframes intro_title_04 {
+              0%    {font-size: $h1_resize_effect_m;}
+             50%    {@include gradient_bg(#564c9b, #3cb7c2);}
+             70%    {@include w-b_color;}
+             75%    {@include b-w_color;}
+            100%    {font-size: $h1_size_m;}
+        }
+}
+
+@media (max-width: 600px){
+
+    .page-wrapper-intro__title-01, .page-wrapper-intro__title-02, .page-wrapper-intro__title-03, .page-wrapper-intro__title-04 {
+        font-size: 1rem;
+    }
+
+        @keyframes intro_title_01 {
+              0%    {background-image: url(../src/intro_bg_01.gif); @include bg_center_fixed; color: transparent; font-size: 0.5rem;}
+             50%    {opacity: 0.3;}
+             75%    {background-image: none; @include w-b_color;}
+             76%    {@include b-w_color;}
+             95%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent;}
+            100%    {background-image: url(../src/adapt_logo.png); @include bg_center_fixed; color: transparent; font-size: 1rem; opacity: 1.0;}
+        }
+
+        @keyframes intro_title_02 {
+              0%    {font-size: 0.5rem;}
+             10%    {@include b-w_color;}
+             35%    {@include w-b_color;}
+             55%    {@include b-w_color;}
+            100%    {font-size: 1rem;}
+        }
+
+        @keyframes intro_title_03 {
+              0%    {font-size: 0.5rem;}
+              5%    {@include w-b_color;}
+             10%    {@include b-w_color;}
+             30%    {background-image: url(../src/intro_bg_04.gif); @include bg_center_fixed;}
+             60%    {background-image: none;}
+             75%    {@include w-b_color;}
+             78%    {background-image: url(../src/intro_bg_07.gif); @include bg_center_fixed; @include b-w_color;}
+             80%    {background-image: none; @include w-b_color;}
+             82%    {@include b-w_color;}
+            100%    {font-size: 1rem;}
+        }
+
+        @keyframes intro_title_04 {
+              0%    {font-size: 0.5rem;}
+             50%    {@include gradient_bg(#564c9b, #3cb7c2);}
+             70%    {@include w-b_color;}
+             75%    {@include b-w_color;}
+            100%    {font-size: 1rem;}
+        }
+}

@@ -1,0 +1,88 @@
+
+@import '../utilities/variables';
+
+.page-wrapper-about-me, .page-wrapper-works, .page-wrapper-contacts {
+    @include flex_center;
+    grid-area: cont;
+    flex-direction: column;
+    background-image: url(../src/content_bg.gif);
+    border: solid $white 2px;
+        -webkit-box-shadow: 0px 0px 10px 3px rgba(255,255,255,1);
+        -moz-box-shadow: 0px 0px 10px 3px rgba(255,255,255,1);
+    box-shadow: 0px 0px 10px 3px rgba(255,255,255,1);
+    @include bg_center_fixed;
+    color: $white;
+    margin: 0 5rem 5rem 0;
+    padding: 3rem;
+    text-shadow: 0px 0px 10px $black;
+    animation: box 5s $ease-out;
+}
+
+@keyframes box {
+      0%    {background-image: none; border: none; box-shadow: none; color: transparent; opacity: 0.1;}
+     30%    {border: solid $white 2px;}
+     50%    {background-image: url(../src/content_bg.gif);}
+     60%    {color: transparent; -webkit-box-shadow: 0px 0px 10px 3px rgba(255,255,255,1); -moz-box-shadow: 0px 0px 10px 3px rgba(255,255,255,1); box-shadow: 0px 0px 10px 3px rgba(255,255,255,1);}
+    100%    {color: $white;opacity: 1.0;}
+}
+
+.page-wrapper-about-me__title {
+    font-size: $h2_size_xxl;
+}
+
+.page-wrapper-about-me__text, .page-wrapper-works__text, .page-wrapper-contacts__address, .page-wrapper-contacts__number {
+    font-size: $p_size_xxl;
+    margin: 0.3rem;
+    padding: 0.3rem;
+}
+
+@media (max-width: 1800px){
+
+    .page-wrapper-about-me__title {
+        font-size: $h2_size_xl;
+    }
+    
+    .page-wrapper-about-me__text, .page-wrapper-works__text, .page-wrapper-contacts__address, .page-wrapper-contacts__number {
+        font-size: $p_size_xl;
+    }
+}
+
+@media (max-width: 1400px){
+
+    .page-wrapper-about-me__title {
+        font-size: $h2_size_l;
+    }
+    
+    .page-wrapper-about-me__text, .page-wrapper-works__text, .page-wrapper-contacts__address, .page-wrapper-contacts__number {
+        font-size: $p_size_l;
+    }
+}
+
+@media (max-width: 1000px){
+
+    .page-wrapper-about-me, .page-wrapper-works, .page-wrapper-contacts {
+        position: relative;
+    }
+}
+
+@media (max-width: 800px){
+
+    .page-wrapper-about-me, .page-wrapper-works, .page-wrapper-contacts {
+        padding: 1rem;
+        margin: 0 2rem 2rem 0;
+        overflow: scroll;
+    }
+
+    .page-wrapper-about-me__title {
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px){
+
+    .page-wrapper-about-me, .page-wrapper-works, .page-wrapper-contacts {
+        grid-column-start: c1;
+        grid-column-end: c4;
+        margin: 1rem;
+    }
+}

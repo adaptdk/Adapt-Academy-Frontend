@@ -1,0 +1,38 @@
+
+@import './variables';
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $black;
+    font-size: 24px;
+    @include no_gap;
+    overflow: hidden;
+}
+
+.page-wrapper {
+    display: grid;
+    position: relative;
+    grid-template-columns: $grid_columns;
+    grid-template-rows: $grid_rows;
+    grid-template-areas: $grid_areas;
+    height: 100vh;
+}
+
+.page-wrapper__bg {
+    @include flex_center;
+    grid-column-start: c1;
+    grid-column-end: c4;
+    grid-row-start: r1;
+    grid-row-end: r4;
+    background-image: url(../src/bg.gif);
+    @include bg_center_fixed;
+        -webkit-box-shadow: inset 0px 0px 20px 3px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 0px 20px 3px rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 20px 3px rgba(255,255,255,1);
+    color: $white;
+    @include no_gap;
+    @include hw_100;
+}
