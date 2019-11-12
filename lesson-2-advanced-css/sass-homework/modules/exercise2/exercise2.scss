@@ -1,8 +1,16 @@
+@import "../../core/animations";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
+section {
+    padding: 80px 0;
+}
+article {
+  padding: 0 10vh;
+}
 h1 {
   height: 8vh;
   width: auto;
@@ -12,6 +20,43 @@ h1 {
   color: $color--white;
   word-spacing: 4px;
   letter-spacing: 1px;
+}
+h2 {
+  font-size: $font-size*1.2;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+.article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__benefits {
+    margin: 0 10%;
+    article {
+      text-align: left;
+      width: 25%;
+      padding: 1% 2%;
+      margin: 0 4%;
+      border: 5px solid $color--red;
+    }
+  }
+  &__products {
+    img{
+      width: $max-width*0.15;
+      height: $max-height*0.43;
+    }
+    :nth-child(2) {img{width: $max-width*0.3;height: $max-height*0.2;}}
+    :nth-child(4) {img{width: $max-width*0.3;height: $max-height*0.2;}}
+  }
+  h3 {
+    font-size: $font-size;
+    text-transform: uppercase;
+    color: $color--red;
+    font-weight: bold;
+    animation: changeColor 0.7s ease-in-out infinite alternate;
+    margin-bottom: 5%;
+  }
 }
 //===========
 //HEADER
@@ -44,6 +89,7 @@ h1 {
       font-size: $font-size;
       color: $color--white;
       border-bottom: 0px solid transparent;
+      text-decoration: none;
     }
     
   }
@@ -54,7 +100,7 @@ h1 {
     }
   }
 }
-
+//**************************
 .hero-text-box {
   position: relative;
   text-align: center;
@@ -79,18 +125,44 @@ h1 {
     }
   }
 }
-  //BUTTONS
+// Section name
+.section-name {
+  margin-bottom: 4vh;
+  &__middle {
+    text-align: center;
+  }
+  &__left {
+    text-align: left;
+    padding: 0 10vh;
+  }
+}
+// Icons 
+.icon {
+  font-size: 350%;
+  display: block;
+  text-align: center;
+  color: $color--red;
+  margin-bottom: 10px; 
+}
+//BUTTONS
 
   .btn {
+    text-decoration: none;
     padding: 1vh 2vh;
     border: 2px solid $color--orange;
-    color: $color--black;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-size: $font-size;
+    float: left;
     &__full {
-      float: left;
+      color: $color--black;
       margin-right: 1vh;
       background-color: $color--orange;
+      &__right {
+        float: right;
+      }
     }
     &__ghost {
-      float: left;
+      color: $color--white;
     }
   }
