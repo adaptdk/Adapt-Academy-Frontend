@@ -1,87 +1,172 @@
-@import "_animations.scss";
-$color--back: #000;
-.container {
-    display: flex;
-}
-
-.main-nav {
-    margin-top: 0;
-    &__list {
-        background-color: black;
+    @import "_animations.scss";
+    $color--back: #000;
+    $border-size: 5px;
+    $highlight-color: #f8c365;
+    $defualt-color: white;
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    a {
+        text-decoration: none;
         color: white;
-        display: table;
-        width: 100%;
-        margin: 0;
-        &__item {
-            display: table-cell;
-            text-decoration: none;
+    }
+    
+    .section {
+        padding: 8%;
+        background-color: $color--back;
+        color: $defualt-color;
+        border-bottom: $border-size $highlight-color solid;
+        font-size: 3vh;
+        &__title {
+            padding-bottom: 100px;
+            background-color: $color--back;
+            color: $highlight-color;
+            font-size: 7vh;
             text-align: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
+        }
+        &__product {
+            text-align: center;
+            padding-bottom: 14vh;
+            &__name {
+                text-align: center;
+                font-size: 5vh;
+                padding: 3vh;
+            }
+        }
+        &__display-col {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            &__img {
+                width: 130vh;
+                height: auto;
+                border: 1px $highlight-color solid;
+            }
+        }
+        &__display-row {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            &__img {
+                width: auto;
+                height: 130vh;
+                border: 1px $highlight-color solid;
+            }
+        }
+        &__defualt {
+            display: flex;
+            justify-content: space-around;
             font-size: 3vh;
-            border-style: solid;
-            border-bottom: 2px solid black;
-            border-top: 2px solid black;
-            &:hover {
-                background-color: #333333;
-                text-decoration: none;
-                color: white;
-                display: table-cell;
-                border-bottom: 2px solid #f8c365;
-                animation: opacityChange;
+            text-align: center;
+            &__img {
+                border: 1px $highlight-color solid;
+                max-width: 40vh;
+                max-height: 40vh;
+            }
+        }
+        &__box {
+            margin: 15px;
+            padding: 40px;
+            border: $border-size $highlight-color solid;
+            ;
+            &__title {
+                padding-bottom: 2vh;
+                font-size: 4vh;
+                color: $highlight-color;
             }
         }
     }
-}
-
-.main-img {
-    width: 100%;
-    animation: float 100s ease-in infinite alternate;
-}
-
-.page-welcome {
-    padding: 1vh;
-    border-width: 2pxvh;
-    border-bottom: 4px solid #f8c365;
-    border-top: 4px solid #f8c365;
-    text-align: center;
-    text-align: center;
-    background-color: black;
-    padding-bottom: 3.5vh;
-    color: white;
-    &__title {
-        font-size: 12vh;
-        font-weight: bold;
+    
+    .main-nav {
+        margin-top: 0;
+        &__list {
+            background-color: $color--back;
+            color: $defualt-color;
+            display: table;
+            width: 100%;
+            margin: 0;
+            &__item {
+                display: table-cell;
+                text-decoration: none;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 3vh;
+                border-style: solid;
+                border-bottom: 2px solid $color--back;
+                border-top: 2px solid $color--back;
+                &:hover {
+                    background-color: #333333;
+                    text-decoration: none;
+                    color: $defualt-color;
+                    display: table-cell;
+                    border-bottom: 2px solid $highlight-color;
+                }
+            }
+        }
     }
-    &__par {
-        font-size: 4vh;
+    
+    .main-img {
+        width: 100%;
+    }
+    
+    .page-welcome {
         padding: 1vh;
-        background-color: black;
-        margin-bottom: 4vh;
-        margin-top: 2vh;
-        border-bottom: 2px solid #f8c365;
-        border-top: 2px solid #f8c365;
-    }
-    &__par:hover {}
-    &__link {
-        font-size: 5vh;
-        margin-left: 7vh;
-        margin-right: 7vh;
-        color: white;
-        text-decoration: none;
-        &__nope {
+        border-bottom: $border-size solid $highlight-color;
+        border-top: $border-size solid $highlight-color;
+        text-align: center;
+        text-align: center;
+        background-color: $color--back;
+        padding-bottom: 7vh;
+        color: $defualt-color;
+        &__title {
+            font-size: 12vh;
+            font-weight: bold;
+            color: $highlight-color;
+            padding: 4vh;
+        }
+        &__par {
+            font-size: 4vh;
+            padding: 1vh;
+            background-color: $color--back;
+            margin-bottom: 4vh;
+            margin-top: 2vh;
+            border-bottom: 2px solid $highlight-color;
+            border-top: 2px solid $highlight-color;
+        }
+        &__par:hover {}
+        &__link {
             font-size: 5vh;
             margin-left: 7vh;
             margin-right: 7vh;
-            color: white;
+            color: $defualt-color;
             text-decoration: none;
+            &__nope {
+                font-size: 5vh;
+                margin-left: 7vh;
+                margin-right: 7vh;
+                color: $defualt-color;
+                text-decoration: none;
+            }
+            &__nope:hover {
+                color: black;
+                cursor: none;
+            }
         }
-        &__nope:hover {
-            color: black;
-            cursor: none;
+        &__link:hover {
+            color: $highlight-color;
         }
     }
-    &__link:hover {
-        color: #f8c365;
+    
+    .footer {
+        background-color: $color--back;
+        color: $defualt-color;
+        text-align: center;
+        padding: 20px;
+        border-bottom: $border-size $highlight-color solid;
+        &__company {
+            color: $highlight-color;
+        }
     }
-}
