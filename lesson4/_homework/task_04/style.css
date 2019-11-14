@@ -1,0 +1,19 @@
+
+/*                   Adapt Academy 2019 lesson 04 - JS | task 04 by Donatas Dereškevičius                     */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    text-align: right;
+    overflow: hidden;
+}
