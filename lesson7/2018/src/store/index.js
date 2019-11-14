@@ -7,7 +7,7 @@ import {
 } from 'redux';
 import { apiMiddleware } from 'redux-api-middleware';
 
-import rootReducer from '../reducers/index';
+import rootReducer from '../reducers';
 
 let composeEnhancers = compose;
 
