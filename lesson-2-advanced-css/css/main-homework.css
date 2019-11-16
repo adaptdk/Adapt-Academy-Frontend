@@ -169,15 +169,19 @@ table {
   box-sizing: border-box;
 }
 
-* section {
+.background__grey {
+  background-color: #F4F4F4;
+}
+
+section {
   padding: 80px 0;
 }
 
-* article {
+article {
   padding: 0 10vh;
 }
 
-* h1 {
+h1 {
   height: 8vh;
   width: auto;
   float: left;
@@ -188,13 +192,21 @@ table {
   letter-spacing: 1px;
 }
 
-* h2 {
+h2 {
   font-size: 28.8px;
   word-spacing: 4px;
   letter-spacing: 1px;
 }
 
-* .article {
+h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ff0000;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,11 +221,16 @@ table {
   justify-content: center;
 }
 
-* .article__benefits {
+.article img {
+  width: 288px;
+  height: 464.4px;
+}
+
+.article__benefits {
   margin: 0 10%;
 }
 
-* .article__benefits article {
+.article__benefits article {
   text-align: left;
   width: 25%;
   padding: 1% 2%;
@@ -221,29 +238,38 @@ table {
   border: 5px solid #ff0000;
 }
 
-* .article__products img {
+.article__products :nth-child(2) img {
+  width: 576px;
+  height: 216px;
+}
+
+.article__products :nth-child(4) img {
+  width: 576px;
+  height: 216px;
+}
+
+.article__blog img {
   width: 288px;
-  height: 464.4px;
-}
-
-* .article__products :nth-child(2) img {
-  width: 576px;
   height: 216px;
 }
 
-* .article__products :nth-child(4) img {
+.article__blog article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 576px;
   height: 216px;
+  margin: 3vh 3vh;
 }
 
-* .article h3 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #ff0000;
-  font-weight: bold;
+.article__contacts {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.article h3 {
   -webkit-animation: changeColor 0.7s ease-in-out infinite alternate;
   animation: changeColor 0.7s ease-in-out infinite alternate;
-  margin-bottom: 5%;
 }
 
 .site-header {
@@ -367,6 +393,7 @@ table {
 
 .btn__full__right {
   float: right;
+  margin: -3.5% 10%;
 }
 
 .btn__ghost {

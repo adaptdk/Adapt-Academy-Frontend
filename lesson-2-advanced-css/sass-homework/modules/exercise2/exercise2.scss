@@ -1,10 +1,16 @@
 @import "../../core/animations";
+@import "../../core/variables";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+}
+.background {
+  &__grey {
+    background-color: $color--light-grey;
+  }
+}
 section {
     padding: 80px 0;
 }
@@ -26,11 +32,22 @@ h2 {
   word-spacing: 4px;
   letter-spacing: 1px;
 }
+h3 {
+  font-size: $font-size;
+  text-transform: uppercase;
+  color: $color--red;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
 .article {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  img{
+    width: $max-width*0.15;
+    height: $max-height*0.43;
+  }
   &__benefits {
     margin: 0 10%;
     article {
@@ -42,26 +59,34 @@ h2 {
     }
   }
   &__products {
-    img{
-      width: $max-width*0.15;
-      height: $max-height*0.43;
-    }
     :nth-child(2) {img{width: $max-width*0.3;height: $max-height*0.2;}}
     :nth-child(4) {img{width: $max-width*0.3;height: $max-height*0.2;}}
   }
+  &__blog {
+    img {
+      width: $max-width*0.15;
+      height: $max-height*0.2;
+    }
+    article {
+      display: flex;
+      width: $max-width*0.3;
+      height: $max-height*0.2;
+      margin: 3vh 3vh;
+    }
+  }
+  &__contacts {
+    background-color: $color--black;
+    color: $color--white;
+  }
   h3 {
-    font-size: $font-size;
-    text-transform: uppercase;
-    color: $color--red;
-    font-weight: bold;
     animation: changeColor 0.7s ease-in-out infinite alternate;
-    margin-bottom: 5%;
   }
 }
+
 //===========
 //HEADER
 //===========
-}
+
 .site-header {
   background: $color--black;
   height: 10vh;
@@ -84,7 +109,6 @@ h2 {
     word-spacing: 4px;
     letter-spacing: 1px;
     margin-left: 3vh;
-    
     a {
       font-size: $font-size;
       color: $color--white;
@@ -145,7 +169,6 @@ h2 {
   margin-bottom: 10px; 
 }
 //BUTTONS
-
   .btn {
     text-decoration: none;
     padding: 1vh 2vh;
@@ -160,6 +183,7 @@ h2 {
       background-color: $color--orange;
       &__right {
         float: right;
+        margin: -3.5% 10%;
       }
     }
     &__ghost {
