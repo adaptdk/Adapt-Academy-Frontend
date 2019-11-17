@@ -1,0 +1,12 @@
+.container {
+    height: 400px;
+    width: 100%;
+    text-align: center;
+}
+.counter {
+    width: 100%;
+    font-size: 80px;
+    margin: 0 auto;
+}
+.buttons {
+}
