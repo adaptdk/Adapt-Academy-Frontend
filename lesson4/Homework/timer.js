@@ -1,4 +1,3 @@
-// Veikiantis
 // Time values
 hours = "00";
 minutes = "00";
@@ -99,8 +98,7 @@ function displayTime() {
 }
 
 function timeVerification() {
-    if (hours * 60 * 60 + minutes * 60 + seconds == 0) {
-        console.log("wtfff");
+    if (hours == 0 && minutes == 0 && seconds == 0) {
         stop();
         alert("Timer done!")
         return false;

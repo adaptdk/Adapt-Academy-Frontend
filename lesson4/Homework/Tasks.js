@@ -70,7 +70,10 @@ console.log(getCountryByCode("DZ"));
 
 // Task 3
 function getForcedUsersCount() {
-    return personnel.filter(person => person.isForceUser == true).length;
+    return personnel.filter(person => person.isForceUser == true).
+                        reduce((sum, persn) => {
+                            return sum + persn.shootingScore + persn.pilotingScore;
+                            }, 0);
 }
 
 console.log(getForcedUsersCount());
