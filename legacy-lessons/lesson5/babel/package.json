@@ -1,0 +1,12 @@
+{
+  "name": "babel-exercise",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "babel": "babel file.js --out-file compiled.js --presets=es2015"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
