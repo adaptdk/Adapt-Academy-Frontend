@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.search-list {
+  padding: 16px;
+  background-color: #191919;
+  color: white;
+
+  &-item {
+    background-color: #232323;
+    display: flex;
+    margin-bottom: 16px;
+
+    &__favorites {
+      border: 1px solid white;
+      background: transparent;
+      color: white;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+    &__year {
+      margin-bottom: 8px;
+    }
+    &__image-container {
+      margin-right: 16px;
+    }
+    &__image {
+      width: 100px;
+    }
+  }
+}
+
+.search {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: #222222;
+
+  &__link {
+    margin: 0 10px;
+    color: white;
+  }
+  &__input {
+    color: white;
+    padding: 8px;
+    background: transparent;
+    height: 32px;
+    border: 1px solid white;
+    width: 100%;
+  }
+  &__button {
+    height: 32px;
+
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+}
