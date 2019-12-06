@@ -15,3 +15,7 @@ Pull your own project from last workshop or pull the existing one from `lesson8/
 2. Add multi language support by using context api (the translationstrings could be created locally in a JSON file)
 3. Make working favorites list (that could show our favorites movies)
    - Store the favorites list inside localstorage
+
+## code sharing link
+
+https://codeshare.io/ayWlVo
