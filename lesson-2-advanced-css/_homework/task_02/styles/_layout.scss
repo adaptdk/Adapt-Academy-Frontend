@@ -1,0 +1,51 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                                  //
+//                                                         Adapt Academy 2019                                                       //
+//                                                              by ghDoo                                                            //
+//                                                   donatas.dereskevicius@gmail.com                                                //
+//                                                                                                                                  //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    $grid_columns:  [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr [c5];
+    $grid_rows:     [r1] 1fr [r2] 1fr [r3] 2fr [r4] 2fr [r5] 2fr [r6] 2fr [r7] 1fr [r8];
+
+    $grid_areas:    "head head head head"
+                    "entr entr entr entr"
+                    "prev prev prev prev"
+                    "list list list list"
+                    "blog blog blog blog"
+                    "info info info info"
+                    "foot foot foot foot";
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #815028;
+    font-family: 'Concert One', cursive;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    display: grid;
+    position: relative;
+    grid-template-columns: $grid_columns;
+    grid-template-rows: $grid_rows;
+    grid-template-areas: $grid_areas;
+    height: 100vh;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1000px) {
+
+    body {
+        background-color: #010101;
+    }
+}

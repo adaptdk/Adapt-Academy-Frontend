@@ -1,0 +1,100 @@
+
+@import '../utilities/variables';
+
+.page-wrapper-navigation {
+    @include flex_column_start;
+    grid-area: menu;
+    @include no_gap;
+
+    .navigation-menu {
+        list-style-type: none;
+        @include no_gap;
+
+        .navigation-menu__button {
+            cursor: pointer;
+            font-family: 'Notable', sans-serif;
+            font-size: $menu_size_xxl;
+            color: #ffffff;
+            margin: 6rem 3rem;
+            padding: 0;
+            text-align: center;
+            animation: menu_effect 4s infinite forwards;
+        }
+
+        .navigation-menu__button:hover {
+            cursor: pointer;
+            border-bottom: solid $white 2px;
+            text-shadow: 0px 0px 10px $white;
+        }
+    }
+}
+
+@keyframes menu_effect {
+	 50%    {letter-spacing: 0.3rem;}
+	100%    {letter-spacing: 0;}
+}
+
+@media (max-width: 1800px){
+
+    .page-wrapper-navigation {
+        .navigation-menu {
+            .navigation-menu__button {
+                font-size: $menu_size_xl;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px){
+
+    .page-wrapper-navigation {
+        .navigation-menu {
+            .navigation-menu__button {
+                font-size: $menu_size_l;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px){
+
+    .page-wrapper-navigation {
+
+        position: relative;
+
+        .navigation-menu {
+
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+
+            .navigation-menu__button {
+                margin: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){
+
+    .page-wrapper-navigation {
+        .navigation-menu {
+            .navigation-menu__button {
+                margin: 1rem;
+            }
+        }
+    }
+
+    @keyframes menu_effect {
+        50%    {letter-spacing: 0.1rem;}
+       100%    {letter-spacing: 0;}
+   }
+}
+
+@media (max-width: 600px){
+
+    .page-wrapper-navigation {
+        @include flex_center;
+        grid-area: head;
+    }
+}

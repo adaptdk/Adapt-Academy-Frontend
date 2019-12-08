@@ -1,0 +1,45 @@
+
+
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex_column_start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin  bg_center_fixed {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin no_gap {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin hw_100 {
+    height: 100vh;
+    width: 100vw;
+}
+
+@mixin b-w_color {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+@mixin  w-b_color {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+@mixin gradient_bg ($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+}

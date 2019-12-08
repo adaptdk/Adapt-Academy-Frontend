@@ -1,0 +1,35 @@
+
+<!--                    Adapt Academy 2019 lesson 04 - JS | task 04 by Donatas Dereškevičius                     -->
+
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>task 04</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body class="page" onload="timeFormat()">
+
+    <h2 class="page__title">Counter</h2>
+    <h1 class="result"></h1>
+    <div class="controls">
+        <button class="controls__button" type="button" name="start" onclick="start()">START</button>
+        <button class="controls__button" type="button" name="stop" onclick="stop()">STOP</button>
+        <button class="controls__button" type="button" name="resume" onclick="resume()">RESUME</button>
+        <button class="controls__button" type="button" name="reset" onclick="reset()">RESET</button>
+    </div>
+    <form class="form">
+        <input class="form-input" type="text" name="number" placeholder="enter in seconds" maxlength="2" pattern="[0-9]{2}" />
+        <button class="form-button" type="button" name="submit" onclick="setTime(number)">SET TIMER</button>
+    </form>
+    <h2 class="note"></h2>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

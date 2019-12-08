@@ -1,0 +1,44 @@
+
+$grid_columns:  [c1] 1fr [c2] 1fr [c3] 1fr [c4];
+$grid_rows:     [r1] 1fr [r2] 1fr [r3] 1fr [r4];
+
+$grid_areas:    "head head head"
+                "menu cont cont"
+                "menu cont cont";
+
+$black: #000000;
+$white: #ffffff;
+
+$ease-out: cubic-bezier(0, 0, 0.58, 1);
+
+// fontsize xxl
+
+$h1_size_xxl: 3rem;
+$h1_resize_effect_xxl: 2.5rem;
+$menu_size_xxl: 2rem;
+$h2_size_xxl: 2.5rem;
+$p_size_xxl: 2rem;
+
+// fontsize xl
+
+$h1_size_xl: 2.5rem;
+$h1_resize_effect_xl: 2rem;
+$menu_size_xl: 1.5rem;
+$h2_size_xl: 2rem;
+$p_size_xl: 1.5rem;
+
+// fontsize l
+
+$h1_size_l: 2rem;
+$h1_resize_effect_l: 1.5rem;
+$menu_size_l: 1rem;
+$h2_size_l: 1.5rem;
+$p_size_l: 1rem;
+
+// fontsize m
+
+$h1_size_m: 1.5rem;
+$h1_resize_effect_m: 1rem;
+$menu_size_m: 0.5rem;
+$h2_size_m: 1rem;
+$p_size_m: 0.5rem;

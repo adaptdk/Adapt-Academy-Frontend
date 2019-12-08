@@ -1,0 +1,47 @@
+
+<!--                    Adapt Academy 2019 lesson 03 - JS introduction | task 01 by Donatas Dereškevičius                     -->
+
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>task 01</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body class="page">
+    <div class="wrap">
+        <h1 class="wrap-title">Your zodiac sign is ... ?</h1>
+        <h2 class="wrap-subtitle">enter your birthday to find out !</h2>
+
+        <form class="form">
+            <h3 class="form-title">Month</h3>
+            <input class="form-input form-input__month" type="text" name="month" placeholder="max 12" maxlength="2" pattern="[0-9]{2}" />
+
+            <h3 class="form-title">and day</h3>
+            <input class="form-input form-input__day" type="text" name="day" placeholder="max 31" maxlength="2" pattern="[0-9]{2}" />
+
+            <button class="form-button" type="button" name="submit" onclick="getZodiacSign(month, day)">submit</button>
+        </form>
+
+        <div class="answer">
+            <h2 class="answer-title">and your sign is ... !!!</h2>
+            <h2 class="answer-text"></h2>
+            <img class="answer-image" />
+            <h2 class="error-text"></h2>
+            <button class="button" type="button" name="try again" onclick="location.href='./index.html'">Try Again !</button>
+        </div>
+
+        <footer class="footer">
+            <h3 class="footer-text">Created by Donatas Dereškevičius / Adapt Academy 2019</h3>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

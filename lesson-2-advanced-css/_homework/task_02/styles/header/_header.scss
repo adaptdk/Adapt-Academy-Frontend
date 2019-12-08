@@ -1,0 +1,19 @@
+
+.page-header {
+    display: flex;
+    grid-area: head;
+    align-items: center;
+    background-color: #cfae81;
+    border: solid #000000 1px;
+    margin-top: 3rem;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1000px) {
+
+    .page-header {
+        flex-direction: column;
+        background-color: #43789e;
+    }
+}
