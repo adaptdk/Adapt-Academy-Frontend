@@ -1,0 +1,58 @@
+.LandingPage {
+  position: relative;
+  min-width: 1024px;
+  min-height: calc(100vh - 284px);
+  background-image: url("../assets/Untitled-1.jpg");
+  background-position: center;
+  background-size: cover;
+  @media (max-width: 1023px) {
+    min-width: auto;
+    width: 800px;
+    margin: 0 auto;
+  }
+  @media (max-width: 799px) {
+    width: 100%;
+    padding-top: 40px;
+  }
+  &-content {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    @media (max-width: 799px) {
+      position: static;
+      width: 400px;
+      height: 350px;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: bold;
+    @media (max-width: 799px) {
+      font-size: 2.5rem;
+    }
+  }
+  &__text {
+    font-size: 1.3rem;
+    padding-bottom: 16px;
+  }
+  &__link {
+    width: 250px;
+    padding: 12px;
+    border: 0.8px solid #fff;
+    text-decoration: none;
+    color: #071013;
+    font-weight: 900;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: transparentize(#0f8fba, 0.25);
+    transition: background-color 300ms;
+    &:hover {
+      background-color: darken($color: #0f8fba, $amount: 5);
+    }
+  }
+}
