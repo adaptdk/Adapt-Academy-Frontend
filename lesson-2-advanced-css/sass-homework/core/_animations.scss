@@ -1,8 +1,8 @@
-@keyframes animation {
-    0% {
-        
-    } 
-    100% { 
-        transform: rotate(180deg);
-    } 
-}
+@keyframes changeColor {
+    from {
+        color: #ff0000;
+    }
+    to {
+        color: #000000;
+    }
+  }
