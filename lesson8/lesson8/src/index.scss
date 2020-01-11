@@ -1,0 +1,26 @@
+body {
+    background: rgb(31, 19, 54);
+
+}
+
+
+.search-list {
+    color: white;
+    padding: 16px;
+    background-color: rgb(36, 0, 83);
+
+    &-item {
+        display: flex;
+
+        &__image-container {}
+        &__text-container {}
+
+    }
+
+   
+
+}
+
+.input-item{
+    background: black;
+}

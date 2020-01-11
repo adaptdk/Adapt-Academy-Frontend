@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    //top: 0;
+    color: white;
+    background-color: blue;
+    padding: 2%;
+}
+
+.title {
+    display: inline-block;
+}
+
+.login {
+    //display: inline-block;
+    float: right;
+    &&__form {
+        display: inline-block;
+    }
+}
+
+input {
+    display: inline-block;
+}
+
+// .header-control {
+//     background-color: #3F5C9A;
+//     height: 80px;
+// }
+// .contro-align {
+//     width: 980px;
+// }

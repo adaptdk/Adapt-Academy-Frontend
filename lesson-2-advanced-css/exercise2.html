@@ -1,188 +1,175 @@
-<!-- 
-
-*** EXERCISE BRIEF ***
-
-You are given a wireframe and part of html mark up. Your task is to make the site look like in the wireframe with your own consistent styles.
-1. Use flexbox, grid or whatever you want for layouting 
-2. Make sure site looks good on different screens (tablet, mobile)
-3. Write additional html where needed
-4. Use BEM naming methodology
-5. Make sure you make your css modular
-
-TIPS:
-
-Wireframe: https://wireframe.cc/9AHcbh
-Font awesome: https://fontawesome.com/icons?d=gallery&m=free
-images: <img src="https://via.placeholder.com/350x150" />
-
-*** *** *** *** *** ***
-
--->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Batcave shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="/sass/modules/exercise2/exercise2.css">
 
-
+    <title>Document</title>
 </head>
 
+
 <body>
-    <header class="site-header">
-        <div>
-            <img src="assets/bat-logo.svg" />
-            <h1>Wicked site</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+    <header>
+        <!-- <div class="site-header"> not loading -->
+        <!-- <img src="assets/bat-logo.svg" /> -->
+        <!-- <img src="https://i.pinimg.com/originals/3a/da/b2/3adab240e8c9daa6c41df9c2993fccd0.jpg"> -->
+        <!-- <h1>Wicked site</h1> -->
+        <!-- </div> -->
+        <nav class="main-nav ">
+            <ul class="main-nav__list">
+                <li class="main-nav__list__item"><a href="#welcome-section">Welcome</a></li>
+                <li class="main-nav__list__item"><a href="#benefits-section">Benefits</a></li>
+                <li class="main-nav__list__item"><a href="#product-section">Products</a></li>
+                <li class="main-nav__list__item"><a href="#blog-section">Blog</a></li>
+                <li class="main-nav__list__item"><a href="#contact-section">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
     <div>
         <figure>
-            <img src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
-         assets/bat-screen-landscape.jpg 525w'
-                sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
-                100vw' />
+            <img class="main-img" src='assets/bat-screen.jpg' srcset='assets/bat-screen.jpg 1920w,
+             assets/bat-screen-landscape.jpg 525w' sizes='(min-width: 700px) 1300px, (max-width: 699px) 600px,
+                    100vw' />
 
-            <div>
-                <h2>Welcome</h2>
-                <p>This is the cover text for super secret and awesome batsy site. I will sell you some cool bat
-                    gadgets</p>
-                <a href="#">Take my cash</a><a href="#">Nope.</a>
+            <div class="page-welcome" id="welcome-section">
+                <h2 class="page-welcome__title">Welcome</h2>
+                <p class="page-welcome__par">This is the cover text for super secret and awesome batsy site. I will sell you some cool bat gadgets
+                </p>
+                <a class="page-welcome__link" href="#product-section">Take my cash</a>
+                <a class="page-welcome__link__nope" href="#product-section">Nope.</a>
             </div>
         </figure>
     </div>
 
-    <section>
-        <article>
+    <section class="section" id="benefits-section">
+        <div class="section__title">
             <h2>Benefits</h2>
             <span><i class="fas fa-balance-scale"></i></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
-        </article>
+        </div>
+        <div class="section__defualt">
+            <article class="section__box">
+                <h3 class="box__title">Benefit</h3>
+                <p>This greatly describes how awesome this feature is.</p>
+            </article>
 
-        <article>
-            <span></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
-        </article>
+            <article class="section__box">
+                <h3 class="box__title">Benefit</h3>
+                <p>This greatly describes how awesome this feature is.</p>
+            </article>
 
-        <article>
-            <span></span>
-            <h3>Benefit</h3>
-            <p>This greatly describes how awesome this feature is.</p>
-        </article>
+            <article class="section__box">
+                <h3 class="box__title">Benefit</h3>
+                <p>This greatly describes how awesome this feature is.</p>
+            </article>
+        </div>
     </section>
 
-    <section>
-        <h2>Products</h2>
+    <section class="section" id="product-section">
+        <div class="section__title">
+            <h2>Products</h2>
+        </div>
         <div>
+            <div class="section__display-col">
+                <article class="section__product">
+                    <img class="section__display-col__img" src="assets/bat-weapon.jpg" />
+                    <h3 class="section__product__name">product name</h3>
+                    <a href=""></a>
+                </article>
+
+                <article class="section__product">
+                    <img class="section__display-col__img" src="assets/bat-weapon2.jpg" />
+                    <h3 class="section__product__name">product name</h3>
+                    <a href=""></a>
+                </article>
+            </div>
+            <div class="section__display-row">
+                <article class="section__product">
+                    <img class="section__display-row__img" src="assets/bat-weapon3.png" />
+                    <h3 class="section__product__name">product name</h3>
+                    <a href=""></a>
+                </article>
+
+                <article class="section__product">
+                    <img class="section__display-row__img" src="assets/bat-weapon4.jpeg" />
+                    <h3 class="section__product__name">product name</h3>
+                    <a href=""></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="blog-section">
+        <header class="section__title">
+            <h2>Blog</h2>
+        </header>
+        <div class="section__defualt">
             <article>
-                <img src="assets/bat-weapon.jpg" />
+                <img class="section__defualt__img" src="assets/bat-weapon.jpg" />
                 <h3>product name</h3>
                 <a href=""></a>
             </article>
 
             <article>
-                <img src="assets/bat-weapon2.jpg" />
+                <img class="section__defualt__img" src="assets/bat-weapon2.jpg" />
                 <h3>product name</h3>
                 <a href=""></a>
             </article>
 
             <article>
-                <img src="assets/bat-weapon3.png" />
+                <img class="section__defualt__img" src="assets/bat-weapon3.png" />
                 <h3>product name</h3>
                 <a href=""></a>
             </article>
 
             <article>
-                <img src="assets/bat-weapon4.jpeg" />
+                <img class="section__defualt__img" src="assets/bat-weapon4.jpeg" />
                 <h3>product name</h3>
                 <a href=""></a>
             </article>
         </div>
     </section>
 
-    <section>
-            <header>
-                    <h2>Blog</h2>
-                    <a href="#">Take my cash</a>
-            </header>
-            
-            <div>
-                <article>
-                    <img src="assets/bat-weapon.jpg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-    
-                <article>
-                    <img src="assets/bat-weapon2.jpg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-    
-                <article>
-                    <img src="assets/bat-weapon3.png" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-    
-                <article>
-                    <img src="assets/bat-weapon4.jpeg" />
-                    <h3>product name</h3>
-                    <a href=""></a>
-                </article>
-            </div>
-        </section>
-
-    <section>
-        <article>
-            <address>
-                <h3>Mr. Batsy</h3>
-                <p>1007 Mountain Drive, Gotham</p>
-                <p>Dark dark cave where lives a lot of bats and no girl, ever.</p>
-                <p>And in case you want to talk to be, don't hesitate, I always reply, cuz <b>I'M BATMAN</b></p>
-                <a href="mailto:batman@batcave.io"></a>
-            </address>
-        </article>
-        <div class="map">
-            <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
-                <style>
-                    .mapouter {
-                        text-align: right;
-                        height: 597px;
-                        width: 600px;
-                    }
-
-                    .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 597px;
-                        width: 600px;
-                    }
-                </style>
+    <section class="section" id="contact-section">
+        <div class="section__display-row">
+            <article>
+                <address>
+                    <h3>Mr. Batsy</h3>
+                    <p>1007 Mountain Drive, Gotham</p>
+                    <p>Dark dark cave where lives a lot of bats and no girl, ever.</p>
+                    <p>And in case you want to talk to be, don't hesitate, I always reply, cuz <b>I'M BATMAN</b></p>
+                    <a href="mailto:batman@batcave.io"></a>
+                </address>
+            </article>
+            <div class="map">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="600" height="597" id="gmap_canvas" src="https://maps.google.com/maps?q=purnuskes&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                    <style>
+                        .mapouter {
+                            text-align: right;
+                            height: 597px;
+                            width: 600px;
+                        }
+                        
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 597px;
+                            width: 600px;
+                        }
+                    </style>
+                </div>
             </div>
     </section>
 
-    <footer class="site-footer">
-        <p>This is a super site designed by Bat engineers who are very batsy. Built in 2018 at <a href="#">Adapt
-                Academy</a></p>
+    <footer class="footer">
+        <p>This is a super site designed by Bat engineers who are very batsy. Built in 2019 at <a class="footer__company">Adapt Academy</a>
+        </p>
     </footer>
 </body>
 

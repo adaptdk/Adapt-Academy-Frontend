@@ -80,7 +80,7 @@ var personnel = [
 ```
 Our objective: get the total score of force users only. Let’s do it step by step!
 
-3
+4
 =======
 Write a prototype based counter which has methods `start()`, `stop()`, `resume()` and `reset()`.
 `start()` method will receive a time parameter with format `hh:mm:ss` which as example is `00:01:10`.
