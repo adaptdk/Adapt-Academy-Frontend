@@ -87,7 +87,7 @@
     "redux-api-middleware": "^2.3.0",
     "redux-form": "^7.4.2",
     "redux-thunk": "^2.3.0",
-    "serve": "^10.1.1"
+    "serve": "^10.1.2"
   },
   "jest": {
     "collectCoverageFrom": [
