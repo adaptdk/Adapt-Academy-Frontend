@@ -1,0 +1,58 @@
+.Footer {
+  height: 180px;
+  padding: 16px 0;
+  background-color: #071013;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  &__wrapper {
+    max-width: 802px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 840px) {
+      max-width: 90%;
+    }
+    &-items {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-around;
+      @media (max-width: 840px) {
+        justify-content: unset;
+      }
+      @media (max-width: 799px) {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &-item,
+    &-title {
+      @media (max-width: 799px) {
+        display: none;
+      }
+    }
+    &-icon {
+      margin-right: 10px;
+    }
+    &-title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    &-links {
+      text-align: center;
+      @media (max-width: 799px) {
+        margin: auto 0;
+      }
+    }
+    &-link {
+      margin: 0 10px;
+    }
+  }
+
+  &__links {
+    text-align: center;
+  }
+}

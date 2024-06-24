@@ -1,70 +1,48 @@
-import React, { useEffect, useState, useRef } from "react";
-import logo from "./logo.svg";
+import React, { useState, useRef } from "react";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import "./App.scss";
-
-const API_KEY = "8731e0fb";
+import { Home } from "./pages/home/home";
+import { Favorites } from "./pages/favorites/favorites";
+import { Search } from "./pages/search/search";
 
 function App() {
-  // const [favoritesList, setFavoritesList] = useState([]);
-  const [page, setPage] = useState("searchList");
   const [query, setQuery] = useState("Lord of the rings");
-  const [searchData, setSearchData] = useState([]);
+
   const searchbox = useRef(null);
 
-  const handleFavoriteClick = () => {
-    setPage("favorites");
-  };
-  const handleSearchClick = () => {
-    setPage("searchList");
-    setQuery(searchbox.current.value);
+  const handleChange = e => {
+    setQuery(e.target.value);
   };
 
-  useEffect(() => {
-    fetch(`http://www.omdbapi.com/?s=${query}&apiKey=${API_KEY}`)
-      .then(response => response.json())
-      .then(response => {
-        setSearchData(response.Search);
-      });
-  }, [query]);
   return (
     <div className="App">
-      <div className="search">
-        <input ref={searchbox} type="text" className="search__input" />
-        <input
-          onClick={handleSearchClick}
-          type="button"
-          className="search__button"
-          value="Search"
-        />
-        <a className="search__link" href="#" onClick={handleFavoriteClick}>
-          Favorites
-        </a>
-      </div>
-      {page === "favorites" && <div>Welcome to favorites</div>}
-      {page === "searchList" && (
-        <div className="search-list">
-          {searchData.map(searchItem => (
-            <div className="search-list-item" key={searchItem.imdbID}>
-              <div className="search-list-item__image-container">
-                <img
-                  alt="movie poster"
-                  className="search-list-item__image"
-                  src={searchItem.Poster}
-                />
-              </div>
-              <div className="search-list-item__text-container">
-                <h2>{searchItem.Title}</h2>
-                <div className="search-list-item__year">{searchItem.Year}</div>
-                <input
-                  type="button"
-                  className="search-list-item__favorites"
-                  value="Add to facvorites"
-                />
-              </div>
-            </div>
-          ))}
+      <Router>
+        <div className="search">
+          <input
+            ref={searchbox}
+            type="text"
+            onChange={handleChange}
+            className="search__input"
+          />
+          <Link to={`/search/${query}`}>
+            <input type="button" className="search__button" value="Search" />
+          </Link>
+          <Link className="search__link" to="/favorites">
+            Favorites
+          </Link>
         </div>
-      )}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="favorites">
+            <Favorites />
+          </Route>
+          <Route path="/search/:searchQuery">
+            <Search />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

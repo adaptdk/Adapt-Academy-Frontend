@@ -1,0 +1,45 @@
+.AdminPage {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 16px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  &__card {
+    width: 300px;
+    border: 1px solid #8b8b8b;
+    border-radius: 6px;
+    height: 599px;
+    margin: 0 10px;
+    background-color: #fff;
+    &-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 50%;
+      margin-bottom: 10px;
+    }
+    &-text {
+      font-weight: 300;
+      margin: 0 0 50px 0;
+      text-align: center;
+    }
+    &-link {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #fffff9;
+      border: 1px solid #157f1f;
+      color: inherit;
+      border-radius: 7px;
+      margin-bottom: 20px;
+      transition: background-color 800ms;
+      &:hover {
+        background-color: #157f1f;
+        color: #fffff9;
+      }
+    }
+  }
+}

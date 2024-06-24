@@ -1,0 +1,59 @@
+.ProductForm {
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40%;
+  margin: 40px auto;
+  &__group {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    font-size: 14px;
+    margin: 15px 0 5px 18px;
+  }
+  &__input {
+    width: 90%;
+    height: 24px;
+    margin: 0 auto;
+    border: 1px solid #8b8b8b;
+    border-radius: 3px;
+    &--shared {
+      flex-grow: 1;
+    }
+  }
+  & .textarea {
+    height: 150px;
+  }
+  &__button {
+    width: 250px;
+    border: 1px solid #fffff9;
+    margin: 10px auto;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 5px #071013;
+    }
+    &--shared {
+      border: 0.25px solid #071013;
+      cursor: pointer;
+      &:hover {
+        background-color: lighten(#8b8b8b, 60);
+      }
+    }
+  }
+  &__shared {
+    background-color: #8b8b8b;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  &__image-container {
+    width: 80%;
+    margin: 0 auto 40px;
+  }
+}

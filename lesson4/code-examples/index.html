@@ -11,8 +11,34 @@
     <body>
         <h1>Javascript lessons from Adapt</h1>
         <p>Open up browser console for testing</p>
+        <div >
+            <h2>1. Write function to which will get getCountryByCode('DZ')</h2>
+            <input id="task-one__input" type="text">
+            <button onclick="countryFinder()">Submit</button>
+            <p class="task-one-result"></p>
+        </div>
+        <div>
+            <h2>2. Rewrite function using es7 await / async</h2>
+            <small>Only works with CORS disabled inside browser!</small>
+            <p>Countries found: <span class="task-two-result"></span></p>
+        </div>
+        <div>
+            <h2>3. Our objective: get the total score of force users only.</h2>
+            <p>Total score: <span class="task-three-result"></span></p>
+        </div>
+        <div id="task-four">
+            <h2>4. Write a prototype based counter which has methods `start()`, `stop()`, `resume()` and `reset()`.</h2>
+            <p>Time format 00:00:00</p>
+            <input type="text" id="task-four__input">
+            <button onclick="startCounter()">Start</button>
+            <button onclick="stopCounter()">Stop</button>
+            <button onclick="resumeCounter()">Resume</button>
+            <button onclick="resetCounter()">Reset</button>
+            <p class="task-four__err" style="color: red;"></p>
+            <p class="task-four__result"></p>
+        </div>
 
         <!-- Change the active script here: -->
-        <script src="examples/1. scope.js"></script>
+        <script src="./examples/exercise.js"></script>
     </body>
 </html>

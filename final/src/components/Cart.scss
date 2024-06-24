@@ -1,0 +1,50 @@
+.Cart {
+  width: 800px;
+  border: 1px solid #8b8b8b;
+  border-radius: 7px;
+  @media (max-width: 1023px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  &__btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    @media (max-width: 1023px) {
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+  &__btn {
+    width: 100px;
+    padding: 5px;
+    margin: 2px;
+    background-color: #fff;
+    outline: none;
+    border: 1px solid #8b8b8b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 300ms;
+    &:hover {
+      box-shadow: 0 0 5px #071013;
+    }
+  }
+  &__item {
+    padding: 10px;
+    &--wide {
+      padding: 10px;
+      flex-grow: 1;
+    }
+  }
+}
+.info-message {
+  padding: 10px;
+  font-weight: bold;
+}
